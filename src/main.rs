@@ -111,6 +111,7 @@ fn App() -> Element {
 
     let lang_en = state.read().lang == "english";
     i18n::set_english(lang_en);
+    llm::set_model(&state.read().chat_model);
     let collapsed = state.read().side_collapsed;
     let dark = match state.read().theme.as_str() {
         "dark" => true,

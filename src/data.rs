@@ -190,6 +190,9 @@ pub struct DayLog {
     pub phrases: u32,
     pub drills: u32,
     pub lessons: u32,
+    /// words spoken to the Talk partner today, and filler words among them
+    pub spoken_words: u32,
+    pub fillers: u32,
 }
 
 impl DayLog {
@@ -229,6 +232,8 @@ pub struct State {
     /// "hinglish" | "english" (interface language)
     pub lang: String,
     pub side_collapsed: bool,
+    /// ollama model used by Talk; empty = default
+    pub chat_model: String,
 }
 
 impl Default for State {
@@ -247,6 +252,7 @@ impl Default for State {
             dialogs: HashMap::new(),
             lang: "hinglish".into(),
             side_collapsed: false,
+            chat_model: String::new(),
         }
     }
 }

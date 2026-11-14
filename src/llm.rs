@@ -6,7 +6,44 @@ use std::io::Write;
 use std::path::Path;
 use std::process::{Command, Stdio};
 
-pub const MODEL: &str = "qwen2.5:3b-instruct";
+pub const DEFAULT_MODEL: &str = "qwen2.5:3b-instruct";
+static MODEL_NAME: std::sync::Mutex<String> = std::sync::Mutex::new(String::new());
+
+pub fn set_model(m: &str) {
+    if let Ok(mut g) = MODEL_NAME.lock() {
+        *g = m.to_string();
+    }
+}
+
+pub fn model() -> String {
+    match MODEL_NAME.lock() {
+        Ok(g) if !g.is_empty() => g.clone(),
+        _ => DEFAULT_MODEL.to_string(),
+    }
+}
+
+/// Models installed in ollama (names), empty if ollama is not running.
+pub fn installed_models() -> Vec<String> {
+    let out = Command::new("curl").args(["-s", "-m", "3", "http://localhost:11434/api/tags"]).output();
+    let Ok(o) = out else { return vec![] };
+    let Ok(v) = serde_json::from_slice::<serde_json::Value>(&o.stdout) else { return vec![] };
+    v["models"].as_array().map(|a| a.iter().filter_map(|m| m["name"].as_str().map(String::from)).collect()).unwrap_or_default()
+}
+
+const FILLERS: [&str; 6] = ["basically", "actually", "you know", "i mean", "kind of", "sort of"];
+
+/// Count filler words/phrases in a spoken answer (Whisper often drops "um", so this is a lower bound).
+pub fn count_fillers(text: &str) -> u32 {
+    let t = format!(" {} ", crate::drill::norm(text));
+    let mut n = 0;
+    for f in FILLERS {
+        n += t.matches(&format!(" {f} ")).count() as u32;
+    }
+    for f in ["um", "umm", "uh", "uhh", "erm", "hmm"] {
+        n += t.matches(&format!(" {f} ")).count() as u32;
+    }
+    n
+}
 pub const STT_MODEL: &str = "base.en";
 
 fn stt_python() -> std::path::PathBuf {
@@ -21,7 +58,7 @@ pub fn stt_ready() -> bool {
 pub fn chat_ready() -> bool {
     let out = Command::new("curl").args(["-s", "-m", "3", "http://localhost:11434/api/tags"]).output();
     match out {
-        Ok(o) => String::from_utf8_lossy(&o.stdout).contains("qwen2.5:3b-instruct"),
+        Ok(o) => String::from_utf8_lossy(&o.stdout).contains(&model()),
         Err(_) => false,
     }
 }
@@ -76,7 +113,7 @@ pub fn partner_reply(scenario: &str, history: &[(bool, String)]) -> Result<Strin
         msgs.push(serde_json::json!({"role": if *user { "user" } else { "assistant" }, "content": text}));
     }
     let raw = ollama(serde_json::json!({
-        "model": MODEL, "messages": msgs, "stream": false, "format": "json",
+        "model": model(), "messages": msgs, "stream": false, "format": "json",
         "options": {"temperature": 0.6, "num_predict": 160}, "keep_alive": "30m"
     }))?;
     let v: serde_json::Value = serde_json::from_str(&raw).map_err(|_| format!("could not read the answer: {raw}"))?;
@@ -87,7 +124,7 @@ pub fn partner_reply(scenario: &str, history: &[(bool, String)]) -> Result<Strin
 /// Correct one learner sentence. The result equals the input (apart from capitals) when it was fine.
 pub fn correct(said: &str) -> Result<String, String> {
     let raw = ollama(serde_json::json!({
-        "model": MODEL, "stream": false, "format": "json",
+        "model": model(), "stream": false, "format": "json",
         "messages": [{"role": "system", "content": FIXER}, {"role": "user", "content": said}],
         "options": {"temperature": 0, "num_predict": 100}, "keep_alive": "30m"
     }))?;
@@ -98,7 +135,7 @@ pub fn correct(said: &str) -> Result<String, String> {
 /// Two short example answers the learner could say next.
 pub fn suggestions(scenario: &str, last_question: &str) -> Result<Vec<String>, String> {
     let raw = ollama(serde_json::json!({
-        "model": MODEL, "stream": false, "format": "json",
+        "model": model(), "stream": false, "format": "json",
         "messages": [
             {"role": "system", "content": "You help an English learner who is stuck. Give two different, short (6-12 words), simple, natural example answers in first person. Reply ONLY with JSON {\"a\": \"...\", \"b\": \"...\"}."},
             {"role": "user", "content": format!("Scenario: {scenario}\nThe partner just said: {last_question}")}
@@ -112,8 +149,20 @@ pub fn suggestions(scenario: &str, last_question: &str) -> Result<Vec<String>, S
 /// Load the chat model into memory in the background so the first reply is not slow.
 pub fn warm_up() {
     let _ = ollama(serde_json::json!({
-        "model": MODEL, "stream": false,
+        "model": model(), "stream": false,
         "messages": [{"role": "user", "content": "hi"}],
         "options": {"num_predict": 1}, "keep_alive": "30m"
     }));
+}
+
+#[cfg(test)]
+mod tests {
+    use super::*;
+
+    #[test]
+    fn counts_fillers() {
+        assert_eq!(count_fillers("Basically, I worked on the API and, you know, the database."), 2);
+        assert_eq!(count_fillers("Um I think uh it works"), 2);
+        assert_eq!(count_fillers("I built a REST API."), 0);
+    }
 }

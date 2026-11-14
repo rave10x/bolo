@@ -597,6 +597,8 @@ pub fn Settings() -> Element {
     let mut ctx = use_context::<Ctx>();
     let st = ctx.state.read().clone();
     let mut msg = use_signal(String::new);
+    let models = use_hook(llm::installed_models);
+    let current_model = llm::model();
     let voice = audio::voice_name();
     let stt_txt = if llm::stt_ready() { "ready ✓" } else { "not installed (run scripts/install-talk.sh)" };
     let chat_txt = if llm::chat_ready() { "ready ✓" } else { "not ready" };
@@ -611,6 +613,20 @@ pub fn Settings() -> Element {
                     }
                 }
                 div { class: "muted sm", {crate::i18n::tr("Hinglish = Hindi explanations in English letters. English = everything in plain English.")} }
+            }
+            div { class: "card set",
+                div { class: "stage-t", crate::icon::Ico { name: "brain".to_string(), size: 20 }, " ", {crate::i18n::tr("Baat-cheet partner ka model")} }
+                if models.is_empty() {
+                    div { class: "muted sm", {crate::i18n::tr("ollama chalu nahi hai, isliye koi model nahi mila.")} }
+                } else {
+                    div { class: "chips",
+                        for m in models.iter() {
+                            { let m2 = m.clone(); let on = *m == current_model;
+                              rsx! { button { key: "{m}", class: if on { "chip on" } else { "chip" }, onclick: move |_| ctx.state.with_mut(|s| s.chat_model = m2.clone()), "{m}" } } }
+                        }
+                    }
+                    div { class: "muted sm", {crate::i18n::trf("Bade model (7B+) zyada smart jawab dete hain par slow hote hain. Default: {}. Instruct/chat model chuno, coder model nahi.", &[llm::DEFAULT_MODEL.to_string()])} }
+                }
             }
             div { class: "card set",
                 div { class: "stage-t", {crate::i18n::tr("Theme")} }

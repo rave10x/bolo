@@ -12,6 +12,7 @@ The interface works in **Hinglish** (Hindi written in English letters) or plain 
 |---|---|
 | **Today** | A short daily plan: talk, role-play, new words, review, a lesson, speaking, a test. Streak and weekly view. |
 | **Partner · Talk** | Voice conversation with a local AI in 16 scenarios (HR round, technical interview, STAR questions, salary talk, stand-up, client call, apology, resignation, small talk...). Your speech is transcribed, the partner replies out loud, and your sentence is corrected with the changed words highlighted. Corrections become your own drill. |
+| **Mock interview** | Part of Talk. A formal practice round of 8 questions (HR, technical or behavioural): no hints, corrections held back until the end, then a summary with average answer length, filler phrases, answers needing correction, and advice. |
 | **Conversations** | 32 scripted dialogues (interview, office, HR and career, client calls, social) with key phrases. Listen to both sides, then role-play your part; the app scores what it heard. |
 | **Lessons** | 6 professional-speaking lessons plus 30 basics lessons, each with a mini test. |
 | **Words** | 400 words in 20 topics with Hindi meaning, pronunciation, example sentence and spaced-repetition review. |
@@ -19,7 +20,7 @@ The interface works in **Hinglish** (Hindi written in English letters) or plain 
 | **Practice** | 8 drill types: meaning, reverse, listen, spell, fill the blank, build the sentence, fix the mistake, my mistakes. |
 | **Mistakes** | 66 common English mistakes made by Hindi speakers, with the reason. |
 
-Also: light, dark and auto themes, a collapsible sidebar, adjustable voice speed, and a one-click progress backup.
+Also: a choice of Ollama model for Talk (Settings), daily speaking stats (words spoken, average per answer), light, dark and auto themes, a collapsible sidebar, adjustable voice speed, and a one-click progress backup.
 
 ## How the AI parts work (all local)
 

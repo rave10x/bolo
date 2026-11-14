@@ -26,6 +26,9 @@ pub const SCENARIOS: &[(&str, &str, &str, &str, &str)] = &[
     ("📞", "Customer care call", "Phone par complaint", "You are a customer care agent on a phone call. The learner has a problem with an order or an internet connection.", "Hello, thank you for calling. How may I help you today?"),
 ];
 
+const MOCK_Q: usize = 8;
+const MOCK_RULES: &str = "THIS IS A MOCK INTERVIEW. Be a formal, neutral interviewer. Each turn: react in at most 3 words (for example \"Thank you.\" or \"I see.\"), then ask exactly ONE new question you have not asked before. Never give hints, never praise at length, never explain.";
+
 #[derive(Clone, PartialEq)]
 struct Msg {
     user: bool,
@@ -65,11 +68,14 @@ fn scroll_down() {
 #[component]
 pub fn Talk() -> Element {
     let ctx = use_context::<Ctx>();
-    let mut sel = use_signal(|| std::env::var("BOLO_SCENARIO").ok().and_then(|v| v.parse::<usize>().ok()));
+    let mut sel = use_signal(|| std::env::var("BOLO_SCENARIO").ok().and_then(|v| v.parse::<usize>().ok()).map(|i| (i, false)));
     let mut recheck = use_signal(|| 0u32);
     let st = ctx.state.read().clone();
     let today_talks = st.days.get(&today()).map(|d| d.talks).unwrap_or(0);
     let fixes = st.my_fixes.len();
+    let today_log = st.days.get(&today()).cloned().unwrap_or_default();
+    let words_today = today_log.spoken_words;
+    let avg_words = if today_talks > 0 { today_log.spoken_words / today_talks } else { 0 };
     let _ = *recheck.read();
     let (stt, chat) = (llm::stt_ready(), llm::chat_ready());
     use_hook(move || {
@@ -78,8 +84,8 @@ pub fn Talk() -> Element {
         }
     });
 
-    if let Some(i) = *sel.read() {
-        return rsx! { Chat { idx: i, on_exit: move |_| sel.set(None) } };
+    if let Some((i, mock)) = *sel.read() {
+        return rsx! { Chat { key: "{i}-{mock}", idx: i, mock, on_exit: move |_| sel.set(None) } };
     }
 
     rsx! {
@@ -97,12 +103,22 @@ pub fn Talk() -> Element {
             div { class: "stats",
                 div { class: "stat", div { class: "n", "{today_talks}" } div { class: "l", {crate::i18n::tr("aaj ke jawab (target 5)")} } }
                 div { class: "stat", div { class: "n", "{fixes}" } div { class: "l", {crate::i18n::tr("meri sudhari hui galtiyan")} } }
+                div { class: "stat", div { class: "n", "{words_today}" } div { class: "l", {crate::i18n::tr("aaj bole gaye words")} } }
+                div { class: "stat", div { class: "n", "{avg_words}" } div { class: "l", {crate::i18n::tr("ek jawab mein average words")} } }
+            }
+            div { class: "section-title", crate::icon::Ico { name: "target".to_string(), size: 20 }, " ", {crate::i18n::tr("Mock interview · Asli practice")} }
+            p { class: "muted", {crate::i18n::trf("Asli interview jaisa round: {} sawaal, koi hint nahi, galtiyan sirf end mein, phir summary ki aapne kaisa kiya.", &[MOCK_Q.to_string()])} }
+            div { class: "grid",
+                for (i, label) in [(0usize, "HR round"), (1, "Technical round"), (3, "Behavioural round")] {
+                    button { key: "m{i}", class: "card topic", disabled: !stt || !chat, onclick: move |_| sel.set(Some((i, true))),
+                        div { class: "ticon", crate::icon::Ico { name: "briefcase".to_string(), size: 26 } } div { class: "tn", "{crate::i18n::tr(label)}" } div { class: "muted sm", {crate::i18n::trf("{} sawaal", &[MOCK_Q.to_string()])} } }
+                }
             }
             if fixes > 0 { div { class: "row-actions", button { class: "btn", onclick: move |_| navigate(ctx, Route::Drill("myfix")), crate::icon::Ico { name: "wrench".to_string(), size: 18 }, " Apni galtiyon ka test" } } }
             div { class: "section-title", {crate::i18n::tr("Topic chuno")} }
             div { class: "grid",
                 for (i, (ico, name, hi, _, _)) in SCENARIOS.iter().enumerate() {
-                    button { key: "{i}", class: "card topic", disabled: !stt || !chat, onclick: move |_| sel.set(Some(i)),
+                    button { key: "{i}", class: "card topic", disabled: !stt || !chat, onclick: move |_| sel.set(Some((i, false))),
                         div { class: "ticon", crate::icon::Ico { name: ico.to_string(), size: 26 } } div { class: "tn", "{crate::i18n::tr(name)}" } div { class: "muted sm", "{crate::i18n::tr(hi)}" } }
                 }
             }
@@ -111,9 +127,11 @@ pub fn Talk() -> Element {
 }
 
 #[component]
-fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
+fn Chat(idx: usize, mock: bool, on_exit: EventHandler<()>) -> Element {
     let mut ctx = use_context::<Ctx>();
-    let (ico, name, _, scenario, opener) = SCENARIOS[idx];
+    let (ico, name, _, scenario0, opener) = SCENARIOS[idx];
+    let scenario: &'static str = use_hook(move || if mock { Box::leak(format!("{scenario0}\n{MOCK_RULES}").into_boxed_str()) as &'static str } else { scenario0 });
+    let mut done = use_signal(|| false);
     let mut msgs = use_signal(move || vec![Msg { user: false, text: opener.to_string(), better: String::new(), tip: String::new(), checked: false }]);
     let mut phase = use_signal(|| Phase::Idle);
     let mut err = use_signal(String::new);
@@ -134,10 +152,27 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
             return;
         }
         hints.set(vec![]);
+        ctx.state.with_mut(|s| { let d = s.day_mut(); d.spoken_words += text.split_whitespace().count() as u32; d.fillers += llm::count_fillers(&text); });
         msgs.with_mut(|m| m.push(Msg { user: true, text: text.clone(), better: String::new(), tip: String::new(), checked: false }));
         phase.set(Phase::Thinking);
         scroll_down();
         let history: Vec<(bool, String)> = msgs.peek().iter().map(|m| (m.user, m.text.clone())).collect();
+        let answered = history.iter().filter(|h| h.0).count();
+        if mock && answered >= MOCK_Q {
+            // last answer: no more questions; correct it, then show the summary
+            ctx.state.with_mut(|s| s.day_mut().talks += 1);
+            spawn(async move {
+                let s2 = text.clone();
+                let fixed = tokio::task::spawn_blocking(move || llm::correct(&s2)).await;
+                if let Ok(Ok(better)) = fixed {
+                    msgs.with_mut(|m| { if let Some(last) = m.iter_mut().rev().find(|x| x.user && x.text == text) { last.checked = true; if !better.is_empty() && canon(&better) != canon(&text) { last.better = better; } } });
+                }
+                phase.set(Phase::Idle);
+                done.set(true);
+                scroll_down();
+            });
+            return;
+        }
         spawn(async move {
             let said = text.clone();
             let r = tokio::task::spawn_blocking(move || llm::partner_reply(scenario, &history)).await;
@@ -205,7 +240,7 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
         div { class: "page narrow chat",
             div { class: "drill-top",
                 button { class: "btn back", onclick: move |_| { audio::stop_all(); on_exit.call(()) }, "← ", crate::icon::Ico { name: ico.to_string(), size: 18 }, " {crate::i18n::tr(name)}" }
-                span { class: "muted sm", {crate::i18n::trf("{} jawab", &[(list.iter().filter(|m| m.user).count()).to_string()])} }
+                span { class: "muted sm", if mock { {crate::i18n::trf("Sawaal {} / {}", &[((list.iter().filter(|m| m.user).count() + 1).min(MOCK_Q)).to_string(), MOCK_Q.to_string()])} } else { {crate::i18n::trf("{} jawab", &[(list.iter().filter(|m| m.user).count()).to_string()])} } }
             }
             for (i, m) in list.iter().enumerate() {
                 div { key: "{i}", class: if m.user { "msgrow me" } else { "msgrow" },
@@ -213,7 +248,7 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
                         "{m.text}"
                         if !m.user { Voice { ctx, text: m.text.clone() } }
                     }
-                    if m.user && !m.better.is_empty() {
+                    if m.user && !m.better.is_empty() && (!mock || *done.read()) {
                         div { class: "fixcard",
                             div { class: "fx good", span { "✓" }
                                 span { for (k, (w, chg)) in diff_words(&m.better, &m.text).into_iter().enumerate() { span { key: "{k}", class: if chg { "chg" } else { "" }, "{w} " } } }
@@ -221,7 +256,7 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
                             div { class: "muted sm", {crate::i18n::tr("Better version (badle hue words highlighted). AI kabhi-kabhi galat bhi ho sakta hai.")} }
                         }
                     }
-                    if m.user && m.better.is_empty() && m.checked { div { class: "muted sm okline", {crate::i18n::tr("✓ Sahi English!")} } }
+                    if m.user && m.better.is_empty() && m.checked && (!mock || *done.read()) { div { class: "muted sm okline", {crate::i18n::tr("✓ Sahi English!")} } }
                 }
             }
             if !hints.read().is_empty() {
@@ -234,6 +269,7 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
             }
             if !err.read().is_empty() { div { class: "card feedback bad", "{err}" } }
 
+            if *done.read() { MockSummary { msgs: list.clone(), ctx, on_exit } } else {
             div { class: "talkbar",
                 div { class: "muted sm tstat", "{status}" }
                 div { class: "talkrow",
@@ -261,15 +297,78 @@ fn Chat(idx: usize, on_exit: EventHandler<()>) -> Element {
                     input { class: "input", placeholder: crate::i18n::tr("ya yahan likho aur Enter dabao"), value: "{typed}", disabled: ph != Phase::Idle,
                         oninput: move |e| typed.set(e.value()),
                         onkeydown: move |e| { if e.key() == Key::Enter && ph == Phase::Idle { let t = typed.read().clone(); typed.set(String::new()); send(t); } } }
-                    button { class: "btn", disabled: ph != Phase::Idle, onclick: move |_| {
+                    if !mock { button { class: "btn", disabled: ph != Phase::Idle, onclick: move |_| {
                         let q = last_ai.clone();
                         spawn(async move {
                             let r = tokio::task::spawn_blocking(move || llm::suggestions(scenario, &q)).await;
                             if let Ok(Ok(h)) = r { hints.set(h); }
                             scroll_down();
                         });
-                    }, crate::icon::Ico { name: "lightbulb".to_string(), size: 18 }, " Kya bolun?" }
+                    }, crate::icon::Ico { name: "lightbulb".to_string(), size: 18 }, " ", {crate::i18n::tr("Kya bolun?")} } }
                 }
+            }
+            }
+        }
+    }
+}
+
+
+#[component]
+fn MockSummary(msgs: Vec<Msg>, ctx: Ctx, on_exit: EventHandler<()>) -> Element {
+    let answers: Vec<&Msg> = msgs.iter().filter(|m| m.user).collect();
+    let n = answers.len().max(1);
+    let counts: Vec<usize> = answers.iter().map(|m| m.text.split_whitespace().count()).collect();
+    let total: usize = counts.iter().sum();
+    let avg = total / n;
+    let short = counts.iter().filter(|c| **c < 8).count();
+    let fillers: u32 = answers.iter().map(|m| llm::count_fillers(&m.text)).sum();
+    let wrong: Vec<&Msg> = answers.iter().copied().filter(|m| !m.better.is_empty()).collect();
+    let clean = n - wrong.len().min(n);
+    let mut notes: Vec<String> = vec![];
+    if avg < 12 {
+        notes.push(crate::i18n::tr("Aapke jawab chhote hain. Interview mein 25–40 words (15–20 second) ka jawab do: jawab, ek wajah, ek example."));
+    } else if avg < 25 {
+        notes.push(crate::i18n::tr("Length theek hai. Jo jawab aam rahe unmein ek asli example jodo."));
+    } else {
+        notes.push(crate::i18n::tr("Jawab ki length acchi hai. Har jawab ek minute se kam rakho."));
+    }
+    if short > 0 {
+        notes.push(crate::i18n::trf("{} jawab 8 words se chhote the. Pehle unhe badhao.", &[short.to_string()]));
+    }
+    if fillers > 3 {
+        notes.push(crate::i18n::trf("Aapne {} filler phrases use kiye (basically, actually, you know...). Unki jagah ek second chup raho.", &[fillers.to_string()]));
+    }
+    if wrong.is_empty() {
+        notes.push(crate::i18n::tr("Koi grammar correction nahi chahiye thi. Badhiya!"));
+    } else {
+        notes.push(crate::i18n::trf("{} / {} jawab mein sudhaar tha. Ye Meri galtiyan mein save hain — inhe practice karo.", &[wrong.len().to_string(), n.to_string()]));
+    }
+    rsx! {
+        div { class: "card result",
+            div { class: "stage-t", crate::icon::Ico { name: "chart-column".to_string(), size: 22 }, " ", {crate::i18n::tr("Interview ka summary")} }
+            div { class: "stats",
+                div { class: "stat", div { class: "n", "{n}" } div { class: "l", {crate::i18n::tr("jawab")} } }
+                div { class: "stat", div { class: "n", "{avg}" } div { class: "l", {crate::i18n::tr("ek jawab mein average words")} } }
+                div { class: "stat", div { class: "n", "{clean}/{n}" } div { class: "l", {crate::i18n::tr("bina galti ke jawab")} } }
+                div { class: "stat", div { class: "n", "{fillers}" } div { class: "l", {crate::i18n::tr("filler phrases")} } }
+            }
+            div { class: "notes",
+                for (k, t) in notes.iter().enumerate() { p { key: "{k}", class: "lp", "{t}" } }
+            }
+            if !wrong.is_empty() {
+                div { class: "section-title", {crate::i18n::tr("Agli baar aise bolo")} }
+                for (k, m) in wrong.iter().enumerate() {
+                    div { key: "{k}", class: "fixcard",
+                        div { class: "fx bad", span { "✗" } span { class: "strike", "{m.text}" } }
+                        div { class: "fx good", span { "✓" }
+                            span { for (q, (w, chg)) in diff_words(&m.better, &m.text).into_iter().enumerate() { span { key: "{q}", class: if chg { "chg" } else { "" }, "{w} " } } }
+                            Voice { ctx, text: m.better.clone() } }
+                    }
+                }
+            }
+            div { class: "row-actions",
+                button { class: "btn", onclick: move |_| on_exit.call(()), {crate::i18n::tr("Wapas")} }
+                if !wrong.is_empty() { button { class: "btn primary", onclick: move |_| navigate(ctx, Route::Drill("myfix")), {crate::i18n::tr("Apni galtiyon ka test")} } }
             }
         }
     }

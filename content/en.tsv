@@ -221,6 +221,30 @@ Natural: I graduated in 2023 / I have a degree.	Natural: I graduated in 2023 / I
 Natural question: What time is it?	Natural question: What time is it?
 Hair uncountable.	Hair is uncountable.
 Both = plural.	Both = plural.
+aaj bole gaye words	words spoken today
+ek jawab mein average words	avg words per answer
+Mock interview · Asli practice	Mock interview
+Asli interview jaisa round: {} sawaal, koi hint nahi, galtiyan sirf end mein, phir summary ki aapne kaisa kiya.	A real practice round: {} questions, no hints, corrections only at the end, then a summary of how you did.
+HR round	HR round
+Technical round	Technical round
+Behavioural round	Behavioural round
+{} sawaal	{} questions
+Sawaal {} / {}	Question {} of {}
+Interview ka summary	Interview summary
+jawab	answers
+bina galti ke jawab	answers with no correction
+filler phrases	filler phrases
+Agli baar aise bolo	Say it like this next time
+Baat-cheet partner ka model	Talk partner model
+ollama chalu nahi hai, isliye koi model nahi mila.	ollama is not running, so no models were found.
+Bade model (7B+) zyada smart jawab dete hain par slow hote hain. Default: {}. Instruct/chat model chuno, coder model nahi.	Bigger models (7B and up) give smarter replies but are slower. Default: {}. Pick an instruct/chat model, not a coder model.
+Aapke jawab chhote hain. Interview mein 25–40 words (15–20 second) ka jawab do: jawab, ek wajah, ek example.	Your answers are short. In an interview aim for 25–40 words (about 15–20 seconds): answer, give one reason, give one example.
+Length theek hai. Jo jawab aam rahe unmein ek asli example jodo.	Decent length. Add one concrete example to the answers that stayed generic.
+Jawab ki length acchi hai. Har jawab ek minute se kam rakho.	Good answer length. Keep each answer under about a minute.
+{} jawab 8 words se chhote the. Pehle unhe badhao.	{} answers had fewer than 8 words. Expand those first.
+Aapne {} filler phrases use kiye (basically, actually, you know...). Unki jagah ek second chup raho.	You used {} filler phrases (basically, actually, you know...). Pause quietly for a second instead.
+Koi grammar correction nahi chahiye thi. Badhiya!	No grammar corrections were needed. Nice.
+{} / {} jawab mein sudhaar tha. Ye Meri galtiyan mein save hain — inhe practice karo.	{} of {} answers had a correction. They are saved in My mistakes — practise them next.
 Aaj kuch due nahi	Nothing due today
 HR round ke sawaal	HR round questions
 Java / DSA / project sawaal	Java / DSA / project questions

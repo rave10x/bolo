@@ -59,3 +59,9 @@ Verified (by running it): all content builds and validates; 10 Rust tests pass (
 - Code `~/Workspace/Projects/bolo` (installed `~/.local/bin/bolo`); progress `~/.local/share/bolo/state.json`.
 - Models: `~/.local/share/bolo/{voice,piper-venv,stt-venv}`, ollama `qwen2.5:3b-instruct`, Whisper cache in `~/.cache/huggingface`.
 - Dev env vars: `BOLO_ROUTE` (talk|dialogues|dialogue:<id>|lessons|words|speak|practice|…), `BOLO_SCENARIO`, `BOLO_SAY`, `BOLO_ROLEPLAY`, `BOLO_THEME`.
+
+## Added 2026-11-14 (second session)
+- **Mock interview** (8 questions, HR / technical / behavioural). The summary is computed locally from the transcript (answer length, filler phrases, corrections), not written by the model, because the 3B model's judgements were unreliable. **CHECK**: untested with a live voice session.
+- **Filler counting is a lower bound.** Whisper often drops "um/uh", so mostly "basically / actually / you know / I mean" are counted.
+- **Chat model is a setting** (lists what ollama has installed). Default stays `qwen2.5:3b-instruct`. A bigger instruct model is smarter but slower; coder models are the wrong kind.
+- **Interface language** (Hinglish / English) uses a lookup table, `content/en.tsv`, keyed by the Hinglish source string. Text without an entry shows as written.
