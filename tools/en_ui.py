@@ -5,7 +5,7 @@ UI = [
 ("Abhyas · Practice","Practice"),("Galtiyan · Mistakes","Mistakes"),("Settings","Settings"),
 ("English seekho, aaram se","Learn English, at your pace"),("Chhota karo","Collapse"),
 ("Sidebar kholo","Expand sidebar"),("Sidebar chhota karo","Collapse sidebar"),
-("din","days"),("Roz thoda — bas yahi kaafi hai","A little every day is enough"),
+("din","day streak"),("Roz thoda — bas yahi kaafi hai","A little every day is enough"),
 ("Suno","Listen"),("Dheere suno","Listen slowly"),("Dheere","Slowly"),
 ("Suprabhat","Good morning"),("Namaste","Hello"),("Shubh sandhya","Good evening"),
 ("Aaj ka chhota sa plan. Sabse zyada dhyan bolne par — roz 20–30 minute.","Today's short plan. Focus most on speaking — 20–30 minutes a day."),

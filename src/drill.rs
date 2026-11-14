@@ -317,13 +317,14 @@ pub fn Drill(qs: Vec<Q>, back_label: String, on_exit: EventHandler<()>, lesson: 
         let r = *right.read();
         let pct = if total_base == 0 { 0 } else { r * 100 / total_base as u32 };
         let msg = crate::i18n::tr(if pct >= 90 { "Shaandaar! Bahut badhiya" } else if pct >= 60 { "Accha kiya! Thoda aur practice" } else { "Koi baat nahi — galti se hi seekhte hain" });
+        let _ = document::eval("setTimeout(function(){var s=document.getElementById('scroller'); if(s){s.scrollTop=0;}},30);");
         return rsx! {
             div { class: "page narrow",
                 div { class: "card result",
                     div { class: "big", "{r} / {total_base}" }
                     div { class: "sub", "{msg}" }
                     div { class: "row-actions",
-                        button { class: "btn primary", onclick: move |_| on_exit.call(()), "{back_label}" }
+                        button { class: "btn primary", onclick: move |_| on_exit.call(()), "{crate::i18n::tr(&back_label)}" }
                     }
                 }
             }
@@ -375,7 +376,7 @@ pub fn Drill(qs: Vec<Q>, back_label: String, on_exit: EventHandler<()>, lesson: 
     rsx! {
         div { class: "page narrow",
             div { class: "drill-top",
-                button { class: "btn back", onclick: move |_| { audio::stop_all(); on_exit.call(()) }, "← {back_label}" }
+                button { class: "btn back", onclick: move |_| { audio::stop_all(); on_exit.call(()) }, "← {crate::i18n::tr(&back_label)}" }
                 span { class: "muted", "{*at.read() + 1} / {n}   ·   ✓ {right}" }
             }
             div { class: "bar", i { style: "width:{progress}%" } }

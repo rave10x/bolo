@@ -154,7 +154,7 @@ fn App() -> Element {
         style { "{css}" }
         div { class: format!("app {}{}", if dark { "dark" } else { "light" }, if collapsed { " collapsed" } else { "" }),
             nav { class: "side",
-                div { class: "brand", span { class: "logo", "B" } div { class: "bw", div { class: "bn", {i18n::tr("Bolo")} } div { class: "bt", "{i18n::tr(\"English seekho, aaram se\")}" } }
+                div { class: "brand", span { class: "logo", "B" } div { class: "bw", div { class: "bn", "Bolo" } div { class: "bt", "{i18n::tr(\"English seekho, aaram se\")}" } }
                     button { class: "side-toggle", title: if collapsed { i18n::tr("Sidebar kholo") } else { i18n::tr("Sidebar chhota karo") }, onclick: move |_| state.with_mut(|s| s.side_collapsed = !s.side_collapsed),
                         icon::Ico { name: if collapsed { "panel-left-open".to_string() } else { "panel-left-close".to_string() }, size: 20 } } }
                 for (i, (ico, label, r)) in nav.iter().enumerate() {
