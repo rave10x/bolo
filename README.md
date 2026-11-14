@@ -42,7 +42,7 @@ Lessons, words, drills and Conversations work without any of the AI tools. Only 
 ## Build and run
 
 ```bash
-git clone https://github.com/rahul1015s/bolo.git
+git clone https://github.com/rave10x/bolo.git
 cd bolo
 cargo build --release
 ./target/release/bolo
