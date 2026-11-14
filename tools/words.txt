@@ -1,0 +1,420 @@
+## basics|Daily Basics|Roz ke zaroori shabd|👋
+hello|नमस्ते / हैलो|हेलो|Hello, how are you?|नमस्ते, आप कैसे हैं?
+goodbye|अलविदा|गुडबाई|Goodbye, see you tomorrow.|अलविदा, कल मिलते हैं।
+please|कृपया / प्लीज़|प्लीज़|Please sit here.|कृपया यहाँ बैठिए।
+thanks|धन्यवाद|थैंक्स|Thanks for your help.|आपकी मदद के लिए धन्यवाद।
+sorry|माफ़ कीजिए|सॉरी|I am sorry for being late.|देर से आने के लिए माफ़ कीजिए।
+yes|हाँ|येस|Yes, I understand.|हाँ, मैं समझता हूँ।
+no|नहीं|नो|No, I do not want tea.|नहीं, मुझे चाय नहीं चाहिए।
+welcome|स्वागत है|वेलकम|You are welcome here.|यहाँ आपका स्वागत है।
+friend|दोस्त|फ्रेंड|He is my best friend.|वह मेरा सबसे अच्छा दोस्त है।
+name|नाम|नेम|My name is Rahul.|मेरा नाम राहुल है।
+morning|सुबह|मॉर्निंग|I wake up early in the morning.|मैं सुबह जल्दी उठता हूँ।
+night|रात|नाइट|The night is very quiet.|रात बहुत शांत है।
+today|आज|टुडे|Today is a good day.|आज एक अच्छा दिन है।
+tomorrow|कल (आने वाला)|टुमारो|I will call you tomorrow.|मैं तुम्हें कल फ़ोन करूँगा।
+yesterday|कल (बीता हुआ)|येस्टरडे|I met him yesterday.|मैं उससे कल मिला था।
+now|अभी|नाउ|Please come now.|कृपया अभी आइए।
+help|मदद|हेल्प|Can you help me?|क्या आप मेरी मदद कर सकते हैं?
+question|सवाल|क्वेश्चन|I have one question.|मेरे पास एक सवाल है।
+answer|जवाब|आंसर|Do you know the answer?|क्या तुम्हें जवाब पता है?
+word|शब्द|वर्ड|This word is new for me.|यह शब्द मेरे लिए नया है।
+## verbs1|Everyday Actions|Roz ke kaam (verbs)|🏃
+go|जाना|गो|I go to school by bus.|मैं बस से स्कूल जाता हूँ।
+come|आना|कम|Please come to my house.|कृपया मेरे घर आइए।
+eat|खाना (क्रिया)|ईट|We eat lunch at one.|हम एक बजे दोपहर का खाना खाते हैं।
+drink|पीना|ड्रिंक|I drink water every hour.|मैं हर घंटे पानी पीता हूँ।
+sleep|सोना|स्लीप|Babies sleep a lot.|बच्चे बहुत सोते हैं।
+wake|जागना / उठना|वेक|I wake at six.|मैं छह बजे उठता हूँ।
+walk|चलना / टहलना|वॉक|We walk in the park.|हम पार्क में टहलते हैं।
+run|दौड़ना|रन|Dogs run fast.|कुत्ते तेज़ दौड़ते हैं।
+sit|बैठना|सिट|Sit on the chair.|कुर्सी पर बैठो।
+stand|खड़े होना|स्टैंड|Please stand in line.|कृपया लाइन में खड़े हो जाइए।
+read|पढ़ना|रीड|I read a book every night.|मैं हर रात एक किताब पढ़ता हूँ।
+write|लिखना|राइट|Write your name here.|यहाँ अपना नाम लिखो।
+speak|बोलना|स्पीक|I want to speak English well.|मैं अच्छी अंग्रेज़ी बोलना चाहता हूँ।
+listen|सुनना (ध्यान से)|लिसन|Listen to the teacher.|टीचर की बात सुनो।
+see|देखना|सी|I can see the moon.|मैं चाँद देख सकता हूँ।
+look|देखना (नज़र डालना)|लुक|Look at this picture.|इस तस्वीर को देखो।
+give|देना|गिव|Give me a pen.|मुझे एक पेन दो।
+take|लेना|टेक|Take your bag.|अपना बैग ले लो।
+make|बनाना|मेक|She can make tea.|वह चाय बना सकती है।
+do|करना|डू|What do you do?|आप क्या करते हैं?
+## family|Family|Parivaar|👨‍👩‍👧
+mother|माँ|मदर|My mother cooks very well.|मेरी माँ बहुत अच्छा खाना बनाती हैं।
+father|पिता|फादर|My father works in a bank.|मेरे पिता बैंक में काम करते हैं।
+brother|भाई|ब्रदर|I have one brother.|मेरा एक भाई है।
+sister|बहन|सिस्टर|My sister is a doctor.|मेरी बहन डॉक्टर है।
+son|बेटा|सन|Their son is five years old.|उनका बेटा पाँच साल का है।
+daughter|बेटी|डॉटर|She is my daughter.|वह मेरी बेटी है।
+husband|पति|हस्बैंड|Her husband is a teacher.|उसका पति टीचर है।
+wife|पत्नी|वाइफ|His wife is very kind.|उसकी पत्नी बहुत दयालु है।
+grandfather|दादा / नाना|ग्रैंडफादर|My grandfather tells stories.|मेरे दादाजी कहानियाँ सुनाते हैं।
+grandmother|दादी / नानी|ग्रैंडमदर|My grandmother makes sweets.|मेरी दादी मिठाई बनाती हैं।
+uncle|चाचा / मामा|अंकल|My uncle lives in Delhi.|मेरे चाचा दिल्ली में रहते हैं।
+aunt|चाची / मौसी|आंट|My aunt is visiting us.|मेरी चाची हमसे मिलने आ रही हैं।
+cousin|चचेरा भाई/बहन|कज़िन|My cousin is my age.|मेरा कज़िन मेरी उम्र का है।
+family|परिवार|फैमिली|I love my family.|मैं अपने परिवार से प्यार करता हूँ।
+parents|माता-पिता|पेरेंट्स|My parents live in a village.|मेरे माता-पिता गाँव में रहते हैं।
+child|बच्चा|चाइल्ड|The child is playing.|बच्चा खेल रहा है।
+baby|शिशु|बेबी|The baby is sleeping.|शिशु सो रहा है।
+neighbour|पड़ोसी|नेबर|Our neighbour is very helpful.|हमारे पड़ोसी बहुत मददगार हैं।
+boy|लड़का|बॉय|The boy is reading.|लड़का पढ़ रहा है।
+girl|लड़की|गर्ल|The girl is singing.|लड़की गा रही है।
+## body|Body & Health|Sharir|🧍
+head|सिर|हेड|My head hurts.|मेरा सिर दर्द कर रहा है।
+eye|आँख|आई|Close your eye.|अपनी आँख बंद करो।
+ear|कान|इयर|I cannot hear in this ear.|मैं इस कान से सुन नहीं पाता।
+nose|नाक|नोज़|My nose is cold.|मेरी नाक ठंडी है।
+mouth|मुँह|माउथ|Open your mouth.|अपना मुँह खोलो।
+tooth|दाँत|टूथ|I have a pain in my tooth.|मेरे दाँत में दर्द है।
+hand|हाथ|हैंड|Wash your hand.|अपना हाथ धोओ।
+finger|उँगली|फिंगर|I cut my finger.|मेरी उँगली कट गई।
+arm|बाँह|आर्म|He broke his arm.|उसकी बाँह टूट गई।
+leg|टाँग|लेग|My leg is tired.|मेरी टाँग थक गई है।
+foot|पैर (पंजा)|फुट|My foot is swollen.|मेरे पैर में सूजन है।
+heart|दिल|हार्ट|The heart pumps blood.|दिल खून को पंप करता है।
+stomach|पेट|स्टमक|My stomach is full.|मेरा पेट भरा है।
+back|पीठ|बैक|My back hurts.|मेरी पीठ दर्द कर रही है।
+face|चेहरा|फेस|Wash your face.|अपना चेहरा धोओ।
+hair|बाल|हेयर|She has long hair.|उसके बाल लंबे हैं।
+voice|आवाज़|वॉइस|She has a sweet voice.|उसकी आवाज़ मीठी है।
+skin|त्वचा|स्किन|My skin is dry.|मेरी त्वचा सूखी है।
+blood|खून|ब्लड|Blood is red.|खून लाल होता है।
+body|शरीर|बॉडी|Exercise keeps the body strong.|कसरत शरीर को मज़बूत रखती है।
+## food|Food & Drink|Khaana-peena|🍛
+water|पानी|वॉटर|I need a glass of water.|मुझे एक गिलास पानी चाहिए।
+tea|चाय|टी|I drink tea every morning.|मैं हर सुबह चाय पीता हूँ।
+milk|दूध|मिल्क|The baby needs milk.|बच्चे को दूध चाहिए।
+rice|चावल|राइस|We eat rice with dal.|हम दाल के साथ चावल खाते हैं।
+bread|ब्रेड|ब्रेड|I like bread and butter.|मुझे ब्रेड और मक्खन पसंद है।
+egg|अंडा|एग|He eats an egg daily.|वह रोज़ एक अंडा खाता है।
+fruit|फल|फ्रूट|Fruit is good for health.|फल सेहत के लिए अच्छे हैं।
+apple|सेब|ऐपल|An apple a day is good.|रोज़ एक सेब अच्छा होता है।
+banana|केला|बनाना|The banana is yellow.|केला पीला होता है।
+mango|आम|मैंगो|Mango is my favourite fruit.|आम मेरा पसंदीदा फल है।
+vegetable|सब्ज़ी|वेजिटेबल|Eat more vegetable every day.|हर दिन ज़्यादा सब्ज़ी खाओ।
+potato|आलू|पोटैटो|I like fried potato.|मुझे तला हुआ आलू पसंद है।
+onion|प्याज़|अनियन|Do not cry over an onion.|प्याज़ के लिए मत रोओ।
+salt|नमक|सॉल्ट|Add some salt.|थोड़ा नमक डालो।
+sugar|चीनी|शुगर|I take tea without sugar.|मैं बिना चीनी की चाय लेता हूँ।
+breakfast|नाश्ता|ब्रेकफ़ास्ट|I have breakfast at eight.|मैं आठ बजे नाश्ता करता हूँ।
+lunch|दोपहर का खाना|लंच|We have lunch at one.|हम एक बजे दोपहर का खाना खाते हैं।
+dinner|रात का खाना|डिनर|Dinner is ready.|रात का खाना तैयार है।
+hungry|भूखा|हंग्री|I am very hungry.|मुझे बहुत भूख लगी है।
+thirsty|प्यासा|थर्स्टी|The dog is thirsty.|कुत्ता प्यासा है।
+## home|Home & Things|Ghar ki cheezein|🏠
+house|घर (मकान)|हाउस|Our house has two rooms.|हमारे घर में दो कमरे हैं।
+room|कमरा|रूम|My room is clean.|मेरा कमरा साफ़ है।
+door|दरवाज़ा|डोर|Please close the door.|कृपया दरवाज़ा बंद कर दीजिए।
+window|खिड़की|विंडो|Open the window.|खिड़की खोलो।
+table|मेज़|टेबल|The book is on the table.|किताब मेज़ पर है।
+chair|कुर्सी|चेयर|Take a chair.|एक कुर्सी ले लो।
+bed|बिस्तर|बेड|The bed is soft.|बिस्तर नरम है।
+kitchen|रसोई|किचन|My mother is in the kitchen.|मेरी माँ रसोई में हैं।
+bathroom|स्नानघर|बाथरूम|Where is the bathroom?|बाथरूम कहाँ है?
+phone|फ़ोन|फोन|My phone is new.|मेरा फ़ोन नया है।
+key|चाबी|की|I lost my key.|मैंने अपनी चाबी खो दी।
+bag|थैला / बैग|बैग|Put it in your bag.|इसे अपने बैग में रखो।
+book|किताब|बुक|This book is interesting.|यह किताब दिलचस्प है।
+pen|कलम|पेन|I need a pen.|मुझे एक कलम चाहिए।
+light|रोशनी / बत्ती|लाइट|Turn on the light.|बत्ती जलाओ।
+fan|पंखा|फैन|Switch off the fan.|पंखा बंद करो।
+clock|घड़ी (दीवार की)|क्लॉक|The clock is on the wall.|घड़ी दीवार पर है।
+wall|दीवार|वॉल|The wall is white.|दीवार सफ़ेद है।
+floor|फ़र्श / मंज़िल|फ्लोर|The floor is wet.|फ़र्श गीला है।
+roof|छत|रूफ|The cat is on the roof.|बिल्ली छत पर है।
+## colours|Colours & Numbers|Rang aur ginti|🎨
+red|लाल|रेड|The apple is red.|सेब लाल है।
+blue|नीला|ब्लू|The sky is blue.|आसमान नीला है।
+green|हरा|ग्रीन|The tree is green.|पेड़ हरा है।
+yellow|पीला|येलो|The sun is yellow.|सूरज पीला है।
+black|काला|ब्लैक|He wears a black shirt.|वह काली कमीज़ पहनता है।
+white|सफ़ेद|व्हाइट|Milk is white.|दूध सफ़ेद होता है।
+one|एक|वन|I have one pen.|मेरे पास एक कलम है।
+two|दो|टू|I have two brothers.|मेरे दो भाई हैं।
+three|तीन|थ्री|Wait for three minutes.|तीन मिनट इंतज़ार करो।
+four|चार|फोर|There are four chairs.|चार कुर्सियाँ हैं।
+five|पाँच|फाइव|I have five fingers.|मेरी पाँच उँगलियाँ हैं।
+ten|दस|टेन|Count from one to ten.|एक से दस तक गिनो।
+twenty|बीस|ट्वेंटी|He is twenty years old.|वह बीस साल का है।
+hundred|सौ|हंड्रेड|It costs a hundred rupees.|इसकी कीमत सौ रुपये है।
+thousand|हज़ार|थाउज़ंड|A thousand people came.|हज़ार लोग आए।
+first|पहला|फर्स्ट|He came first.|वह पहले आया।
+last|आख़िरी|लास्ट|This is the last page.|यह आख़िरी पन्ना है।
+half|आधा|हाफ|Give me half.|मुझे आधा दो।
+many|बहुत सारे|मेनी|There are many books.|बहुत सारी किताबें हैं।
+few|थोड़े से|फ्यू|Only few people came.|सिर्फ़ थोड़े लोग आए।
+## time|Days, Months & Time|Din, mahine, samay|📅
+Monday|सोमवार|मंडे|I work on Monday.|मैं सोमवार को काम करता हूँ।
+Tuesday|मंगलवार|ट्यूज़डे|The class is on Tuesday.|क्लास मंगलवार को है।
+Wednesday|बुधवार|वेन्ज़डे|We meet on Wednesday.|हम बुधवार को मिलते हैं।
+Thursday|गुरुवार|थर्सडे|Thursday is a busy day.|गुरुवार व्यस्त दिन है।
+Friday|शुक्रवार|फ्राइडे|Friday is my favourite day.|शुक्रवार मेरा पसंदीदा दिन है।
+Saturday|शनिवार|सैटरडे|I rest on Saturday.|मैं शनिवार को आराम करता हूँ।
+Sunday|रविवार|संडे|Sunday is a holiday.|रविवार छुट्टी का दिन है।
+week|सप्ताह|वीक|I study every week.|मैं हर सप्ताह पढ़ाई करता हूँ।
+month|महीना|मंथ|This month is busy.|यह महीना व्यस्त है।
+year|साल|यियर|A year has twelve months.|एक साल में बारह महीने होते हैं।
+January|जनवरी|जैन्युअरी|January is cold.|जनवरी ठंडी होती है।
+December|दिसंबर|डिसेंबर|December is the last month.|दिसंबर आख़िरी महीना है।
+hour|घंटा|आवर|It takes one hour.|इसमें एक घंटा लगता है।
+minute|मिनट|मिनट|Wait one minute.|एक मिनट रुको।
+second|सेकंड|सेकंड|Just a second.|बस एक सेकंड।
+early|जल्दी|अर्ली|I get up early.|मैं जल्दी उठता हूँ।
+late|देर से|लेट|You are late.|आप देर से आए हैं।
+always|हमेशा|ऑलवेज़|I always drink water.|मैं हमेशा पानी पीता हूँ।
+sometimes|कभी-कभी|सम्टाइम्स|Sometimes I walk to work.|कभी-कभी मैं पैदल काम पर जाता हूँ।
+never|कभी नहीं|नेवर|I never lie.|मैं कभी झूठ नहीं बोलता।
+## places|Places|Jagahein|🏙️
+school|स्कूल|स्कूल|The school opens at eight.|स्कूल आठ बजे खुलता है।
+college|कॉलेज|कॉलेज|My brother is in college.|मेरा भाई कॉलेज में है।
+office|दफ़्तर|ऑफ़िस|I go to the office by bus.|मैं बस से दफ़्तर जाता हूँ।
+shop|दुकान|शॉप|The shop is closed.|दुकान बंद है।
+market|बाज़ार|मार्केट|The market is crowded.|बाज़ार में भीड़ है।
+hospital|अस्पताल|हॉस्पिटल|The hospital is near.|अस्पताल पास में है।
+bank|बैंक|बैंक|I go to the bank today.|मैं आज बैंक जा रहा हूँ।
+station|स्टेशन|स्टेशन|The station is far.|स्टेशन दूर है।
+road|सड़क|रोड|The road is long.|सड़क लंबी है।
+city|शहर|सिटी|Delhi is a big city.|दिल्ली एक बड़ा शहर है।
+village|गाँव|विलेज|I was born in a village.|मेरा जन्म एक गाँव में हुआ।
+park|बाग़ / पार्क|पार्क|Children play in the park.|बच्चे पार्क में खेलते हैं।
+temple|मंदिर|टेंपल|We visit the temple on Monday.|हम सोमवार को मंदिर जाते हैं।
+library|पुस्तकालय|लाइब्रेरी|I study in the library.|मैं पुस्तकालय में पढ़ता हूँ।
+restaurant|रेस्तराँ|रेस्टोरेंट|The restaurant is full.|रेस्तराँ भरा हुआ है।
+airport|हवाई अड्डा|एयरपोर्ट|The airport is far away.|हवाई अड्डा बहुत दूर है।
+country|देश|कंट्री|India is a big country.|भारत एक बड़ा देश है।
+street|गली / सड़क|स्ट्रीट|Our street is quiet.|हमारी गली शांत है।
+home|घर (अपना)|होम|I am going home.|मैं घर जा रहा हूँ।
+world|दुनिया|वर्ल्ड|The world is big.|दुनिया बड़ी है।
+## adj|Describing Words|Visheshan (adjectives)|✨
+big|बड़ा|बिग|This is a big house.|यह एक बड़ा घर है।
+small|छोटा|स्मॉल|I have a small bag.|मेरे पास एक छोटा बैग है।
+good|अच्छा|गुड|This is a good book.|यह एक अच्छी किताब है।
+bad|बुरा|बैड|The weather is bad.|मौसम ख़राब है।
+new|नया|न्यू|I have a new phone.|मेरे पास एक नया फ़ोन है।
+old|पुराना|ओल्ड|This is an old building.|यह एक पुरानी इमारत है।
+hot|गरम|हॉट|The tea is hot.|चाय गरम है।
+cold|ठंडा|कोल्ड|The water is cold.|पानी ठंडा है।
+easy|आसान|ईज़ी|The test was easy.|टेस्ट आसान था।
+difficult|मुश्किल|डिफ़िकल्ट|English is not difficult.|अंग्रेज़ी मुश्किल नहीं है।
+fast|तेज़|फास्ट|He runs fast.|वह तेज़ दौड़ता है।
+slow|धीमा|स्लो|The bus is slow.|बस धीमी है।
+long|लंबा|लॉन्ग|The road is long.|सड़क लंबी है।
+short|छोटा (कद/लंबाई)|शॉर्ट|He is short.|वह छोटे कद का है।
+heavy|भारी|हेवी|The bag is heavy.|बैग भारी है।
+dark|अँधेरा|डार्क|The room is dark.|कमरा अँधेरा है।
+clean|साफ़|क्लीन|The room is clean.|कमरा साफ़ है।
+dirty|गंदा|डर्टी|The shirt is dirty.|कमीज़ गंदी है।
+beautiful|सुंदर|ब्यूटीफुल|The garden is beautiful.|बाग़ सुंदर है।
+strong|मज़बूत|स्ट्रॉन्ग|He is very strong.|वह बहुत मज़बूत है।
+## feel|Feelings|Bhaavnayein|😊
+happy|ख़ुश|हैप्पी|I am happy today.|मैं आज ख़ुश हूँ।
+sad|उदास|सैड|She looks sad.|वह उदास लग रही है।
+angry|ग़ुस्सा|एंग्री|My boss is angry.|मेरे बॉस ग़ुस्से में हैं।
+tired|थका हुआ|टायर्ड|I am very tired.|मैं बहुत थका हुआ हूँ।
+afraid|डरा हुआ|अफ़्रेड|I am afraid of dogs.|मैं कुत्तों से डरता हूँ।
+nervous|घबराया हुआ|नर्वस|I feel nervous before exams.|मैं परीक्षा से पहले घबरा जाता हूँ।
+excited|उत्साहित|एक्साइटेड|We are excited about the trip.|हम सफ़र को लेकर उत्साहित हैं।
+bored|ऊबा हुआ|बोर्ड|I am bored at home.|मैं घर पर ऊब गया हूँ।
+proud|गर्वित|प्राउड|I am proud of you.|मुझे तुम पर गर्व है।
+lonely|अकेला (दुखी)|लोनली|He feels lonely here.|वह यहाँ अकेला महसूस करता है।
+worried|चिंतित|वरीड|She is worried about her son.|वह अपने बेटे को लेकर चिंतित है।
+surprised|हैरान|सरप्राइज़्ड|I was surprised by the news.|मैं यह ख़बर सुनकर हैरान था।
+confident|आत्मविश्वासी|कॉन्फ़िडेंट|Be confident in the interview.|इंटरव्यू में आत्मविश्वास रखो।
+shy|शर्मीला|शाई|He is shy with new people.|वह नए लोगों से शर्माता है।
+busy|व्यस्त|बिज़ी|I am busy right now.|मैं अभी व्यस्त हूँ।
+free|ख़ाली / मुफ़्त|फ्री|Are you free tonight?|क्या आप आज रात ख़ाली हैं?
+sure|पक्का|श्योर|I am sure about this.|मुझे इस बारे में पक्का यक़ीन है।
+ready|तैयार|रेडी|Are you ready?|क्या तुम तैयार हो?
+sick|बीमार|सिक|He is sick today.|वह आज बीमार है।
+comfortable|आरामदायक|कम्फ़र्टेबल|This chair is comfortable.|यह कुर्सी आरामदायक है।
+## link|Question & Linking Words|Sawaal aur jodne wale shabd|🔗
+what|क्या|व्हाट|What is your name?|आपका नाम क्या है?
+where|कहाँ|व्हेयर|Where do you live?|आप कहाँ रहते हैं?
+when|कब|व्हेन|When do you wake up?|आप कब उठते हैं?
+why|क्यों|व्हाई|Why are you late?|आप देर से क्यों आए?
+who|कौन|हू|Who is that man?|वह आदमी कौन है?
+how|कैसे|हाउ|How are you?|आप कैसे हैं?
+which|कौन सा|व्हिच|Which bag is yours?|कौन सा बैग तुम्हारा है?
+whose|किसका|हूज़|Whose pen is this?|यह किसकी कलम है?
+and|और|एंड|I like tea and coffee.|मुझे चाय और कॉफ़ी पसंद है।
+but|लेकिन|बट|I am tired but happy.|मैं थका हूँ लेकिन ख़ुश हूँ।
+or|या|ओर|Tea or coffee?|चाय या कॉफ़ी?
+because|क्योंकि|बिकॉज़|I am late because of traffic.|मैं ट्रैफ़िक की वजह से देर से आया।
+so|इसलिए|सो|It was raining, so I stayed home.|बारिश हो रही थी, इसलिए मैं घर पर रहा।
+if|अगर|इफ़|If you study, you will pass.|अगर तुम पढ़ोगे, तो पास होगे।
+then|फिर / तब|देन|First eat, then sleep.|पहले खाओ, फिर सोओ।
+also|भी|ऑल्सो|I also like music.|मुझे संगीत भी पसंद है।
+too|भी (अंत में) / बहुत ज़्यादा|टू|I like it too.|मुझे भी यह पसंद है।
+very|बहुत|वेरी|The food is very good.|खाना बहुत अच्छा है।
+only|सिर्फ़|ओनली|I have only one pen.|मेरे पास सिर्फ़ एक कलम है।
+again|फिर से|अगेन|Please say it again.|कृपया इसे फिर से कहिए।
+## prep|Small Words (in, on, at...)|Chhote shabd|📍
+in|में|इन|The book is in the bag.|किताब बैग में है।
+on|पर|ऑन|The pen is on the table.|कलम मेज़ पर है।
+at|पर / में (जगह-समय)|ऐट|I am at home.|मैं घर पर हूँ।
+under|के नीचे|अंडर|The cat is under the bed.|बिल्ली बिस्तर के नीचे है।
+behind|के पीछे|बिहाइंड|He stands behind me.|वह मेरे पीछे खड़ा है।
+between|के बीच में|बिटवीन|Sit between us.|हमारे बीच में बैठो।
+near|के पास|नियर|My house is near the park.|मेरा घर पार्क के पास है।
+with|के साथ|विद|I go with my friend.|मैं अपने दोस्त के साथ जाता हूँ।
+without|के बिना|विदाउट|I drink tea without sugar.|मैं बिना चीनी के चाय पीता हूँ।
+from|से|फ्रॉम|I am from Bihar.|मैं बिहार से हूँ।
+to|को / तक|टू|I go to school.|मैं स्कूल जाता हूँ।
+for|के लिए|फॉर|This gift is for you.|यह तोहफ़ा तुम्हारे लिए है।
+about|के बारे में|अबाउट|Tell me about your day.|मुझे अपने दिन के बारे में बताओ।
+before|से पहले|बिफ़ोर|Wash your hands before eating.|खाने से पहले हाथ धोओ।
+after|के बाद|आफ़्टर|Call me after lunch.|खाने के बाद मुझे फ़ोन करो।
+inside|अंदर|इनसाइड|The cat is inside the house.|बिल्ली घर के अंदर है।
+outside|बाहर|आउटसाइड|The children are outside.|बच्चे बाहर हैं।
+above|के ऊपर|अबव|The fan is above the bed.|पंखा बिस्तर के ऊपर है।
+across|के पार|अक्रॉस|The shop is across the road.|दुकान सड़क के पार है।
+through|के आर-पार|थ्रू|The train goes through a tunnel.|ट्रेन सुरंग के आर-पार जाती है।
+## verbs2|More Useful Verbs|Aur zaroori verbs|⚡
+want|चाहना|वॉन्ट|I want some water.|मुझे थोड़ा पानी चाहिए।
+need|ज़रूरत होना|नीड|I need your help.|मुझे आपकी मदद चाहिए।
+like|पसंद करना|लाइक|I like cricket.|मुझे क्रिकेट पसंद है।
+love|प्यार करना|लव|I love my country.|मैं अपने देश से प्यार करता हूँ।
+know|जानना|नो|I know him well.|मैं उसे अच्छी तरह जानता हूँ।
+think|सोचना|थिंक|I think you are right.|मुझे लगता है तुम सही हो।
+understand|समझना|अंडरस्टैंड|I understand this lesson.|मैं यह पाठ समझता हूँ।
+remember|याद रखना|रिमेंबर|Do you remember me?|क्या तुम्हें मैं याद हूँ?
+forget|भूल जाना|फ़र्गेट|Do not forget your keys.|अपनी चाबियाँ मत भूलना।
+learn|सीखना|लर्न|I learn English daily.|मैं रोज़ अंग्रेज़ी सीखता हूँ।
+teach|पढ़ाना|टीच|I teach maths to children.|मैं बच्चों को गणित पढ़ाता हूँ।
+ask|पूछना|आस्क|Ask your teacher.|अपने टीचर से पूछो।
+tell|बताना|टेल|Tell me the truth.|मुझे सच बताओ।
+buy|ख़रीदना|बाय|I want to buy a phone.|मैं एक फ़ोन ख़रीदना चाहता हूँ।
+sell|बेचना|सेल|They sell fruit.|वे फल बेचते हैं।
+pay|भुगतान करना|पे|I pay the bill online.|मैं बिल ऑनलाइन भरता हूँ।
+wait|इंतज़ार करना|वेट|Please wait here.|कृपया यहाँ इंतज़ार कीजिए।
+open|खोलना|ओपन|Open your book.|अपनी किताब खोलो।
+close|बंद करना|क्लोज़|Close the door.|दरवाज़ा बंद करो।
+start|शुरू करना|स्टार्ट|Let us start now.|चलो अब शुरू करते हैं।
+## work|School & Work|Padhai aur kaam|💼
+teacher|शिक्षक|टीचर|My teacher is very kind.|मेरे शिक्षक बहुत दयालु हैं।
+student|विद्यार्थी|स्टूडेंट|He is a good student.|वह एक अच्छा विद्यार्थी है।
+class|कक्षा|क्लास|The class starts at nine.|कक्षा नौ बजे शुरू होती है।
+exam|परीक्षा|एग्ज़ाम|I have an exam tomorrow.|मेरी कल परीक्षा है।
+lesson|पाठ|लेसन|This lesson is easy.|यह पाठ आसान है।
+homework|गृहकार्य|होमवर्क|I finish my homework first.|मैं पहले अपना गृहकार्य पूरा करता हूँ।
+job|नौकरी|जॉब|I am looking for a job.|मैं नौकरी ढूँढ रहा हूँ।
+work|काम|वर्क|I have a lot of work.|मेरे पास बहुत काम है।
+boss|मालिक / बॉस|बॉस|My boss is strict.|मेरे बॉस सख़्त हैं।
+manager|प्रबंधक|मैनेजर|The manager is in a meeting.|प्रबंधक मीटिंग में हैं।
+salary|वेतन|सैलरी|My salary comes on the first.|मेरा वेतन पहली तारीख़ को आता है।
+meeting|बैठक|मीटिंग|We have a meeting at ten.|हमारी दस बजे बैठक है।
+email|ईमेल|ईमेल|I will send you an email.|मैं तुम्हें एक ईमेल भेजूँगा।
+interview|इंटरव्यू|इंटरव्यू|I have an interview on Monday.|मेरा सोमवार को इंटरव्यू है।
+company|कंपनी|कंपनी|He works in a big company.|वह एक बड़ी कंपनी में काम करता है।
+team|टीम|टीम|Our team is great.|हमारी टीम शानदार है।
+project|परियोजना|प्रोजेक्ट|The project is almost done.|परियोजना लगभग पूरी हो गई है।
+skill|हुनर|स्किल|Communication is an important skill.|बातचीत एक ज़रूरी हुनर है।
+practice|अभ्यास|प्रैक्टिस|Practice makes you perfect.|अभ्यास आपको माहिर बनाता है।
+goal|लक्ष्य|गोल|My goal is to speak fluently.|मेरा लक्ष्य धाराप्रवाह बोलना है।
+## tech|Computer & Coding|Computer aur coding|💻
+computer|कंप्यूटर|कंप्यूटर|I work on a computer.|मैं कंप्यूटर पर काम करता हूँ।
+laptop|लैपटॉप|लैपटॉप|My laptop is slow.|मेरा लैपटॉप धीमा है।
+internet|इंटरनेट|इंटरनेट|The internet is not working.|इंटरनेट नहीं चल रहा है।
+website|वेबसाइट|वेबसाइट|I built a website.|मैंने एक वेबसाइट बनाई।
+app|ऐप|ऐप|This app is free.|यह ऐप मुफ़्त है।
+code|कोड|कोड|I write code every day.|मैं रोज़ कोड लिखता हूँ।
+program|प्रोग्राम|प्रोग्राम|This program has a bug.|इस प्रोग्राम में एक गड़बड़ है।
+bug|गड़बड़ (बग)|बग|I found a bug.|मुझे एक बग मिला।
+error|त्रुटि|एरर|The error message is clear.|त्रुटि का संदेश साफ़ है।
+file|फ़ाइल|फाइल|Save the file.|फ़ाइल सेव करो।
+password|पासवर्ड|पासवर्ड|Do not share your password.|अपना पासवर्ड साझा मत करो।
+download|डाउनलोड करना|डाउनलोड|I will download the app.|मैं ऐप डाउनलोड करूँगा।
+install|स्थापित करना|इंस्टॉल|Please install Java.|कृपया Java इंस्टॉल कीजिए।
+update|अपडेट|अपडेट|There is a new update.|एक नया अपडेट आया है।
+function|फ़ंक्शन|फंक्शन|This function returns a number.|यह फ़ंक्शन एक संख्या लौटाता है।
+data|डेटा|डेटा|The data is safe.|डेटा सुरक्षित है।
+test|परीक्षण|टेस्ट|Run the test again.|परीक्षण फिर से चलाओ।
+deploy|तैनात करना (live करना)|डिप्लॉय|We deploy on Friday.|हम शुक्रवार को deploy करते हैं।
+deadline|आख़िरी तारीख़|डेडलाइन|The deadline is tomorrow.|आख़िरी तारीख़ कल है।
+screen|स्क्रीन|स्क्रीन|The screen is too bright.|स्क्रीन बहुत तेज़ है।
+## travel|Travel|Safar|🚆
+train|रेलगाड़ी|ट्रेन|The train is late.|रेलगाड़ी देर से है।
+bus|बस|बस|I take the bus to work.|मैं काम पर बस से जाता हूँ।
+car|कार|कार|He drives a small car.|वह एक छोटी कार चलाता है।
+bike|साइकिल / बाइक|बाइक|I go by bike.|मैं बाइक से जाता हूँ।
+ticket|टिकट|टिकट|I need a ticket.|मुझे एक टिकट चाहिए।
+seat|सीट|सीट|Is this seat free?|क्या यह सीट ख़ाली है?
+luggage|सामान|लगेज|My luggage is heavy.|मेरा सामान भारी है।
+map|नक़्शा|मैप|Look at the map.|नक़्शा देखो।
+address|पता|एड्रेस|What is your address?|आपका पता क्या है?
+ride|सवारी करना|राइड|Can I ride your bike?|क्या मैं आपकी बाइक चला सकता हूँ?
+drive|गाड़ी चलाना|ड्राइव|I can drive a car.|मैं कार चला सकता हूँ।
+arrive|पहुँचना|अराइव|The train will arrive soon.|ट्रेन जल्दी पहुँचेगी।
+leave|छोड़ना / निकलना|लीव|We leave at seven.|हम सात बजे निकलते हैं।
+travel|यात्रा करना|ट्रैवल|I like to travel.|मुझे यात्रा करना पसंद है।
+trip|सफ़र / यात्रा|ट्रिप|We planned a trip to Goa.|हमने गोवा की यात्रा की योजना बनाई।
+hotel|होटल|होटल|The hotel is very clean.|होटल बहुत साफ़ है।
+left|बायाँ|लेफ़्ट|Turn left here.|यहाँ से बाएँ मुड़ो।
+right|दायाँ / सही|राइट|Turn right at the corner.|कोने से दाएँ मुड़ो।
+straight|सीधा|स्ट्रेट|Go straight for two minutes.|दो मिनट सीधे जाओ।
+far|दूर|फ़ार|My office is far.|मेरा दफ़्तर दूर है।
+## health|Health & Doctor|Sehat|🏥
+doctor|डॉक्टर|डॉक्टर|I need to see a doctor.|मुझे डॉक्टर को दिखाना है।
+medicine|दवा|मेडिसिन|Take this medicine twice a day.|यह दवा दिन में दो बार लो।
+fever|बुख़ार|फीवर|I have a fever.|मुझे बुख़ार है।
+cough|खाँसी|कफ़|I have a bad cough.|मुझे बहुत खाँसी है।
+cold|ज़ुकाम|कोल्ड|I caught a cold.|मुझे ज़ुकाम हो गया।
+pain|दर्द|पेन|I have a pain in my leg.|मेरी टाँग में दर्द है।
+headache|सिरदर्द|हेडेक|I have a headache.|मुझे सिरदर्द है।
+rest|आराम|रेस्ट|You need some rest.|आपको थोड़े आराम की ज़रूरत है।
+exercise|कसरत|एक्सरसाइज़|Daily exercise is important.|रोज़ की कसरत ज़रूरी है।
+healthy|सेहतमंद|हेल्दी|He eats healthy food.|वह सेहतमंद खाना खाता है।
+weak|कमज़ोर|वीक|I feel weak today.|मैं आज कमज़ोर महसूस कर रहा हूँ।
+hurt|चोट पहुँचना|हर्ट|My leg hurt.|मेरी टाँग में चोट लगी।
+cure|इलाज करना|क्योर|This medicine will cure you.|यह दवा तुम्हें ठीक कर देगी।
+pharmacy|दवाख़ाना|फ़ार्मेसी|The pharmacy is next door.|दवाख़ाना बगल में है।
+appointment|मुलाक़ात का समय|अपॉइंटमेंट|I have an appointment at five.|मेरी पाँच बजे की अपॉइंटमेंट है।
+allergy|एलर्जी|एलर्जी|I have an allergy to dust.|मुझे धूल से एलर्जी है।
+injury|चोट|इंजरी|He has a leg injury.|उसकी टाँग में चोट है।
+sleepy|नींद में|स्लीपी|I feel sleepy after lunch.|मुझे खाने के बाद नींद आती है।
+safe|सुरक्षित|सेफ़|This place is safe.|यह जगह सुरक्षित है।
+careful|सावधान|केयरफुल|Be careful on the road.|सड़क पर सावधान रहो।
+## nature|Weather & Nature|Mausam aur prakriti|🌦️
+sun|सूरज|सन|The sun is bright.|सूरज तेज़ है।
+moon|चाँद|मून|The moon is beautiful tonight.|आज रात चाँद सुंदर है।
+rain|बारिश|रेन|I love the rain.|मुझे बारिश पसंद है।
+wind|हवा|विंड|The wind is strong.|हवा तेज़ है।
+cloud|बादल|क्लाउड|There is a dark cloud.|एक काला बादल है।
+snow|बर्फ़|स्नो|Snow falls in winter.|सर्दियों में बर्फ़ गिरती है।
+summer|गर्मी का मौसम|समर|Summer is very hot.|गर्मी का मौसम बहुत गरम होता है।
+winter|सर्दी का मौसम|विंटर|Winter is my favourite season.|सर्दी का मौसम मेरा पसंदीदा है।
+weather|मौसम|वेदर|The weather is nice today.|आज मौसम अच्छा है।
+tree|पेड़|ट्री|The tree is very old.|पेड़ बहुत पुराना है।
+flower|फूल|फ्लावर|This flower smells sweet.|इस फूल की ख़ुशबू मीठी है।
+river|नदी|रिवर|The river is wide.|नदी चौड़ी है।
+mountain|पहाड़|माउंटेन|We climbed a mountain.|हम एक पहाड़ पर चढ़े।
+sky|आसमान|स्काई|The sky is clear.|आसमान साफ़ है।
+star|तारा|स्टार|I can see a star.|मुझे एक तारा दिख रहा है।
+dog|कुत्ता|डॉग|The dog is barking.|कुत्ता भौंक रहा है।
+cat|बिल्ली|कैट|The cat drinks milk.|बिल्ली दूध पीती है।
+bird|पक्षी|बर्ड|A bird is on the tree.|एक पक्षी पेड़ पर है।
+cow|गाय|काउ|The cow gives milk.|गाय दूध देती है।
+fish|मछली|फ़िश|Fish live in water.|मछली पानी में रहती है।
+## shop|Shopping & Money|Kharidari aur paisa|🛒
+money|पैसा|मनी|I do not have much money.|मेरे पास ज़्यादा पैसा नहीं है।
+price|कीमत|प्राइस|What is the price of this shirt?|इस कमीज़ की कीमत क्या है?
+cheap|सस्ता|चीप|This phone is cheap.|यह फ़ोन सस्ता है।
+expensive|महँगा|एक्सपेंसिव|That watch is expensive.|वह घड़ी महँगी है।
+bill|बिल|बिल|Can I have the bill, please?|क्या मुझे बिल मिल सकता है?
+cash|नक़द|कैश|I will pay in cash.|मैं नक़द दूँगा।
+change|खुले पैसे / बदलना|चेंज|Do you have change?|क्या आपके पास खुले पैसे हैं?
+discount|छूट|डिस्काउंट|Is there any discount?|क्या कोई छूट है?
+size|नाप|साइज़|What size do you need?|आपको कौन सा नाप चाहिए?
+shirt|कमीज़|शर्ट|I want a blue shirt.|मुझे एक नीली कमीज़ चाहिए।
+shoes|जूते|शूज़|My shoes are old.|मेरे जूते पुराने हैं।
+wear|पहनना|वेयर|I wear a cap in summer.|मैं गर्मी में टोपी पहनता हूँ।
+try|कोशिश करना / पहनकर देखना|ट्राई|Can I try this?|क्या मैं इसे पहनकर देख सकता हूँ?
+bargain|मोल-भाव|बारगेन|He is good at bargain.|वह मोल-भाव में माहिर है।
+offer|प्रस्ताव|ऑफ़र|There is a special offer today.|आज एक ख़ास ऑफ़र है।
+return|वापस करना|रिटर्न|I want to return this shirt.|मैं यह कमीज़ वापस करना चाहता हूँ।
+rupee|रुपया|रुपी|It costs fifty rupee.|इसकी कीमत पचास रुपये है।
+cost|कीमत होना|कॉस्ट|How much does it cost?|इसकी कीमत कितनी है?
+save|बचाना|सेव|I save some money every month.|मैं हर महीने कुछ पैसे बचाता हूँ।
+spend|ख़र्च करना|स्पेंड|Do not spend too much.|ज़्यादा ख़र्च मत करो।

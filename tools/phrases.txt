@@ -1,0 +1,221 @@
+## greet|Greetings|Milna-julna|👋
+Hello, how are you?|नमस्ते, आप कैसे हैं?
+I am fine, thank you.|मैं ठीक हूँ, धन्यवाद।
+And you?|और आप?
+Nice to meet you.|आपसे मिलकर अच्छा लगा।
+My name is Rahul.|मेरा नाम राहुल है।
+What is your name?|आपका नाम क्या है?
+Where are you from?|आप कहाँ से हैं?
+I am from India.|मैं भारत से हूँ।
+Good morning, sir.|नमस्ते सर (सुबह)।
+Good night, sleep well.|शुभ रात्रि, अच्छे से सोना।
+See you tomorrow.|कल मिलते हैं।
+Take care.|अपना ध्यान रखना।
+## intro|Introducing Myself|Apna parichay|🙋
+Let me introduce myself.|मुझे अपना परिचय देने दीजिए।
+I am twenty-five years old.|मेरी उम्र पच्चीस साल है।
+I live in Lucknow.|मैं लखनऊ में रहता हूँ।
+I am a student.|मैं एक विद्यार्थी हूँ।
+I am learning to code.|मैं कोडिंग सीख रहा हूँ।
+I studied in a government school.|मैंने सरकारी स्कूल में पढ़ाई की।
+I have two brothers and one sister.|मेरे दो भाई और एक बहन हैं।
+My hobby is playing cricket.|मेरा शौक़ क्रिकेट खेलना है।
+I want to improve my English.|मैं अपनी अंग्रेज़ी सुधारना चाहता हूँ।
+I am working hard every day.|मैं हर दिन मेहनत कर रहा हूँ।
+I like listening to music.|मुझे संगीत सुनना पसंद है।
+Thank you for listening.|सुनने के लिए धन्यवाद।
+## daily|Daily Life|Roz ki zindagi|☀️
+I wake up at six.|मैं छह बजे उठता हूँ।
+I brush my teeth and take a bath.|मैं ब्रश करता हूँ और नहाता हूँ।
+I have tea and breakfast.|मैं चाय और नाश्ता करता हूँ।
+I go to college by bus.|मैं बस से कॉलेज जाता हूँ।
+What time is it?|क्या समय हुआ है?
+It is half past ten.|साढ़े दस बजे हैं।
+I am very hungry.|मुझे बहुत भूख लगी है।
+Let us have lunch.|चलो दोपहर का खाना खाते हैं।
+I study in the evening.|मैं शाम को पढ़ाई करता हूँ।
+I watch a movie at night.|मैं रात को फ़िल्म देखता हूँ।
+I go to bed at eleven.|मैं ग्यारह बजे सोने जाता हूँ।
+I am very tired today.|मैं आज बहुत थका हुआ हूँ।
+## ask|Asking & Helping|Poochhna aur madad|🙏
+Excuse me, can you help me?|माफ़ कीजिए, क्या आप मेरी मदद कर सकते हैं?
+Could you repeat that, please?|क्या आप कृपया दोबारा कह सकते हैं?
+Please speak slowly.|कृपया धीरे बोलिए।
+I did not understand.|मैं समझा नहीं।
+What does this word mean?|इस शब्द का क्या मतलब है?
+How do you say this in English?|इसे अंग्रेज़ी में कैसे कहते हैं?
+Can I ask a question?|क्या मैं एक सवाल पूछ सकता हूँ?
+May I come in?|क्या मैं अंदर आ सकता हूँ?
+Where is the bus stop?|बस स्टॉप कहाँ है?
+How much is this?|यह कितने का है?
+Can you show me the way?|क्या आप मुझे रास्ता बता सकते हैं?
+Thank you so much for your help.|आपकी मदद के लिए बहुत धन्यवाद।
+## shopp|At the Shop|Dukaan par|🛍️
+I want to buy a shirt.|मुझे एक कमीज़ ख़रीदनी है।
+Do you have this in blue?|क्या यह नीले रंग में है?
+How much does it cost?|इसकी कीमत कितनी है?
+It is too expensive.|यह बहुत महँगा है।
+Can you give me a discount?|क्या आप मुझे छूट दे सकते हैं?
+I will take this one.|मैं यह वाला लूँगा।
+Can I pay by card?|क्या मैं कार्ड से भुगतान कर सकता हूँ?
+Please give me the bill.|कृपया मुझे बिल दीजिए।
+Do you have change?|क्या आपके पास खुले पैसे हैं?
+I want to return this.|मैं इसे वापस करना चाहता हूँ।
+Can I try it on?|क्या मैं इसे पहनकर देख सकता हूँ?
+Thank you, have a nice day.|धन्यवाद, आपका दिन शुभ हो।
+## food|At a Restaurant|Restaurant mein|🍽️
+A table for two, please.|कृपया दो लोगों के लिए एक मेज़।
+Can I see the menu?|क्या मैं मेनू देख सकता हूँ?
+I will have a cup of tea.|मैं एक कप चाय लूँगा।
+What do you recommend?|आप क्या सुझाएँगे?
+Please bring some water.|कृपया थोड़ा पानी लाइए।
+The food is delicious.|खाना बहुत स्वादिष्ट है।
+It is a little spicy.|यह थोड़ा तीखा है।
+No sugar, please.|कृपया चीनी नहीं।
+Can we have the bill, please?|क्या हमें बिल मिल सकता है?
+Keep the change.|बाक़ी पैसे रख लीजिए।
+I am full, thank you.|मेरा पेट भर गया, धन्यवाद।
+The service was very good.|सेवा बहुत अच्छी थी।
+## travelp|Travel & Directions|Safar aur raasta|🧭
+Where is the railway station?|रेलवे स्टेशन कहाँ है?
+Go straight and turn left.|सीधे जाइए और बाएँ मुड़िए।
+It is near the bank.|यह बैंक के पास है।
+How far is it from here?|यहाँ से कितनी दूर है?
+Which bus goes to the market?|कौन सी बस बाज़ार जाती है?
+One ticket to Delhi, please.|कृपया दिल्ली का एक टिकट।
+When does the train leave?|ट्रेन कब छूटती है?
+Is this seat free?|क्या यह सीट ख़ाली है?
+I am lost.|मैं रास्ता भटक गया हूँ।
+Please stop here.|कृपया यहाँ रोकिए।
+I have a reservation.|मेरा आरक्षण है।
+What time do we arrive?|हम कितने बजे पहुँचेंगे?
+## phone|Phone & Messages|Phone par baat|📞
+Hello, who is this?|हैलो, कौन बोल रहा है?
+This is Rahul speaking.|मैं राहुल बोल रहा हूँ।
+Can I speak to Mr. Sharma?|क्या मैं श्री शर्मा से बात कर सकता हूँ?
+He is not here right now.|वह अभी यहाँ नहीं है।
+Can I leave a message?|क्या मैं संदेश छोड़ सकता हूँ?
+I will call you back.|मैं आपको वापस फ़ोन करूँगा।
+Sorry, the line is bad.|माफ़ कीजिए, लाइन ख़राब है।
+Can you hear me?|क्या आप मुझे सुन पा रहे हैं?
+Please send me a message.|कृपया मुझे संदेश भेजिए।
+I will text you the address.|मैं तुम्हें पता मैसेज कर दूँगा।
+Let us talk later.|चलो बाद में बात करते हैं।
+Thanks for calling.|फ़ोन करने के लिए धन्यवाद।
+## opinion|Opinions & Feelings|Raay aur bhaavnayein|💭
+I think it is a good idea.|मुझे लगता है यह अच्छा विचार है।
+I agree with you.|मैं आपसे सहमत हूँ।
+I do not agree.|मैं सहमत नहीं हूँ।
+In my opinion, it is difficult.|मेरी राय में, यह मुश्किल है।
+I like this very much.|मुझे यह बहुत पसंद है।
+I do not like spicy food.|मुझे तीखा खाना पसंद नहीं।
+That sounds great!|यह बहुत बढ़िया लगता है!
+I am feeling nervous.|मैं घबराया हुआ महसूस कर रहा हूँ।
+I am happy for you.|मैं आपके लिए ख़ुश हूँ।
+I am sorry to hear that.|यह सुनकर मुझे दुख हुआ।
+Do not worry, everything will be fine.|चिंता मत करो, सब ठीक हो जाएगा।
+You are right.|आप सही हैं।
+## office|At Work|Office mein|🏢
+Good morning, everyone.|सभी को नमस्ते।
+I have a meeting at eleven.|मेरी ग्यारह बजे मीटिंग है।
+Can we start the meeting?|क्या हम मीटिंग शुरू कर सकते हैं?
+I will send you the report today.|मैं आज आपको रिपोर्ट भेज दूँगा।
+I need more time for this task.|मुझे इस काम के लिए और समय चाहिए।
+The deadline is on Friday.|आख़िरी तारीख़ शुक्रवार है।
+Let me check and get back to you.|मुझे देखने दीजिए, मैं आपको बताता हूँ।
+Could you share your screen?|क्या आप अपनी स्क्रीन साझा कर सकते हैं?
+I am working on a new feature.|मैं एक नए फ़ीचर पर काम कर रहा हूँ।
+The code is ready for review.|कोड समीक्षा के लिए तैयार है।
+Sorry, I missed that.|माफ़ कीजिए, मुझसे वह छूट गया।
+Thank you for your time.|आपके समय के लिए धन्यवाद।
+## interview|Job Interview|Job interview|🎤
+Thank you for this opportunity.|इस अवसर के लिए धन्यवाद।
+Tell me about yourself.|मुझे अपने बारे में बताइए।
+I have six months of practice in Java.|मुझे Java में छह महीने का अभ्यास है।
+I built a small project using Java.|मैंने Java से एक छोटा प्रोजेक्ट बनाया।
+I am a fast learner.|मैं जल्दी सीखता हूँ।
+I work well in a team.|मैं टीम में अच्छा काम करता हूँ।
+My strength is hard work.|मेरी ताक़त मेहनत है।
+I want to grow in this company.|मैं इस कंपनी में आगे बढ़ना चाहता हूँ।
+Could you repeat the question?|क्या आप सवाल दोहरा सकते हैं?
+I do not know this, but I can learn it.|मुझे यह नहीं पता, पर मैं सीख सकता हूँ।
+Do you have any questions for me?|क्या आपका मुझसे कोई सवाल है?
+Thank you for your time.|आपके समय के लिए धन्यवाद।
+## health2|At the Doctor|Doctor ke paas|🩺
+I do not feel well.|मेरी तबीयत ठीक नहीं है।
+I have a fever since yesterday.|मुझे कल से बुख़ार है।
+I have a pain in my stomach.|मेरे पेट में दर्द है।
+I have a bad cough.|मुझे बहुत खाँसी है।
+How long have you had this problem?|आपको यह परेशानी कब से है?
+Take this medicine twice a day.|यह दवा दिन में दो बार लीजिए।
+Take rest and drink water.|आराम कीजिए और पानी पीजिए।
+Is it serious?|क्या यह गंभीर है?
+Do I need any tests?|क्या मुझे कोई जाँच करानी होगी?
+Come again after three days.|तीन दिन बाद फिर आइए।
+I am allergic to dust.|मुझे धूल से एलर्जी है।
+Thank you, doctor.|धन्यवाद, डॉक्टर साहब।
+## pmeet|Meetings|Meeting mein bolna|🗓️
+Let us get started, since everyone is here.|चलिए शुरू करते हैं, सब यहाँ हैं।
+Could we take this offline and discuss it after the meeting?|क्या हम इसे meeting के बाद अलग से बात कर सकते हैं?
+Sorry to interrupt, but I have a quick question.|बीच में टोकने के लिए माफ़ कीजिए, मेरा एक छोटा सवाल है।
+Let me make sure I understand what you are saying.|मुझे पक्का करने दीजिए कि मैं आपकी बात सही समझा।
+I would like to add one more point to that.|मैं इसमें एक और बात जोड़ना चाहूँगा।
+Could you share the document with everyone?|क्या आप यह document सबके साथ साझा कर सकते हैं?
+I will follow up with an email summarising what we decided.|मैं हमारे फ़ैसलों का सार email से भेजूँगा।
+Who will take ownership of this task?|इस काम की ज़िम्मेदारी कौन लेगा?
+We are running out of time, so let us move to the next topic.|समय कम है, इसलिए अगले विषय पर चलते हैं।
+Can everyone see my screen?|क्या सबको मेरी screen दिख रही है?
+I will get back to you with the exact numbers by tomorrow.|मैं कल तक आपको सही आँकड़े बताऊँगा।
+Thanks, everyone, for your time today.|आज आपके समय के लिए सबका धन्यवाद।
+## pdis|Disagree & Push Back Politely|Tameez se na kehna|🙅
+I see your point, but I have a slightly different view.|मैं आपकी बात समझता हूँ, पर मेरा नज़रिया थोड़ा अलग है।
+I am not sure that will work, because of the time we have.|मुझे पक्का नहीं कि यह चलेगा, क्योंकि हमारे पास समय कम है।
+That is a valid concern, and here is how we can handle it.|यह जायज़ चिंता है, और हम इसे ऐसे संभाल सकते हैं।
+Could we consider another option?|क्या हम कोई दूसरा विकल्प सोच सकते हैं?
+With respect, I think we may be missing one risk.|सम्मान के साथ, मुझे लगता है हम एक जोखिम चूक रहे हैं।
+I would need more time to do this properly.|इसे ठीक से करने के लिए मुझे और समय चाहिए।
+I am afraid I cannot take on more work this week.|मुझे डर है कि मैं इस हफ़्ते और काम नहीं ले सकता।
+Let us agree to disagree and decide with data.|चलिए असहमत रहते हैं और आँकड़ों के आधार पर तय करते हैं।
+Can we prioritise? I can do either of these, but not both.|क्या हम प्राथमिकता तय करें? मैं इनमें से एक कर सकता हूँ, दोनों नहीं।
+I understand the urgency, and I will do my best.|मैं तात्कालिकता समझता हूँ, और पूरी कोशिश करूँगा।
+Thank you for the feedback, I will work on it.|फ़ीडबैक के लिए धन्यवाद, मैं इस पर काम करूँगा।
+That is fine with me, let us go with your approach.|मुझे मंज़ूर है, आपके तरीक़े से चलते हैं।
+## pint|Interview Answers|Interview ke lambe jawab|🎯
+I am a Java developer who enjoys building reliable backend systems.|मैं एक Java developer हूँ जिसे भरोसेमंद backend systems बनाना पसंद है।
+One of my strengths is that I stay calm and keep trying until I solve a problem.|मेरी एक ताक़त यह है कि मैं शांत रहता हूँ और हल मिलने तक कोशिश करता हूँ।
+I built a small application from scratch, including the database and the tests.|मैंने शुरू से एक छोटा application बनाया, database और tests सहित।
+In my last project, I reduced the loading time by adding an index to the database.|अपने पिछले project में मैंने database में index जोड़कर loading time घटाया।
+I do not know that yet, but I would approach it by reading the documentation and trying a small example.|मुझे यह अभी नहीं पता, पर मैं documentation पढ़कर और छोटा उदाहरण आज़माकर सीखूँगा।
+When I disagree, I listen first and then explain my reasoning with an example.|जब मैं असहमत होता हूँ, पहले सुनता हूँ और फिर उदाहरण के साथ अपना तर्क बताता हूँ।
+I am looking for a role where I can learn quickly and contribute to real products.|मैं ऐसी भूमिका ढूँढ रहा हूँ जहाँ तेज़ी से सीख सकूँ और असली products में योगदान दे सकूँ।
+I work well under pressure, and I communicate early when something is at risk.|मैं दबाव में अच्छा काम करता हूँ, और जोखिम होने पर जल्दी बता देता हूँ।
+My weakness is that I sometimes try to do everything myself, and I am learning to ask for help sooner.|मेरी कमज़ोरी है कि मैं सब कुछ खुद करने की कोशिश करता हूँ, और जल्दी मदद माँगना सीख रहा हूँ।
+In five years, I see myself as a senior engineer who mentors others.|पाँच साल में मैं खुद को ऐसे senior engineer के रूप में देखता हूँ जो दूसरों को सिखाता है।
+Could you tell me more about the team and how success is measured in this role?|क्या आप team के बारे में और बता सकते हैं और इस भूमिका में सफलता कैसे मापी जाती है?
+Thank you for the opportunity, I am very interested in this role.|इस अवसर के लिए धन्यवाद, मुझे इस भूमिका में बहुत रुचि है।
+## phr|HR & Salary Talk|HR se baat|🧾
+Could you please walk me through the compensation structure?|क्या आप compensation structure समझा सकते हैं?
+Is the variable pay linked to individual or company performance?|क्या variable pay व्यक्तिगत प्रदर्शन से जुड़ा है या कंपनी के?
+What is the notice period during the probation?|probation के दौरान notice period कितना है?
+I would like to request a joining date of the first of next month.|मैं अगले महीने की पहली तारीख़ को joining की request करता हूँ।
+I need to serve my notice period, which is sixty days.|मुझे अपना notice period पूरा करना है, जो साठ दिन का है।
+Could the company consider a slightly higher base salary?|क्या कंपनी थोड़ा ज़्यादा base salary पर विचार कर सकती है?
+Please let me know the documents I need to submit.|कृपया बताइए कि मुझे कौन से documents जमा करने हैं।
+I have decided to resign, and I will submit my formal letter today.|मैंने इस्तीफ़ा देने का फ़ैसला किया है, और आज औपचारिक पत्र दूँगा।
+I will make sure the work is handed over smoothly.|मैं ध्यान रखूँगा कि काम आराम से सौंपा जाए।
+Could you confirm the details in an email, please?|क्या आप कृपया email में ब्यौरा पक्का कर सकते हैं?
+Thank you for your support during my time here.|यहाँ मेरे समय में सहयोग के लिए धन्यवाद।
+I would appreciate your feedback on my performance.|मैं अपने प्रदर्शन पर आपका फ़ीडबैक पसंद करूँगा।
+## ppres|Presenting & Explaining|Samjhana aur present karna|🧑‍🏫
+Today I will walk you through the main features of the application.|आज मैं application की मुख्य विशेषताएँ समझाऊँगा।
+Let me start with the problem we are trying to solve.|मैं उस समस्या से शुरू करता हूँ जिसे हम हल कर रहे हैं।
+As you can see on the screen, the data is updated in real time.|जैसा आप screen पर देख सकते हैं, data real time में अपडेट होता है।
+The main reason we chose this approach is simplicity.|यह तरीक़ा चुनने की मुख्य वजह सरलता है।
+To summarise, we have three options, and I recommend the second one.|संक्षेप में, हमारे पास तीन विकल्प हैं, और मैं दूसरे की सलाह देता हूँ।
+This reduces the response time from five seconds to under one second.|इससे response time पाँच सेकंड से घटकर एक सेकंड से कम हो जाता है।
+Let me give you a simple example to make this clearer.|इसे साफ़ करने के लिए एक आसान उदाहरण देता हूँ।
+The next step is to test it with real users.|अगला क़दम असली users के साथ test करना है।
+If you have any questions, please feel free to ask at any point.|कोई सवाल हो तो किसी भी समय बेझिझक पूछिए।
+One limitation is that it does not work offline yet.|एक सीमा यह है कि यह अभी offline काम नहीं करता।
+Does that answer your question?|क्या इससे आपके सवाल का जवाब मिला?
+That is all from my side, thank you for listening.|मेरी तरफ़ से बस इतना, सुनने के लिए धन्यवाद।

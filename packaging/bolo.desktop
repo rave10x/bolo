@@ -1,0 +1,10 @@
+[Desktop Entry]
+Type=Application
+Name=Bolo
+GenericName=English Practice
+Comment=Learn English offline - Hinglish lessons, words and speaking
+Exec=bolo
+Icon=bolo
+Terminal=false
+Categories=Education;Languages;
+Keywords=english;learn;hindi;speaking;

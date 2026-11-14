@@ -1,0 +1,385 @@
+## int-intro|Tell me about yourself|Interview ka pehla sawaal|🎤|Interview|Interviewer
+Q: Good morning, and thank you for coming in. Please have a seat. Could you tell me a little about yourself?
+Y: Good morning, and thank you for having me. I am a Java developer with a strong interest in backend systems. Over the last year I have been building projects and solving data structure problems every day.
+Q: That sounds good. What kind of projects have you worked on?
+Y: Mostly small but complete applications. For example, I built an expense tracker with a REST API and a database, and I handled validation and error cases myself.
+Q: And what made you choose software development?
+Y: I enjoy solving problems, and I like that I can build something that people actually use. Every bug I fix teaches me something new.
+Q: What are you looking for in your next role?
+Y: I want to join a team where I can learn from experienced developers and take real responsibility for my work.
+K: I have a strong interest in | mujhe ... mein gehri ruchi hai
+K: handled it myself | maine use khud sambhala
+K: take responsibility for | ... ki zimmedari lena
+## int-strength|Strengths and weaknesses|Taakat aur kamzori batana|💪|Interview|Interviewer
+Q: What would you say is your biggest strength?
+Y: I would say it is consistency. When I start learning something, I practise it every day until I can use it confidently, and I do not give up when it gets difficult.
+Q: Can you give me an example?
+Y: Last year my English speaking was weak, so I practised speaking for thirty minutes daily. Within a few months I could join team discussions comfortably.
+Q: Interesting. And what is a weakness you are working on?
+Y: Sometimes I spend too long on one problem before asking for help. I am learning to set a time limit, and after that I ask a teammate.
+Q: That is a good habit to build. How is it going so far?
+Y: Much better. I now try for thirty minutes, and if I am still stuck, I ask a clear question with what I have already tried.
+K: I do not give up | main haar nahi manta
+K: I am working on | main ... par kaam kar raha hoon (sudhaar)
+K: set a time limit | samay seema tay karna
+## int-why|Why do you want to join us?|Is company mein kyon?|🏢|Interview|Interviewer
+Q: Why do you want to work for our company?
+Y: I have read about your products, and I like that you build software for real customers. I also saw that your team works with Java and Spring, which is exactly the technology I have been learning.
+Q: What do you know about our company?
+Y: You provide payment solutions for small businesses, and you have grown quickly in the last three years. I would be happy to contribute to that growth.
+Q: Where do you see yourself in five years?
+Y: I hope to become a strong backend engineer who can design systems and help new developers in the team.
+Q: Why should we hire you over other candidates?
+Y: I may not have the longest experience, but I learn fast, I take feedback well, and I am serious about my work. I will give my best effort every day.
+K: I would be happy to contribute | mujhe yogdan dene mein khushi hogi
+K: take feedback well | feedback acche se lena
+K: give my best effort | poori koshish karna
+## int-project|Walk me through a project|Apna project samjhana|🧩|Interview|Interviewer
+Q: Let us talk about one of your projects. Can you walk me through it?
+Y: Sure. It is an expense tracker. Users can add expenses, see monthly totals and filter by category. I built the backend in Java with a REST API and stored the data in a database.
+Q: What was the most difficult part?
+Y: Handling wrong input. At first the app crashed when someone entered a negative amount. I added validation and returned clear error messages.
+Q: How did you test it?
+Y: I wrote unit tests for the main logic and tested the API manually with sample data. That helped me find a few bugs before I finished.
+Q: If you had more time, what would you improve?
+Y: I would add user login and charts. I would also write more tests, because they make changes much safer.
+K: walk you through | aapko step by step samjhana
+K: the most difficult part was | sabse mushkil hissa
+K: if I had more time | agar mere paas aur samay hota
+## int-tech|Explaining a technical concept|Technical cheez samjhana|🧠|Interview|Interviewer
+Q: Can you explain the difference between an ArrayList and a LinkedList?
+Y: Both store a list of items. An ArrayList uses an array internally, so reading an item by index is very fast. A LinkedList connects items with pointers, so adding or removing in the middle is easier, but reading by index is slow.
+Q: Which one would you use most of the time?
+Y: Usually an ArrayList, because most programs read data more often than they insert in the middle, and it uses memory more efficiently.
+Q: What is the time complexity of searching in a HashMap?
+Y: On average it is constant time, order of one, because the key is converted to a hash that points to the right bucket. In the worst case, with many collisions, it can become order of n.
+Q: Nicely explained. What happens when two keys have the same hash?
+Y: That is called a collision. Java stores both entries in the same bucket, in a list or a tree, and compares the keys to find the right one.
+K: under the hood | andar se, internally
+K: on average / in the worst case | aam taur par / sabse kharab sthiti mein
+K: the key idea is | mukhya vichaar ye hai
+## int-conflict|Handling a conflict|Teammate se matbhed|🤝|Interview|Interviewer
+Q: Tell me about a time you disagreed with a teammate. What happened?
+Y: In a college project, my teammate wanted to finish the work quickly without testing, and I felt it was risky. We both wanted the project to succeed, but we had different ideas.
+Q: What did you do?
+Y: I listened to his reason first. He was worried about the deadline. Then I showed him two bugs that testing could catch and suggested we test only the most important parts.
+Q: And what was the result?
+Y: He agreed. We found three bugs early, submitted on time, and the project got good marks. After that we always planned time for testing.
+Q: What did you learn from that situation?
+Y: That it helps to understand the other person's concern first. When people feel heard, it is easier to find a solution together.
+K: I felt it was risky | mujhe laga ye jokhim bhara hai
+K: we found a middle ground | humne beech ka raasta nikala
+K: when people feel heard | jab logon ko lage ki unki baat suni gayi
+## int-salary|Salary expectations|Salary kitni chahiye?|💰|Interview|Interviewer
+Q: What are your salary expectations for this role?
+Y: I would like to understand the full role and responsibilities first. Based on my research for similar positions, I am looking for something in the range of the market rate for a junior developer.
+Q: Could you give me a specific number?
+Y: I am flexible, but I was thinking of a range between X and Y. I care a lot about learning opportunities and growth as well.
+Q: What is your current salary?
+Y: I would prefer to focus on the value I can bring to this role. My expectation is based on my skills and the market, and I am open to discussing it.
+Q: Okay. We will discuss details with HR in the next round.
+Y: That sounds good. Thank you, I really appreciate your time and I am excited about this opportunity.
+K: market rate | bazaar mein chalne wali dar
+K: I am flexible | main lachila hoon (baat ho sakti hai)
+K: I am open to discussing it | main is par baat karne ko taiyar hoon
+## int-ask|Questions for the interviewer|Interviewer se sawaal poochhna|❓|Interview|Interviewer
+Q: We have covered most things. Do you have any questions for us?
+Y: Yes, thank you. What does a typical day look like for someone in this role?
+Q: You would work with a small team, attend a short morning meeting, and then work on features and bug fixes.
+Y: That sounds great. How does the team handle code reviews and learning for new joiners?
+Q: Every new joiner gets a mentor for the first three months, and all code is reviewed by at least one senior developer.
+Y: That is really helpful. And what are the next steps in the hiring process?
+Q: We will contact you within a week with feedback.
+Y: Thank you so much for your time today. I enjoyed the conversation and I hope to hear from you soon.
+K: What does a typical day look like | ek aam din kaisa hota hai
+K: next steps | agle charan
+K: I hope to hear from you soon | umeed hai jaldi khabar milegi
+## int-dontknow|When you do not know the answer|Jawab na aaye to|🙈|Interview|Interviewer
+Q: How does garbage collection decide which objects to remove?
+Y: I do not remember the exact algorithm, but I understand the basic idea. Objects that nothing refers to anymore can be removed to free memory. May I think about it for a moment?
+Q: Sure, take your time.
+Y: I believe the collector starts from known roots, like local variables, and marks everything reachable. Anything not marked is garbage. I am not fully sure about the details of the different collectors.
+Q: That is a good explanation of the basic idea. Would you like to learn more about it?
+Y: Yes, definitely. I will read more about it today. It is a topic I want to understand better.
+Q: I appreciate your honesty. Let us move to the next question.
+Y: Of course. Thank you for explaining.
+K: I do not remember exactly | mujhe theek se yaad nahi
+K: I believe | mera maanna hai / mujhe lagta hai
+K: May I think for a moment? | kya main ek pal soch sakta hoon?
+## off-standup|Daily stand-up|Roz ka stand-up update|🧑‍💻|Office|Team lead
+Q: Good morning, everyone. Let us start. Rahul, what did you work on yesterday?
+Y: Good morning. Yesterday I finished the login API and fixed two bugs in the registration form.
+Q: Great. And what is your plan for today?
+Y: Today I will write unit tests for the login API and start working on the password reset feature.
+Q: Any blockers?
+Y: One small one. I do not have access to the staging database yet, so I cannot test the reset email there.
+Q: Okay, I will ask the admin to give you access today. Anything else?
+Y: No, that is all from my side. Thank you.
+K: finish / wrap up | khatm karna
+K: I am blocked on | main ... ki wajah se ruka hua hoon
+K: that is all from my side | meri taraf se bas itna
+## off-help|Asking a colleague for help|Saathi se madad maangna|🆘|Office|Colleague
+Q: Hey Rahul, you look a bit stuck. Is everything okay?
+Y: Hi, yes, actually I have been trying to fix this error for an hour. Do you have a few minutes to take a look?
+Q: Sure. What have you tried so far?
+Y: I checked the logs, and the error says the connection is refused. I also restarted the service, but the same error comes back.
+Q: Hmm, did you check the port number in the configuration file?
+Y: Not yet. Let me check. Oh, I see, it was pointing to the old port. That was the problem. Thank you so much!
+Q: No worries. It happens to everyone.
+Y: I really appreciate your help. I will make sure to note this down so I do not repeat it.
+K: Do you have a few minutes? | kya aapke paas kuch minute hain?
+K: What have you tried so far? | ab tak aapne kya try kiya?
+K: I really appreciate your help | aapki madad ki bahut kadar hai
+## off-delay|Reporting a delay|Deadline miss hone ki khabar|⏳|Office|Manager
+Q: Rahul, do you have a minute? I wanted to check on the payment feature. Will it be ready by Friday?
+Y: Thanks for checking. I wanted to talk to you about that. I am a little behind schedule, and I may need until Monday to finish properly.
+Q: What happened?
+Y: The third-party API changed its response format, and I had to rewrite part of the code. I should have told you earlier, and I am sorry about that.
+Q: Okay. What can we do to avoid more delay?
+Y: I have already fixed the main part. If someone can review the code on Friday, I can finish testing over the weekend and deliver on Monday morning.
+Q: That works. Please send me a short update tomorrow evening.
+Y: Sure, I will send it by six. Thank you for understanding.
+K: behind schedule | samay se peeche
+K: I should have told you earlier | mujhe pehle bata dena chahiye tha
+K: thank you for understanding | samajhne ke liye shukriya
+## off-disagree|Disagreeing politely|Tameez se asehmat hona|🗣️|Office|Colleague
+Q: I think we should use a single big table for all the data. It is simpler.
+Y: I see your point, and it would be quicker to build. However, I am a little worried about performance when the data grows.
+Q: But we do not have that much data right now.
+Y: That is true for now. What if we start with two tables? It is only a small extra effort and it will be easier to change later.
+Q: Hmm, that is fair. How would you split it?
+Y: One table for users and one for their orders, connected with a user id. I can draw a quick diagram if that helps.
+Q: Yes, please. Let us look at it together after lunch.
+Y: Sounds good. I will have it ready by then.
+K: I see your point, however | main aapki baat samajhta hoon, lekin
+K: What if we ... ? | agar hum ... karein to?
+K: that is fair | ye theek baat hai
+## off-review|Receiving code review feedback|Code review ka feedback|🔍|Office|Reviewer
+Q: Hi Rahul, I reviewed your pull request. Overall it looks good, but I left a few comments.
+Y: Thank you for reviewing it so quickly. I will go through the comments now.
+Q: The main one is that this method is doing too many things. Could you split it into smaller methods?
+Y: That makes sense. I will separate the validation and the saving into two methods so that each one has a single job.
+Q: Also, please add a test for the case when the input is empty.
+Y: Good catch. I had missed that case. I will add the test and update the pull request this afternoon.
+Q: Great. Ping me when it is ready and I will take another look.
+Y: Will do. Thanks for the helpful feedback.
+K: Good catch | accha pakda
+K: That makes sense | ye samajh mein aata hai
+K: Ping me when it is ready | taiyar ho jaye to mujhe batana
+## off-leave|Asking for leave|Chhutti maangna|🌴|Office|Manager
+Q: Hi Rahul, come in. What can I do for you?
+Y: Good afternoon. I wanted to ask for leave from the twentieth to the twenty-second. I have a family function in my hometown.
+Q: Three days. Do you have any important deadlines during that time?
+Y: The reporting feature is due on the nineteenth, so I will finish it before I leave. I will also share my work status with Aman so that he can cover for me.
+Q: That sounds fine. Please apply for it in the system as well.
+Y: Sure, I will apply today. I will be reachable on phone for any urgent matter.
+Q: Okay, approved. Enjoy your time with family.
+Y: Thank you very much, I appreciate it.
+K: cover for me | meri jagah kaam sambhalna
+K: be reachable on phone | phone par uplabdh rehna
+K: for any urgent matter | kisi zaroori maamle ke liye
+## off-clarify|Clarifying in a meeting|Meeting mein baat samajhna|🎧|Office|Product manager
+Q: So the new feature should work like the old one, but faster and with a cleaner design.
+Y: Sorry to interrupt. Could you clarify what you mean by faster? Do you have a target for the loading time?
+Q: Good question. Ideally under two seconds on a normal connection.
+Y: Understood. And when you say a cleaner design, will the design team share the mockups, or should we propose something?
+Q: The designers will share mockups by Wednesday.
+Y: Great. Just to confirm, we will start the backend work now and the screens after the mockups arrive. Is that correct?
+Q: Exactly. Thanks for confirming.
+Y: Thank you. I will write this down in the ticket so that everyone has the same understanding.
+K: Could you clarify ...? | kya aap ... spasht karenge?
+K: Just to confirm | bas pakka karne ke liye
+K: have the same understanding | sabki samajh ek jaisi ho
+## off-demo|Presenting a demo|Demo dena|📊|Office|Manager
+Q: Rahul, would you like to show us what you have built this week?
+Y: Yes, thank you. Let me share my screen. Can everyone see it?
+Q: Yes, we can see it clearly.
+Y: Great. This is the new dashboard. On the left, you can filter the orders by date. When I click on an order, the details open on the right.
+Q: Nice. What happens if there are no orders for that date?
+Y: Good question. The page shows a friendly message instead of an empty screen. Let me show you.
+Q: That is good. Any known issues?
+Y: One small thing: exporting to Excel is slow for very large data. I am working on improving it next week.
+K: Let me share my screen | main apni screen share karta hoon
+K: Let me walk you through | main aapko dikhata/samjhata hoon
+K: known issues | jaani-pehchani samasyayein
+## off-first|First day at the office|Office ka pehla din|🚪|Office|HR / buddy
+Q: Welcome to the team, Rahul! I am Priya, and I will be your buddy for the first few weeks.
+Y: Thank you, Priya. It is great to meet you. I am really excited to be here.
+Q: Let me show you around. This is your desk, and the kitchen is over there.
+Y: Thanks. Could you tell me who I should contact if I have problems with my laptop or access?
+Q: For that, you can message the IT desk on the company chat. I will add you to the group.
+Y: That is helpful. Is there anything I should read or set up before I start working?
+Q: Yes, I will send you the onboarding document and the project setup steps after lunch.
+Y: Perfect. Please feel free to correct me if I do something wrong. I want to learn the way things are done here.
+K: show you around | aapko jagah dikhana
+K: Who should I contact ...? | ... ke liye kisse sampark karun?
+K: feel free to | befikar hokar
+## off-connect|Audio problems on a video call|Video call mein awaaz ki dikkat|🎙️|Office|Colleague
+Q: Rahul, we cannot hear you. You seem to be on mute.
+Y: Sorry about that. Can you hear me now?
+Q: Yes, much better. But the video is freezing a bit.
+Y: My internet seems slow. Let me turn off my camera so the audio stays clear.
+Q: Good idea. Can you continue with the update?
+Y: Sure. I am sorry, could you repeat the last question? The sound broke for a moment.
+Q: I asked whether the report will be ready by tomorrow.
+Y: Yes, it will be ready by noon. I will also send a message in the chat so that it is on record.
+K: You seem to be on mute | lagta hai aap mute par hain
+K: The sound broke up | awaaz kat gayi
+K: Let me turn off my camera | main camera band karta hoon
+## hr-offer|Discussing the job offer with HR|Offer par HR se baat|📄|HR & Career|HR manager
+Q: Hello Rahul, congratulations again. I am calling to discuss your offer letter. Is this a good time?
+Y: Thank you so much. Yes, this is a good time to talk.
+Q: The offer is for the position of Software Engineer, with the salary mentioned in the letter. Do you have any questions about it?
+Y: Yes, a couple of things. Could you tell me about the variable pay and when it is paid?
+Q: The variable part is paid quarterly, depending on your performance and the company results.
+Y: Understood. And is there a probation period? If so, what are the notice terms during that time?
+Q: Yes, six months of probation, with a notice period of one month during that time.
+Y: That is clear. Could I have a couple of days to review everything and confirm?
+Q: Of course. Please reply to the email by Friday.
+K: offer letter | naukri ka prastaav patra
+K: probation period | parikshavadhi
+K: Could I have a couple of days to review? | kya main do din dekhne ke liye le sakta hoon?
+## hr-negotiate|Negotiating the salary|Salary par baat-cheet|⚖️|HR & Career|HR manager
+Q: So, are you happy with the offer, or would you like to discuss anything?
+Y: I am very excited about the role, and I really want to join. I would like to discuss the salary. Based on my skills and the market, I was expecting something slightly higher.
+Q: What number did you have in mind?
+Y: I was hoping for something closer to the upper end of the range we discussed, around twelve to thirteen percent above the current offer.
+Q: That is a bit above our budget for this role. What if we add a joining bonus?
+Y: I appreciate that. A joining bonus helps, but I would prefer an increase in the base salary. Could we find a middle ground, maybe half of what I asked?
+Q: Let me speak to my manager and get back to you tomorrow.
+Y: That would be great. Thank you for being open to the discussion.
+K: I was expecting something slightly higher | mujhe thoda zyada ki ummeed thi
+K: a middle ground | beech ka raasta
+K: base salary | buniyadi vetan
+## hr-notice|Resigning politely|Naukri chhodne ki baat|✉️|HR & Career|Manager
+Q: Rahul, you wanted to talk to me. What is on your mind?
+Y: Yes, I wanted to tell you in person. I have decided to resign. I have received an offer that is a good step forward for my career.
+Q: I am sorry to hear that. Is there anything we can do to change your mind?
+Y: Thank you, I really appreciate that. I have thought about it carefully, and my decision is final. I have learned a lot here, and I am grateful for the support.
+Q: Okay. What is your notice period?
+Y: It is two months according to my contract. I will make sure to complete my current tasks and prepare handover notes for my teammates.
+Q: Thank you for being professional about it. Please send the formal letter to HR.
+Y: I will send it today. I would like to leave on good terms and stay in touch.
+K: my decision is final | mera faisla antim hai
+K: handover notes | kaam saunpne ke notes
+K: leave on good terms | achhe sambandhon ke saath chhodna
+## hr-appraisal|Annual review|Saalana review|📈|HR & Career|Manager
+Q: Let us talk about your year. How do you feel it went?
+Y: I think it went well. I delivered the payment module on time, and I learned a lot about testing. I would like to improve my ability to plan larger tasks.
+Q: I agree with that. Your work quality has been good, and the team likes working with you.
+Y: Thank you, that means a lot to me. I try to communicate early when there are problems.
+Q: One area to work on is speaking up more in meetings.
+Y: That is fair feedback. I have been practising my spoken English, and I will try to share my ideas more often.
+Q: Great. Where would you like to grow next year?
+Y: I would like to take more ownership, maybe lead a small feature from design to release, and learn more about system design.
+K: take more ownership | zyada zimmedari lena
+K: an area to work on | sudhaar wala kshetra
+K: that is fair feedback | ye theek feedback hai
+## hr-policy|Asking HR about policies|HR se policy poochhna|📋|HR & Career|HR executive
+Q: Hi Rahul, how can I help you?
+Y: Hi, I wanted to ask about the leave policy. How many paid leaves do I get in a year?
+Q: You get eighteen paid leaves, and some of them can be carried forward to the next year.
+Y: Thank you. And how does work from home work? Is it fixed days or can I request it when needed?
+Q: Two days a week are allowed, and you can request more with your manager's approval.
+Y: That is helpful. One more thing, how do I claim medical insurance for my parents?
+Q: You can add them through the HR portal during the enrolment window, which is open until the end of this month.
+Y: Great, I will do that today. Thank you for the clear explanation.
+K: carried forward | agle saal mein aage badhana
+K: with prior approval | pehle se manzoori ke saath
+K: enrolment window | naam likhane ki avadhi
+## hr-exit|Exit interview|Naukri chhodte waqt feedback|👋|HR & Career|HR manager
+Q: Thank you for meeting me, Rahul. This is a short exit conversation. Why did you decide to leave?
+Y: Thank you for asking. It was not an easy decision. I got an opportunity with more responsibility and a role closer to my long-term goals.
+Q: What did you like most about working here?
+Y: The team. People were helpful, and my manager gave me real responsibility early on, which helped me grow.
+Q: Is there anything we could do better?
+Y: I think a clearer career path and a bit more training on design would help people stay and grow here.
+Q: Thank you, that is useful feedback. Would you recommend this company to a friend?
+Y: Yes, I would. I am grateful for everything I learned here, and I hope to stay in touch.
+K: it was not an easy decision | ye aasan faisla nahi tha
+K: long-term goals | lambe samay ke lakshya
+K: stay in touch | sampark mein rehna
+## cl-req|Understanding client requirements|Client ki zaroorat samajhna|🧾|Client & Calls|Client
+Q: Hello, thanks for joining. Let me explain what we need. We want customers to book appointments from our website.
+Y: Thank you for explaining. To make sure I understand, customers will choose a date and time, and then the system sends a confirmation. Is that right?
+Q: Yes, and they should also be able to cancel.
+Y: Understood. A few questions: should cancellation be free at any time, or only up to a certain hour before the appointment?
+Q: Good point. Free cancellation up to twenty-four hours before.
+Y: Perfect. Do you also need email or SMS reminders?
+Q: Email is enough for now.
+Y: Great. I will prepare a short document with these points and send it today so that we can confirm we are on the same page.
+K: To make sure I understand | pakka karne ke liye ki main samjha
+K: on the same page | ek hi samajh par
+K: Do you also need ...? | kya aapko ... bhi chahiye?
+## cl-status|Giving a project status update|Project ka status batana|📍|Client & Calls|Client
+Q: Hi Rahul, how is the project going? Are we on track?
+Y: Hello, yes, overall we are on track. The login and booking features are complete and tested, and we are working on the payment page now.
+Q: Are there any risks I should know about?
+Y: One risk is that the payment provider's test environment has been unstable. If it continues, it may delay testing by a day or two.
+Q: What are you doing about it?
+Y: We have asked their support team for help, and meanwhile we are building a mock version so that we can continue working without waiting.
+Q: Good thinking. When can I see a demo?
+Y: We can show you a working demo next Thursday. I will send an invite today.
+K: on track | sahi raste par / samay par
+K: a risk is that | ek jokhim ye hai
+K: in the meantime | tab tak
+## cl-outage|Apologising for a problem|Galti par maafi maangna|🙇|Client & Calls|Client
+Q: Rahul, our customers could not log in for an hour this morning. What happened?
+Y: I am very sorry about that, and I understand how serious it is. A change we deployed last night caused the login service to crash.
+Q: Is it fixed now?
+Y: Yes, we rolled back the change at ten fifteen, and everything has been working normally since then. We are monitoring it closely.
+Q: How will you prevent this from happening again?
+Y: We will add more testing before each release and a check that stops a faulty deployment automatically. I will share a written report by tomorrow.
+Q: Okay, please do that. This is important for us.
+Y: Absolutely. Thank you for your patience, and again, I apologise for the trouble.
+K: I understand how serious this is | main samajhta hoon ye kitna gambhir hai
+K: roll back | purani sthiti par wapas laana
+K: prevent this from happening again | ise dobara hone se rokna
+## cl-schedule|Scheduling a meeting|Meeting ka time tay karna|📅|Client & Calls|Client
+Q: Hi Rahul, can we set up a call this week to go over the design?
+Y: Sure. I am available on Wednesday afternoon or Thursday morning. Which one suits you better?
+Q: Thursday morning is good. What time?
+Y: How about ten thirty? That would be about thirty minutes.
+Q: Ten thirty is fine, but could we make it forty-five minutes? I have a few things to discuss.
+Y: No problem. I will send a calendar invite with the meeting link for forty-five minutes.
+Q: Thank you. I may need to reschedule if something urgent comes up.
+Y: That is perfectly fine. Just let me know a day before if possible.
+K: Which one suits you better? | aapko kaun sa theek rahega?
+K: send a calendar invite | calendar invite bhejna
+K: reschedule | meeting ka samay badalna
+## soc-lunch|Lunch break small talk|Lunch par halki baat|🍱|Team & Social|Colleague
+Q: Hey, are you free for lunch? A few of us are going to the canteen.
+Y: Sure, I would love to join. Let me save my work, and I will be there in two minutes.
+Q: So, how are you finding the new project?
+Y: It is challenging, but I am enjoying it. I am learning a lot, especially from the code reviews.
+Q: Nice. Did you watch the match last night?
+Y: Yes, it was a great game, especially the last over. I could not sleep for an hour after it.
+Q: Same here! Do you play cricket yourself?
+Y: Yes, on weekends with friends. You should join us sometime if you like.
+K: I would love to join | mujhe shamil hone mein khushi hogi
+K: how are you finding ... | aapko ... kaisa lag raha hai
+K: Same here! | mera bhi yahi haal!
+## soc-network|Meeting people at an event|Naye logon se milna|🎪|Team & Social|New contact
+Q: Hi, I do not think we have met. I am Neha. Are you here for the developer meetup?
+Y: Hi Neha, nice to meet you. I am Rahul. Yes, I came to learn about backend development and meet people in the field.
+Q: What do you do, Rahul?
+Y: I am a Java developer. I mostly work on APIs and databases. How about you?
+Q: I work as a tester at a product company. Nice, we should stay in touch.
+Y: Definitely. Would you like to connect on LinkedIn? I would like to ask you about testing tools sometime.
+Q: Sure, let me give you my profile name.
+Y: Thanks a lot. It was great talking to you, and I hope to see you at the next meetup.
+K: stay in touch | sampark mein rehna
+K: connect on LinkedIn | LinkedIn par jud jana
+K: It was great talking to you | aapse baat karke achha laga
+## soc-farewell|Farewell and thanks|Vida aur dhanyavaad|🎉|Team & Social|Colleague
+Q: Rahul, today is your last day. We are going to miss you!
+Y: Thank you, that is very kind. I am going to miss everyone too. This team has taught me so much.
+Q: Where are you going next?
+Y: I am joining a product company as a backend engineer. It is a big step for me, and a little scary.
+Q: You will do great. Please do not forget us.
+Y: Never. Please stay in touch. I will share my number, and we can meet up when I am in town.
+Q: Definitely. All the best for your new job!
+Y: Thank you so much. Take care, and all the best to you as well.
+K: We are going to miss you | hum aapko yaad karenge
+K: all the best | shubhkamnayein
+K: take care | apna khayal rakhna

@@ -1,0 +1,66 @@
+I am agree with you.|I agree with you.|'Agree' khud ek verb hai, isse pehle am/is/are nahi lagta.
+We discussed about the plan.|We discussed the plan.|'Discuss' ke baad 'about' nahi aata, kyunki discuss ka matlab hi 'baat karna kisi cheez ke baare mein' hai.
+I am knowing him.|I know him.|'Know' state verb hai; iska -ing form (am knowing) nahi banta.
+He don't like tea.|He doesn't like tea.|He/She/It ke saath doesn't aata hai, don't nahi.
+I am having a doubt.|I have a doubt.|'Have' jab 'rakhna/hona' ke matlab mein ho to -ing nahi lagta. Doubt ho to bas 'I have a doubt'.
+She is having two brothers.|She has two brothers.|Sambandh/maalkiyat ke liye simple present: has/have.
+He is more taller than me.|He is taller than me.|Tall ka comparative 'taller' hai; 'more' aur '-er' ek saath nahi.
+This is more better.|This is better.|Better khud comparative hai; 'more' mat lagao.
+I have 20 years.|I am 20 years old.|Umar batane ke liye 'I am ... years old' bolte hain, 'have' nahi.
+My age is 20 years.|I am 20 years old.|Natural tareeka: I am 20 (years old).
+What is your good name?|What is your name?|'Good name' English mein nahi bolte; seedha 'What is your name?'
+Where do you stay?|Where do you live?|Stay = kuch der rukna (hotel). Permanent ghar ke liye 'live'.
+Please do the needful.|Please take the necessary action.|'Do the needful' purani Indian office English hai; modern English mein clear sentence likho.
+I will revert back to you.|I will get back to you.|'Revert' ka matlab hi 'wapas' hai, aur English mein iska matlab 'purani halat mein jaana' hai. 'Get back to you' sahi hai.
+Can you repeat again?|Can you repeat that?|Repeat ke andar hi 'dobara' hai, 'again' double ho jata hai.
+I returned back home.|I returned home.|Return mein 'back' ka matlab pehle se hai.
+He explained me the topic.|He explained the topic to me.|Explain ke baad 'to + person' aata hai.
+She told to me a story.|She told me a story.|Tell ke baad seedha person: told me.
+He said me to wait.|He told me to wait.|'Say' ke baad person nahi aata; 'tell' ke baad aata hai.
+I am waiting since morning.|I have been waiting since morning.|'Since' ke saath present perfect continuous: have been waiting.
+I am living here since 2020.|I have lived here since 2020.|'Since' ke saath present perfect, simple present continuous nahi.
+I have seen him yesterday.|I saw him yesterday.|Bite hue samay (yesterday) ke saath simple past: saw.
+Yesterday I have gone to the market.|Yesterday I went to the market.|Past time ke saath simple past.
+I did not went there.|I did not go there.|Did ke baad verb ka pehla form: go.
+Did you went to school?|Did you go to school?|'Did' ke baad 'go' aata hai, 'went' nahi.
+She do not like coffee.|She does not like coffee.|She/He/It ke saath does not.
+He go to school daily.|He goes to school daily.|He/She/It ke saath verb mein -s/-es lagta hai.
+They is my friends.|They are my friends.|They/We/You ke saath 'are'.
+I are a student.|I am a student.|'I' ke saath hamesha 'am'.
+There is many people here.|There are many people here.|Plural ke saath 'there are'.
+Many informations are useful.|Much information is useful.|Information gina nahi jata (uncountable): informations galat hai.
+I need some advices.|I need some advice.|Advice uncountable hai, 'advices' nahi.
+Our furnitures are old.|Our furniture is old.|Furniture uncountable hai.
+He gave me a good news.|He gave me good news.|News uncountable hai; 'a news' nahi.
+I have a lot of works.|I have a lot of work.|Work (kaam) uncountable hai.
+I want to discuss about this.|I want to discuss this.|Discuss ke baad 'about' nahi aata.
+He is knowing the answer.|He knows the answer.|Know ke saath continuous form nahi.
+I am understanding now.|I understand now.|Understand ke saath -ing nahi lagta.
+I am not liking this.|I do not like this.|Like state-verb hai; simple present use karo.
+He is a student of class ten.|He is in class ten.|Natural tareeka: in class ten.
+I am good in English.|I am good at English.|Kisi cheez mein achha hona = good at.
+She is weak in maths.|She is weak at maths.|Weak at / bad at.
+I am interested to learn.|I am interested in learning.|Interested ke baad 'in + -ing'.
+I am fond to music.|I am fond of music.|Fond ke baad 'of'.
+He is afraid from dogs.|He is afraid of dogs.|Afraid ke baad 'of'.
+I am agree to you.|I agree with you.|Agree = verb, 'with' ke saath.
+I reached to Delhi.|I reached Delhi.|Reach ke baad 'to' nahi aata.
+Please come in my house.|Please come to my house.|Jaana/aana = to; 'in' andar hone ke liye.
+She is married with him.|She is married to him.|Married ke saath 'to'.
+I am going to home.|I am going home.|Home ke pehle 'to' nahi lagta.
+He entered into the room.|He entered the room.|Enter ke baad 'into' nahi.
+My friend is coming from long time.|My friend has been coming for a long time.|Kitne samay se = for ya since, with present perfect.
+It is raining since morning.|It has been raining since morning.|Since ke saath present perfect continuous.
+I will tell to him.|I will tell him.|Tell ke baad direct person.
+Open the light.|Switch on the light.|Light jalane ke liye 'switch on' / 'turn on'.
+Close the fan.|Switch off the fan.|Band karne ke liye 'switch off' / 'turn off'.
+He is my cousin brother.|He is my cousin.|Cousin mein hi bhai/behen aa gaya.
+I have done my graduation.|I have graduated.|Natural: I graduated in 2023 / I have a degree.
+What is the time now?|What time is it?|Natural question: What time is it?
+I am feeling sleep.|I am feeling sleepy.|Sleep = noun/verb; feeling ke saath adjective: sleepy.
+My hairs are long.|My hair is long.|Hair uncountable.
+He is elder than me by two years.|He is two years older than me.|Comparison mein 'older' use karo; elder sirf family mein.
+She is my one friend.|She is a friend of mine.|'My one friend' unnatural hai.
+Every students are present.|Every student is present.|Every ke baad singular noun aur singular verb.
+Both of them is here.|Both of them are here.|Both = plural.
+Who all are coming?|Who is coming?|'Who all' Hindi 'kaun kaun' ka direct anuvaad hai; 'who' kaafi hai.
