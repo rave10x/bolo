@@ -1,0 +1,28 @@
+name: Release
+on:
+  push:
+    tags: ["v*"]
+permissions:
+  contents: write
+jobs:
+  linux:
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/checkout@v4
+      - name: System libraries (Dioxus desktop)
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y libwebkit2gtk-4.1-dev libgtk-3-dev libxdo-dev libayatana-appindicator3-dev libssl-dev pkg-config
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release
+      - name: Package
+        run: |
+          mkdir -p dist/bolo
+          cp target/release/bolo dist/bolo/
+          cp -r scripts packaging public README.md LICENSE install.sh dist/bolo/
+          tar -C dist -czf bolo-${GITHUB_REF_NAME}-linux-x86_64.tar.gz bolo
+      - uses: softprops/action-gh-release@v2
+        with:
+          files: bolo-*.tar.gz
+          generate_release_notes: true

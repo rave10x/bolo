@@ -9,6 +9,11 @@ WHAT="${1:-all}"
 D="${XDG_DATA_HOME:-$HOME/.local/share}/bolo"
 MODEL="${BOLO_MODEL:-qwen2.5:3b-instruct}"
 mkdir -p "$D/voice"
+if ! python3 -c "import venv, ensurepip" 2>/dev/null; then
+  echo "PROBLEM: Python's venv module is missing."
+  echo "Install it, then run this again:  sudo apt install python3-venv   (Debian/Ubuntu)   or   sudo dnf install python3   (Fedora)"
+  exit 3
+fi
 say() { printf '\n== %s\n' "$*"; }
 
 install_voice() {

@@ -11,6 +11,7 @@ need() { command -v "$1" >/dev/null || { echo "Missing: $1 — $2"; MISSING=1; }
 need cargo   "install Rust: https://rustup.rs"
 need python3 "install Python 3 (sudo dnf install python3 / sudo apt install python3 python3-venv)"
 need curl    "install curl"
+if command -v python3 >/dev/null && ! python3 -c "import venv, ensurepip" 2>/dev/null; then echo "Missing: python3-venv — sudo apt install python3-venv (Debian/Ubuntu)"; MISSING=1; fi
 need pw-record "install PipeWire tools (sudo dnf install pipewire-utils / sudo apt install pipewire-bin)"
 if [ "$MISSING" = 1 ]; then echo "Install the missing tools above, then run ./install.sh again."; exit 1; fi
 

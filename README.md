@@ -6,6 +6,8 @@ Bolo is for people who can *understand* English but freeze when they have to *sp
 
 The interface works in **Hinglish** (Hindi written in English letters) or plain **English**. Switch any time in Settings → Language.
 
+![Bolo, today's plan, dark theme](docs/today.png)
+
 ## Features
 
 | Section | What it does |
@@ -35,7 +37,7 @@ The small model is the main limitation: replies can be generic and some mistakes
 
 - Linux with PipeWire (`pw-record`, `pw-play`)
 - Rust toolchain (stable)
-- Python 3 (for the content build and the speech tools)
+- Python 3 with the `venv` module (`python3-venv` on Debian/Ubuntu) for the content build and the speech tools
 - For **Talk**: [Ollama](https://ollama.com/download), about 2.5 GB of disk for the models
 - Optional: `espeak-ng` as a fallback voice
 
@@ -54,6 +56,8 @@ cd bolo
 ```
 
 It asks for your password only if Ollama has to be installed. If you skip the AI step, or something fails, open **Talk** or **Settings** in the app and press **Install AI**; it runs the same installer in the background and shows its progress. You can also run `bash scripts/install-ai.sh [all|voice|talk]` yourself.
+
+Prebuilt Linux binaries are attached to each [release](https://github.com/rave10x/bolo/releases) (you still need the AI step above for Talk).
 
 Just building without installing:
 
