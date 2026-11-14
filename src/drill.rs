@@ -114,7 +114,8 @@ fn distractors(fw: &FlatWord, f: impl Fn(&FlatWord) -> String) -> Vec<String> {
     same
 }
 
-pub const DRILLS: [(&str, &str, &str, &str); 8] = [
+pub const DRILLS: [(&str, &str, &str, &str); 9] = [
+    ("call", "📞", "Call interview jawab · Call replies", "Interviewer ki baat par sahi jawab chuno (phone / video)"),
     ("meaning", "🔤", "Matlab batao · Meaning", "English word dekho, Hindi matlab chuno"),
     ("reverse", "🔁", "English batao · Reverse", "Hindi matlab dekho, English word chuno"),
     ("listen", "👂", "Suno aur chuno · Listen", "Word suno, sahi word chuno"),
@@ -246,6 +247,16 @@ pub fn build_session(drill: &'static str, state: &State, n: usize) -> Vec<Q> {
             shuffle(&mut rest);
             head.extend(rest);
             head.into_iter().take(n).map(|i| make_mistake_q(&MISTAKES.items[i])).collect()
+        }
+        "call" => {
+            let mut v: Vec<&Mcq> = CALLS.items.iter().collect();
+            shuffle(&mut v);
+            v.into_iter().take(n).map(|m| {
+                let mut q = make_mcq_q(m);
+                q.drill = "call";
+                q.title = "Interviewer kya bol raha hai? Sabse accha jawab chuno".into();
+                q
+            }).collect()
         }
         "myfix" => {
             let mut v: Vec<&Fix> = state.my_fixes.iter().collect();
@@ -505,7 +516,7 @@ mod tests {
     #[test]
     fn every_drill_builds_answerable_questions() {
         let st = State::default();
-        for kind in ["meaning", "reverse", "listen", "spell", "fill", "build", "mistakes", "mixed"] {
+        for kind in ["meaning", "reverse", "listen", "spell", "fill", "build", "mistakes", "call", "mixed"] {
             let qs = build_session(kind, &st, 10);
             assert_eq!(qs.len(), 10, "{kind}");
             for q in qs {

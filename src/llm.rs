@@ -30,6 +30,46 @@ pub fn installed_models() -> Vec<String> {
     v["models"].as_array().map(|a| a.iter().filter_map(|m| m["name"].as_str().map(String::from)).collect()).unwrap_or_default()
 }
 
+static INSTALLING: std::sync::atomic::AtomicBool = std::sync::atomic::AtomicBool::new(false);
+
+pub fn installing() -> bool {
+    INSTALLING.load(std::sync::atomic::Ordering::Relaxed)
+}
+
+fn install_log() -> std::path::PathBuf {
+    State::dir().join("install.log")
+}
+
+/// Last few lines of the installer's output.
+pub fn install_tail() -> String {
+    let t = std::fs::read_to_string(install_log()).unwrap_or_default();
+    let lines: Vec<&str> = t.lines().filter(|l| !l.trim().is_empty()).collect();
+    lines[lines.len().saturating_sub(5)..].join("\n")
+}
+
+/// Run the bundled installer (voice + speech recognition + chat model) in the background. Output goes to install.log.
+pub fn start_install() {
+    use std::sync::atomic::Ordering::Relaxed;
+    if INSTALLING.swap(true, Relaxed) {
+        return;
+    }
+    std::thread::spawn(|| {
+        let dir = State::dir();
+        let _ = std::fs::create_dir_all(&dir);
+        let script = dir.join("install-ai.sh");
+        let _ = std::fs::write(&script, include_str!("../scripts/install-ai.sh"));
+        let log = std::fs::File::create(install_log());
+        if let Ok(log) = log {
+            let err = log.try_clone();
+            if let Ok(err) = err {
+                let _ = Command::new("bash").arg(&script).arg("all").env("BOLO_NONINTERACTIVE", "1").env("BOLO_MODEL", model())
+                    .stdin(Stdio::null()).stdout(log).stderr(err).status();
+            }
+        }
+        INSTALLING.store(false, Relaxed);
+    });
+}
+
 const FILLERS: [&str; 6] = ["basically", "actually", "you know", "i mean", "kind of", "sort of"];
 
 /// Count filler words/phrases in a spoken answer (Whisper often drops "um", so this is a lower bound).

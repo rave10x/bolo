@@ -12,6 +12,8 @@ pub const SCENARIOS: &[(&str, &str, &str, &str, &str)] = &[
     ("🧠", "Technical interview", "Java / DSA / project sawaal", "You are a technical interviewer for a junior Java backend role. Ask one question at a time about Java basics, collections, OOP, SQL, REST and the learner's projects. Ask a follow-up when the answer is short.", "Hello! Let us begin with something simple. Can you explain the difference between an ArrayList and a LinkedList?"),
     ("🧩", "Explain your project", "Apna project samjhao", "You are an interviewer who wants to understand the learner's own project: purpose, design, challenges, testing and what they would improve. Ask one question at a time.", "I saw a project on your resume. Could you walk me through what it does and how you built it?"),
     ("🤝", "Behavioural interview", "STAR style sawaal", "You are an interviewer asking behavioural questions: conflict, failure, deadline pressure, teamwork, learning something new. Ask one at a time and follow up for details like what they did and the result.", "Let me ask about teamwork. Can you tell me about a time you had a disagreement with someone and how you handled it?"),
+    ("📞", "Phone screening call", "Recruiter ki phone call", "You are a recruiter calling a candidate for a first phone screening for a junior Java developer role. This is a PHONE CALL: keep replies short (one or two sentences). Ask if it is a good time, then ask about background, current situation, notice period, salary expectation and motivation, one question at a time. React naturally if the learner asks you to repeat or speak slower, and end by explaining the next steps.", "Hello, may I speak to the candidate, please? Hi, this is Neha from a software company. Is this a good time to talk for about fifteen minutes?"),
+    ("🎥", "Video interview", "Video call par interview", "You are an interviewer on a VIDEO CALL for a junior Java backend role. Start with call courtesies (can you hear and see me), then ask a mix of introduction, project and basic technical questions, one at a time. Keep replies short, as on a call. If the learner says audio is bad or asks you to repeat, help patiently.", "Hi, can you see and hear me clearly? Thanks for joining. Shall we begin with a short introduction about yourself?"),
     ("💰", "Salary negotiation", "Offer par salary baat", "You are an HR manager discussing a job offer. The learner may negotiate salary, joining date, variable pay and notice period. Be polite but realistic; you have some flexibility but not unlimited.", "Congratulations, we would like to offer you the role. Do you have any questions about the offer?"),
     ("🧑‍💻", "Daily stand-up", "Team ko update do", "You are a team lead in a daily stand-up meeting. Ask about yesterday's work, today's plan and blockers, then follow up on details.", "Good morning! Let us start the stand-up. What did you work on yesterday?"),
     ("👔", "One-to-one with manager", "Manager se baat", "You are the learner's manager in a one-to-one meeting. Discuss workload, feedback, challenges, goals and learning. Be supportive but ask direct questions.", "Thanks for making time. How have the last few weeks been for you at work?"),
@@ -27,6 +29,7 @@ pub const SCENARIOS: &[(&str, &str, &str, &str, &str)] = &[
 ];
 
 const MOCK_Q: usize = 8;
+const CALL_RULES: &str = "THIS IS A PHONE OR VIDEO CALL. Keep every reply short, as on a call (one or two sentences). Start with the usual call courtesies, and react naturally if the learner asks you to repeat or speak slower.";
 const MOCK_RULES: &str = "THIS IS A MOCK INTERVIEW. Be a formal, neutral interviewer. Each turn: react in at most 3 words (for example \"Thank you.\" or \"I see.\"), then ask exactly ONE new question you have not asked before. Never give hints, never praise at length, never explain.";
 
 #[derive(Clone, PartialEq)]
@@ -96,7 +99,8 @@ pub fn Talk() -> Element {
                 div { class: "card feedback bad",
                     div { class: "fb-title", {crate::i18n::tr("Setup baaki hai")} }
                     p { if !stt { {crate::i18n::tr("• Awaaz pehchanne wala tool (Whisper) install nahi hai.  ")} } if !chat { {crate::i18n::tr("• Baat-cheet wala model (qwen2.5:3b) abhi tayyar nahi hai (ollama chalu hona chahiye).  ")} } }
-                    p { class: "sm", {crate::i18n::tr("Terminal mein chalao:  scripts/install-talk.sh  — phir neeche button dabao.")} }
+                    p { class: "sm", {crate::i18n::tr("Neeche ka button dabao — app khud sab install kar legi (internet chahiye, ek hi baar).")} }
+                    crate::study::InstallAi {}
                     div { class: "row-actions", button { class: "btn", onclick: move |_| recheck += 1, {crate::i18n::tr("Dobara check karo")} } }
                 }
             }
@@ -109,7 +113,7 @@ pub fn Talk() -> Element {
             div { class: "section-title", crate::icon::Ico { name: "target".to_string(), size: 20 }, " ", {crate::i18n::tr("Mock interview · Asli practice")} }
             p { class: "muted", {crate::i18n::trf("Asli interview jaisa round: {} sawaal, koi hint nahi, galtiyan sirf end mein, phir summary ki aapne kaisa kiya.", &[MOCK_Q.to_string()])} }
             div { class: "grid",
-                for (i, label) in [(0usize, "HR round"), (1, "Technical round"), (3, "Behavioural round")] {
+                for (i, label) in [(0usize, "HR round"), (1, "Technical round"), (3, "Behavioural round"), (4, "Call interview round")] {
                     button { key: "m{i}", class: "card topic", disabled: !stt || !chat, onclick: move |_| sel.set(Some((i, true))),
                         div { class: "ticon", crate::icon::Ico { name: "briefcase".to_string(), size: 26 } } div { class: "tn", "{crate::i18n::tr(label)}" } div { class: "muted sm", {crate::i18n::trf("{} sawaal", &[MOCK_Q.to_string()])} } }
                 }

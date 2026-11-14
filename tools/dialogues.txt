@@ -383,3 +383,63 @@ Y: Thank you so much. Take care, and all the best to you as well.
 K: We are going to miss you | hum aapko yaad karenge
 K: all the best | shubhkamnayein
 K: take care | apna khayal rakhna
+## call-phone-open|Recruiter phone screening|Phone par recruiter ka pehla sawaal|📞|Call Interview|Recruiter
+Q: Hello, may I speak to Rahul, please?
+Y: Speaking. Good morning, thank you for calling.
+Q: Hi Rahul, this is Neha from a software company. Is this a good time to talk for about fifteen minutes?
+Y: Yes, this is a good time. I am in a quiet place, so we can start.
+Q: Great. Could you tell me a little about yourself and your experience so far?
+Y: Sure. I am a Java developer with a year of project experience. Recently I built an expense tracker with a REST API and a database, and I am now looking for a backend role.
+Q: That sounds relevant. What is your current notice period?
+Y: My notice period is thirty days, and I can discuss an earlier date if needed.
+K: this is a good time | ye ek achha samay hai
+K: thank you for calling | call karne ke liye dhanyavaad
+K: I can discuss an earlier date | main jaldi ki date par baat kar sakta hoon
+## call-video-tech|Technical round on video|Video call par technical round|🎥|Call Interview|Interviewer
+Q: Hi Rahul, can you see and hear me clearly?
+Y: Yes, I can hear you clearly. The video is fine too. Thank you for having me.
+Q: Great. Today I will ask a few questions about Java and your project. Please feel free to think aloud.
+Y: Sure, I will explain my thinking as I go.
+Q: Can you explain the difference between an ArrayList and a LinkedList?
+Y: Of course. An ArrayList uses an array, so reading by index is fast. A LinkedList uses nodes, so inserting in the middle is cheaper, but reading by index is slower.
+Q: Good. Could you share your screen and show me part of your project?
+Y: Sure, let me share my screen. Can you see it now?
+K: let me share my screen | main apni screen share karta hoon
+K: I will explain my thinking as I go | main saath mein apni soch samjhaunga
+K: I can hear you clearly | main aapko saaf sun sakta hoon
+## call-audio|Audio problem on a call|Awaaz ya internet ki dikkat|🔊|Call Interview|Interviewer
+Q: So, tell me about your last project and what you.. [the audio breaks up]
+Y: Sorry, you are breaking up a little. Could you repeat the last part, please?
+Q: Yes, I asked about your last project and what you learned from it.
+Y: Thank you. In my last project I built a small booking application, and I learned how to design a clean REST API.
+Q: I am sorry, your voice is a bit low on my side.
+Y: I think there may be a problem with my microphone. Let me reconnect, one moment.
+Q: Sure, take your time.
+Y: I am back. Can you hear me better now?
+K: you are breaking up | aapki awaaz toot rahi hai
+K: let me reconnect | main call dobara jodta hoon
+K: could you repeat that? | kya aap ise dobara bol sakte hain?
+## call-repeat|Asking to repeat or clarify|Samajh na aaye to dobara poochhna|❓|Call Interview|Interviewer
+Q: Tell me how you would handle a conflict with a teammate over a technical decision.
+Y: Sorry, could you rephrase the question, please? I want to be sure I understand.
+Q: Of course. Imagine you and a teammate disagree about the design. What would you do?
+Y: Thank you. Let me think about that for a moment.
+Q: Take your time.
+Y: I would first listen to their reasons, then share mine with an example, and suggest we test both on a small scale. If we still disagree, I would ask our lead for a decision.
+Q: That is a good approach. Could you speak a little about a time you did this?
+Y: Yes. In my college project, we disagreed about the database, so we compared both with a small prototype and chose the faster one.
+K: could you speak a little slower? | kya aap thoda dheere bol sakte hain?
+K: let me think about that for a moment | main thoda sochna chahta hoon
+K: could you rephrase the question? | kya aap sawaal doosre tareeke se pooch sakte hain?
+## call-close|Closing the call|Call ka end aur agla step|🤝|Call Interview|Recruiter
+Q: Before we finish, do you have any questions for me?
+Y: Yes, what does a typical day look like for this role?
+Q: You would work in a small team, join a daily stand-up, and build and test features each sprint.
+Y: That sounds great. Also, what are the next steps in the process?
+Q: We will share your profile with the hiring manager, and you should hear from us within a week.
+Y: Thank you. I am very interested in this role, and I look forward to hearing from you.
+Q: Thank you, Rahul. It was nice speaking with you. Have a good day.
+Y: Thank you for your time today. Have a great day!
+K: what are the next steps? | agle kadam kya hain?
+K: thank you for your time | aapke samay ke liye dhanyavaad
+K: I look forward to hearing from you | main aapse jaldi sampark karunga

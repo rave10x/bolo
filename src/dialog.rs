@@ -6,7 +6,7 @@ use crate::study::Voice;
 use crate::{audio, llm, navigate, Ctx, Route};
 use dioxus::prelude::*;
 
-const CATS: [&str; 5] = ["Interview", "Office", "HR & Career", "Client & Calls", "Team & Social"];
+const CATS: [&str; 6] = ["Interview", "Call Interview", "Office", "HR & Career", "Client & Calls", "Team & Social"];
 
 #[component]
 pub fn DialogueList() -> Element {

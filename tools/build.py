@@ -70,7 +70,11 @@ def _helpers():
     def TBL(head, *rows): return {"t": "tbl", "head": list(head), "rows": [list(r) for r in rows]}
     def FIX(wrong, right, why): return {"t": "fix", "wrong": wrong, "right": right, "why": why}
     def Q(q, opts, ans, why): return {"q": q, "opts": list(opts), "ans": ans, "why": why}
-    ns = {"P": P, "H": H, "TIP": TIP, "EX": EX, "TBL": TBL, "FIX": FIX, "Q": Q, "STAGES": [], "LESSONS": []}
+    TR = {}
+    def T(hi, en):
+        TR[hi] = en
+        return hi
+    ns = {"TR": TR, "T": T, "P": P, "H": H, "TIP": TIP, "EX": EX, "TBL": TBL, "FIX": FIX, "Q": Q, "STAGES": [], "LESSONS": []}
     def STAGE(id, name, hi, desc): ns["STAGES"].append({"id": id, "name": name, "hi": hi, "desc": desc})
     def LESSON(id, stage, title, hi, blocks, quiz): ns["LESSONS"].append({"id": id, "stage": stage, "title": title, "hi": hi, "blocks": blocks, "quiz": quiz})
     ns["STAGE"] = STAGE; ns["LESSON"] = LESSON
@@ -81,7 +85,18 @@ def lessons():
     for fn in sorted(os.listdir(HERE)):
         if fn.startswith("lessons_") and fn.endswith(".py"):
             exec(compile(open(os.path.join(HERE, fn), encoding="utf-8").read(), fn, "exec"), ns)
+    json.dump(ns["TR"], open(os.path.join(HERE, "en_auto.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
     return {"stages": ns["STAGES"], "lessons": ns["LESSONS"]}
+
+def calls():
+    """Call-interview response drill: tools/calls_drill.py defines ITEMS via Q(...)."""
+    ns = _helpers()
+    ns["ITEMS"] = []
+    exec(compile(open(os.path.join(HERE, "calls_drill.py"), encoding="utf-8").read(), "calls_drill.py", "exec"), ns)
+    tr = json.load(open(os.path.join(HERE, "en_auto.json"), encoding="utf-8"))
+    tr.update(ns["TR"])
+    json.dump(tr, open(os.path.join(HERE, "en_auto.json"), "w", encoding="utf-8"), ensure_ascii=False, indent=0)
+    return {"items": ns["ITEMS"]}
 
 def check(w, p, m, l, d):
     errs = []
@@ -118,11 +133,12 @@ def check(w, p, m, l, d):
 
 if __name__ == "__main__":
     w, p, m, l, d = words(), phrases(), mistakes(), lessons(), dialogues()
+    c = calls()
     errs = check(w, p, m, l, d)
     if errs:
         print("\n".join(errs)); sys.exit(1)
     os.makedirs(OUT, exist_ok=True)
-    for name, data in [("words", w), ("phrases", p), ("mistakes", m), ("lessons", l), ("dialogues", d)]:
+    for name, data in [("words", w), ("phrases", p), ("mistakes", m), ("lessons", l), ("dialogues", d), ("calls", c)]:
         json.dump(data, open(os.path.join(OUT, name + ".json"), "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
     nw = sum(len(t["words"]) for t in w["topics"]); np_ = sum(len(x["items"]) for x in p["packs"])
     print(f"words {nw} in {len(w['topics'])} topics | phrases {np_} in {len(p['packs'])} packs | mistakes {len(m['items'])} | lessons {len(l['lessons'])} in {len(l['stages'])} stages | dialogues {len(d['items'])} ({sum(len(x['lines']) for x in d['items'])} lines)")

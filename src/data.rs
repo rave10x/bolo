@@ -148,6 +148,12 @@ pub static DIALOGUES: LazyLock<DialogueFile> = LazyLock::new(|| serde_json::from
 pub static LESSONS: LazyLock<LessonFile> = LazyLock::new(|| serde_json::from_str(&read("lessons.json")).expect("lessons.json"));
 pub static WORDS: LazyLock<WordFile> = LazyLock::new(|| serde_json::from_str(&read("words.json")).expect("words.json"));
 pub static PACKS: LazyLock<PackFile> = LazyLock::new(|| serde_json::from_str(&read("phrases.json")).expect("phrases.json"));
+#[derive(Deserialize, Clone, PartialEq, Debug)]
+pub struct CallFile {
+    pub items: Vec<Mcq>,
+}
+
+pub static CALLS: LazyLock<CallFile> = LazyLock::new(|| serde_json::from_str(&read("calls.json")).expect("calls.json"));
 pub static MISTAKES: LazyLock<MistakeFile> = LazyLock::new(|| serde_json::from_str(&read("mistakes.json")).expect("mistakes.json"));
 
 /// Every word once, in learning order, with a stable id ("topic:word").

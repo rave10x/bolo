@@ -99,7 +99,6 @@ UI = [
 ("Setup baaki hai","Setup still needed"),
 ("• Awaaz pehchanne wala tool (Whisper) install nahi hai.  ","• The speech recognition tool (Whisper) is not installed.  "),
 ("• Baat-cheet wala model (qwen2.5:3b) abhi tayyar nahi hai (ollama chalu hona chahiye).  ","• The chat model (qwen2.5:3b) is not ready yet (ollama must be running).  "),
-("Terminal mein chalao:  scripts/install-talk.sh  — phir neeche button dabao.","Run in a terminal:  ~/Workspace/Projects/bolo/scripts/install-talk.sh  — then press the button below."),
 ("Dobara check karo","Check again"),("aaj ke jawab (target 5)","answers today (target 5)"),
 ("meri sudhari hui galtiyan","mistakes I corrected"),("Apni galtiyon ka test","Test on my mistakes"),
 ("Topic chuno","Pick a topic"),("Mic dabao aur English mein bolo","Press the mic and speak in English"),
@@ -138,6 +137,9 @@ UI = [
 ('Aapne {} filler phrases use kiye (basically, actually, you know...). Unki jagah ek second chup raho.','You used {} filler phrases (basically, actually, you know...). Pause quietly for a second instead.'),
 ('Koi grammar correction nahi chahiye thi. Badhiya!','No grammar corrections were needed. Nice.'),
 ('{} / {} jawab mein sudhaar tha. Ye Meri galtiyan mein save hain — inhe practice karo.','{} of {} answers had a correction. They are saved in My mistakes — practise them next.'),
+("Neeche ka button dabao — app khud sab install kar legi (internet chahiye, ek hi baar).","Press the button below — the app installs everything itself (needs internet, one time only)."),
+("Install ho raha hai… (kuch minute lagenge)","Installing… (takes a few minutes)"),("AI install karo","Install AI"),
+("AI install / repair","AI install / repair"),("Voice, speech recognition and the chat model (about 2 GB, once). Safe to run again.","Voice, speech recognition and the chat model (about 2 GB, once). Safe to run again."),
 ("Aaj kuch due nahi","Nothing due today"),
 # scenario Hinglish subtitles
 ("HR round ke sawaal","HR round questions"),("Java / DSA / project sawaal","Java / DSA / project questions"),

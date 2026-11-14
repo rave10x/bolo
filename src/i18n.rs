@@ -78,6 +78,15 @@ mod tests {
         for m in &crate::data::MISTAKES.items {
             if !table().contains_key(m.why.trim()) { missing.push(m.why.clone()); }
         }
+        for d in &crate::data::DIALOGUES.items {
+            for k in &d.keys {
+                if !table().contains_key(k.hi.trim()) { missing.push(k.hi.clone()); }
+            }
+        }
+        for m in &crate::data::CALLS.items {
+            if !table().contains_key(m.q.trim()) && m.q.chars().any(|c| c == '\u{27}') == false && !m.q.starts_with("Interviewer:") { missing.push(m.q.clone()); }
+            if !table().contains_key(m.why.trim()) { missing.push(m.why.clone()); }
+        }
         set_english(false);
         assert_eq!(tr("Seekho · Lessons"), "Seekho · Lessons");
         assert!(missing.is_empty(), "untranslated: {missing:?}");

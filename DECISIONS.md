@@ -46,7 +46,7 @@ Verified (by running it): all content builds and validates; 10 Rust tests pass (
 3. **Small-model quality**: replies can be generic/slightly off; corrections miss some errors (e.g. "I have fixed … yesterday" was not flagged in my test) and occasionally over-correct. This is the main limitation of running 3B on a laptop CPU.
 4. Hindi translations, Devanagari pronunciations and the 32 dialogues were written by me and not reviewed by a fluent speaker. Dialogue salary figures are placeholders ("between X and Y").
 5. The dialogue's "other person" voice and the role-play scoring beyond the first step were checked visually, not by running a full role-play.
-6. A fully fresh machine: the install scripts (`scripts/install-voice.sh`, `scripts/install-talk.sh`) were written from what I ran by hand, not run from scratch.
+6. A fully fresh machine: the installer (`scripts/install-ai.sh`) was run on a machine where everything was already installed (it re-checks and re-pulls), but not on a blank machine.
 
 ## Not done / next
 - Android port (PrepDeck has one; Bolo does not).
@@ -65,3 +65,5 @@ Verified (by running it): all content builds and validates; 10 Rust tests pass (
 - **Filler counting is a lower bound.** Whisper often drops "um/uh", so mostly "basically / actually / you know / I mean" are counted.
 - **Chat model is a setting** (lists what ollama has installed). Default stays `qwen2.5:3b-instruct`. A bigger instruct model is smarter but slower; coder models are the wrong kind.
 - **Interface language** (Hinglish / English) uses a lookup table, `content/en.tsv`, keyed by the Hinglish source string. Text without an entry shows as written.
+- **Call interviews** (phone screening / video round): stage 7 with 5 lessons, 5 dialogues, 2 Talk partners, a mock "call round" and a Practice drill ("call replies", 17 pick-the-best-reply questions). Content is written Hinglish + English together (`T()` in `tools/lessons_call.py` records both). **CHECK**: wording and salary/notice advice are generic and not reviewed by a recruiter.
+- **One-step install.** `install.sh` builds, installs the app and runs `scripts/install-ai.sh`. The app embeds the same script behind an "Install AI" button (never asks for a password; if Ollama is missing it shows the one command to run, because Ollama's installer needs sudo).

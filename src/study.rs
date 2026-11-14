@@ -31,6 +31,31 @@ pub fn say(ctx: Ctx, text: &str, slow: bool) {
     let _ = audio::speak(text, wpm);
 }
 
+/// Button + live log for installing the AI parts (voice, speech recognition, chat model).
+#[component]
+pub fn InstallAi() -> Element {
+    let mut running = use_signal(llm::installing);
+    let mut tail = use_signal(llm::install_tail);
+    use_future(move || async move {
+        loop {
+            tokio::time::sleep(std::time::Duration::from_secs(2)).await;
+            let r = llm::installing();
+            if *running.peek() != r { running.set(r); }
+            let t = llm::install_tail();
+            if *tail.peek() != t { tail.set(t); }
+        }
+    });
+    let busy = *running.read();
+    rsx! {
+        div { class: "row-actions",
+            button { class: "btn primary", disabled: busy, onclick: move |_| { llm::start_install(); running.set(true); },
+                crate::icon::Ico { name: "download".to_string(), size: 18 }, " ",
+                if busy { {crate::i18n::tr("Install ho raha hai… (kuch minute lagenge)")} } else { {crate::i18n::tr("AI install karo")} } }
+        }
+        if !tail.read().is_empty() { pre { class: "installlog", "{tail}" } }
+    }
+}
+
 #[component]
 pub fn Voice(ctx: Ctx, text: String) -> Element {
     let t2 = text.clone();
@@ -600,7 +625,7 @@ pub fn Settings() -> Element {
     let models = use_hook(llm::installed_models);
     let current_model = llm::model();
     let voice = audio::voice_name();
-    let stt_txt = if llm::stt_ready() { "ready ✓" } else { "not installed (run scripts/install-talk.sh)" };
+    let stt_txt = if llm::stt_ready() { "ready ✓" } else { "not installed (press Install AI)" };
     let chat_txt = if llm::chat_ready() { "ready ✓" } else { "not ready" };
     rsx! {
         div { class: "page narrow",
@@ -653,6 +678,11 @@ pub fn Settings() -> Element {
                 div { class: "row-actions", button { class: "btn", onclick: move |_| { let s = ctx.state.peek(); let _ = audio::speak("Hello! This is how I sound. Let us learn English together.", s.normal_wpm); }, crate::icon::Ico { name: "volume-2".to_string(), size: 18 }, " Awaaz test karo" } }
                 div { class: "muted sm", "Voice engine: {voice}" }
                 div { class: "muted sm", "Speech recognition (Baat-cheet): {stt_txt}   ·   Chat model: {chat_txt}" }
+            }
+            div { class: "card set",
+                div { class: "stage-t", crate::icon::Ico { name: "download".to_string(), size: 20 }, " ", {crate::i18n::tr("AI install / repair")} }
+                div { class: "muted sm", {crate::i18n::tr("Voice, speech recognition and the chat model (about 2 GB, once). Safe to run again.")} }
+                InstallAi {}
             }
             div { class: "card set",
                 div { class: "stage-t", {crate::i18n::tr("Backup")} }
