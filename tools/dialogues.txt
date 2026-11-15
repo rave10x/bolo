@@ -443,3 +443,81 @@ Y: Thank you for your time today. Have a great day!
 K: what are the next steps? | agle kadam kya hain?
 K: thank you for your time | aapke samay ke liye dhanyavaad
 K: I look forward to hearing from you | main aapse jaldi sampark karunga
+## call-fu-app|Following up on an application|Application ke baad follow-up call|📲|Call Interview|Recruiter
+Q: Hello, this is Priya from the HR team. How can I help you?
+Y: Hi ma'am, Rahul this side. Is this a good time to talk?
+Q: Yes, I have a few minutes. Which Rahul is this?
+Y: Thank you. I applied for the Web Developer opening, and we spoke on the phone the other evening. I wanted to follow up and check if there are any updates regarding the opportunity.
+Q: Oh yes, I remember. Let me check the status. One moment, please.
+Y: Sure, take your time. I am in no hurry, and I really appreciate your help.
+Q: Thank you for waiting. Your profile is with the hiring manager, and he is reviewing a few candidates this week.
+Y: Understood. Could you tell me roughly when I can expect to hear back, so that I can plan my time?
+Q: We should have a decision by the end of next week.
+Y: That is helpful. Is there anything else I can send you in the meantime, like my portfolio, project links or an updated resume?
+Q: A link to your portfolio would be great. Please email it to me today.
+Y: Of course. I will send it within the hour, with my phone number and email in the signature so that it is easy to find.
+Q: Perfect. Anything else you wanted to ask?
+Y: Just one thing. If the hiring manager has any questions about my projects, I am happy to explain them on a short call at any time.
+Q: Good, I will let him know. We will get back to you soon.
+Y: Thank you so much for your time, ma'am. I am very interested in this role, and I look forward to hearing from you. Have a great day!
+K: I wanted to follow up on | main ... ke baare mein follow-up karna chahta tha
+K: updates regarding the opportunity | is mauke ke baare mein koi khabar
+K: when can I expect to hear back | mujhe jawab kab tak mil sakta hai
+## call-fu-interview|Follow-up after an interview|Interview ke baad jawab ka intezaar|⏰|Call Interview|Recruiter
+Q: Hello, Priya speaking.
+Y: Good morning, ma'am. This is Rahul. Is this a good time to talk for two minutes?
+Q: Hi Rahul. Yes, go ahead.
+Y: Thank you. I attended the technical interview for the backend role last Tuesday, and I wanted to check on the next steps. I know these things take time, so I hope I am not disturbing you.
+Q: Not at all. We are still discussing a few candidates, so there is no final decision yet.
+Y: I understand. Could you tell me whether the interviewer gave any feedback about my interview?
+Q: He said your Java basics were strong, but he wanted to see more depth in system design.
+Y: Thank you for sharing that, it is really useful. I will work on system design right away. Is there a chance to show that with a small design exercise?
+Q: I can ask him. That is a fair request.
+Y: I would be grateful. I can do it on a call or as a short written document, whichever is easier for the team.
+Q: Okay, I will check and let you know by Friday.
+Y: That works well for me. If I do not hear from you by then, may I call you again on Monday?
+Q: Yes, that is fine. Call me after eleven.
+Y: Thank you, I will do that. I appreciate your time and your honest feedback, ma'am.
+Q: You are welcome. Take care, Rahul.
+Y: Thank you. Have a wonderful day!
+K: I wanted to check on the next steps | main agle steps ke baare mein poochhna chahta tha
+K: I hope I am not disturbing you | umeed hai main aapko pareshaan nahi kar raha
+K: may I call you again on Monday | kya main Monday ko phir call kar sakta hoon
+## call-fu-late|Not a good time to talk|Agar wo abhi busy hon|🕐|Call Interview|Recruiter
+Q: Hello?
+Y: Hello ma'am, this is Rahul. I applied for the Web Developer role. Is this a good time to talk?
+Q: Sorry, I am in the middle of a meeting right now. Can you call later?
+Y: Of course, no problem. What time would be convenient for you?
+Q: Maybe after four o'clock?
+Y: Sure. I will call you at four fifteen. Would you prefer a call or a message on WhatsApp?
+Q: A call is fine. But if I do not pick up, please leave a message.
+Y: Understood. Thank you for letting me know, ma'am. I will call you after four.
+Q: Okay, talk to you then.
+Y: Thank you. Have a good day. Bye!
+Q: Hello, Rahul? Sorry I could not take your call earlier.
+Y: Hi ma'am, thank you for calling back. Is this a good time now?
+Q: Yes, I am free for ten minutes. What did you want to ask?
+Y: I just wanted to know if there is any update on my application, and whether you need any document from my side.
+Q: There is no update yet, but your resume looks good. We will call you if the team wants to move ahead.
+Y: Thank you, ma'am. I will wait for your call. Please feel free to contact me on this number any time.
+K: Is this a good time to talk | kya abhi baat karne ka sahi samay hai
+K: What time would be convenient | kaunsa samay theek rahega
+K: Sorry I could not take your call | maaf kijiye, aapka call nahi utha paya
+## call-fu-feedback|Asking for feedback after a rejection|Reject hone ke baad feedback maangna|💬|Call Interview|Recruiter
+Q: Hello, Priya here.
+Y: Hi ma'am, this is Rahul. Thank you for your email about the Web Developer role. Is this a good time to talk for a minute?
+Q: Yes, sure. How can I help you?
+Y: I understand that you decided to move ahead with other candidates, and I respect that. I wanted to ask if you could share some feedback that could help me improve.
+Q: Sure. Overall your profile was good. The main gap was experience with React in production.
+Y: That is very helpful. Was there any other area where I should improve, such as communication or problem solving?
+Q: Your communication was clear. Maybe more practice with real projects would help.
+Y: Understood. I will build a larger project with React and deploy it, so that I can show real work next time.
+Q: That is a good plan. We also have other openings coming up in a few months.
+Y: That is great to hear. May I stay in touch, and can I apply again when a suitable role opens?
+Q: Yes, of course. Please keep an eye on our careers page.
+Y: I will. Would it be alright if I connect with you on LinkedIn, so that I do not miss any updates?
+Q: Sure, send me a request.
+Y: Thank you very much for your time and your honest feedback, ma'am. I really appreciate it. Have a great day!
+K: share some feedback that could help me improve | kuchh feedback jisse main behtar ho sakoon
+K: I respect your decision | main aapke faisle ka samman karta hoon
+K: stay in touch | sampark mein rehna

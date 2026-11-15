@@ -50,7 +50,7 @@ enum Phase {
 }
 
 /// The corrected sentence word by word; `true` marks words that were not in what the learner said.
-fn diff_words(better: &str, said: &str) -> Vec<(String, bool)> {
+pub(crate) fn diff_words(better: &str, said: &str) -> Vec<(String, bool)> {
     let mut pool: Vec<String> = canon(said).split(' ').map(String::from).collect();
     better
         .split_whitespace()

@@ -48,6 +48,24 @@ def dialogues():
             cur["keys"].append({"en": en, "hi": hi})
         else:
             raise SystemExit("bad dialogue line: " + l)
+    # longer conversations: extra exchanges from dialogues_more.txt are spliced in after line N
+    byid = {x["id"]: x for x in items}
+    cur, n, extra = None, 0, []
+    def flush():
+        if cur is not None:
+            if n % 2 or n > len(cur["lines"]): raise SystemExit("bad insert point for " + cur["id"])
+            cur["lines"][n:n] = extra
+    for l in blocks_file("dialogues_more.txt", None):
+        if l.startswith("## "):
+            flush()
+            did, n = l[3:].split("|"); n = int(n)
+            if did not in byid: raise SystemExit("dialogues_more: unknown id " + did)
+            cur, extra = byid[did], []
+        elif l[:3] in ("Q: ", "Y: "):
+            extra.append({"who": l[0].lower(), "text": l[3:].strip()})
+        elif not l.startswith("# "):
+            raise SystemExit("bad dialogues_more line: " + l)
+    flush()
     return {"items": items}
 
 def mistakes():

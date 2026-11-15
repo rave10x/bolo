@@ -25,3 +25,21 @@ jobs:
         run: cargo build --release
       - name: Installer scripts parse
         run: bash -n install.sh && bash -n scripts/install-ai.sh
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - name: Test
+        run: cargo test --release
+      - name: Build
+        run: cargo build --release
+      - name: Installer script parses
+        shell: pwsh
+        run: |
+          foreach ($f in 'install.ps1','scripts/install-ai.ps1') {
+            $errs = $null
+            [System.Management.Automation.Language.Parser]::ParseFile((Resolve-Path $f), [ref]$null, [ref]$errs) | Out-Null
+            if ($errs) { $errs; exit 1 }
+          }

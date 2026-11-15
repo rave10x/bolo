@@ -1,16 +1,19 @@
-//! Speech and recording through system tools (all offline): piper if installed, else espeak-ng; pw-record / pw-play.
+//! Speech and recording (all offline). The OS-specific part lives in a backend:
+//! Linux = pw-record / pw-play + espeak-ng, Windows = cpal / rodio + the built-in Windows voice.
+//! Piper is used for a natural voice on both when it is installed.
 
+use crate::audio_backend as backend;
 use crate::data::State;
 use std::path::PathBuf;
-use std::process::{Child, Command, Stdio};
 use std::sync::Mutex;
 
-static REC: Mutex<Option<Child>> = Mutex::new(None);
-static PLAY: Mutex<Option<Child>> = Mutex::new(None);
-static VOICE: Mutex<Option<Child>> = Mutex::new(None);
+static REC: Mutex<Option<backend::Handle>> = Mutex::new(None);
+static PLAY: Mutex<Option<backend::Handle>> = Mutex::new(None);
+static VOICE: Mutex<Option<backend::Handle>> = Mutex::new(None);
 
-pub fn tool_available(name: &str) -> bool {
-    Command::new("which").arg(name).stdout(Stdio::null()).stderr(Stdio::null()).status().is_ok_and(|s| s.success())
+/// Can this machine record and play sound?
+pub fn can_record() -> bool {
+    backend::can_record()
 }
 
 pub fn recordings_dir() -> PathBuf {
@@ -26,15 +29,9 @@ pub fn has_recording(id: &str) -> bool {
     std::fs::metadata(rec_path(id)).is_ok_and(|m| m.len() > 1000)
 }
 
-fn stop_slot(slot: &Mutex<Option<Child>>, graceful: bool) {
-    if let Some(mut child) = slot.lock().unwrap().take() {
-        if graceful {
-            // SIGINT lets pw-record finish the WAV header.
-            let _ = Command::new("kill").args(["-INT", &child.id().to_string()]).status();
-        } else {
-            let _ = child.kill();
-        }
-        let _ = child.wait();
+fn stop_slot(slot: &Mutex<Option<backend::Handle>>, graceful: bool) {
+    if let Some(h) = slot.lock().unwrap().take() {
+        h.stop(graceful);
     }
 }
 
@@ -51,21 +48,13 @@ pub fn start_recording(id: &str) -> Result<(), String> {
     stop_all();
     let path = rec_path(id);
     std::fs::create_dir_all(recordings_dir()).map_err(|e| e.to_string())?;
-    let child = Command::new("pw-record")
-        .args(["--rate", "16000", "--channels", "1"])
-        .arg(&path)
-        .stdout(Stdio::null())
-        .stderr(Stdio::null())
-        .spawn()
-        .map_err(|e| format!("pw-record: {e}"))?;
-    *REC.lock().unwrap() = Some(child);
+    *REC.lock().unwrap() = Some(backend::record(&path)?);
     Ok(())
 }
 
 pub fn play_recording(id: &str) -> Result<(), String> {
     stop_all();
-    let child = Command::new("pw-play").arg(rec_path(id)).stdout(Stdio::null()).stderr(Stdio::null()).spawn().map_err(|e| format!("pw-play: {e}"))?;
-    *PLAY.lock().unwrap() = Some(child);
+    *PLAY.lock().unwrap() = Some(backend::play(&rec_path(id))?);
     Ok(())
 }
 
@@ -85,21 +74,21 @@ fn piper_model_alt() -> Option<PathBuf> {
     models().into_iter().find(|p| p.to_string_lossy().contains("ryan"))
 }
 
-/// piper from the app's own venv (installed by scripts/install-voice.sh) or from PATH.
+/// piper from the app's own venv (installed by the AI installer) or from PATH.
 fn piper_bin() -> Option<PathBuf> {
-    let own = State::dir().join("piper-venv/bin/piper");
+    let own = crate::platform::venv_bin(&State::dir().join("piper-venv"), "piper");
     if own.exists() {
         return Some(own);
     }
-    tool_available("piper").then(|| PathBuf::from("piper"))
+    crate::platform::which("piper")
 }
 
 /// Which voice is in use, for the Settings page.
 pub fn voice_name() -> String {
     if piper_model().is_some() && piper_bin().is_some() {
         "Piper (natural voice)".into()
-    } else if tool_available("espeak-ng") {
-        "espeak-ng (robot voice)".into()
+    } else if let Some(n) = backend::system_voice_name() {
+        n.into()
     } else {
         "none".into()
     }
@@ -116,34 +105,15 @@ pub fn speak_as(text: &str, wpm: u32, alt: bool) -> Result<(), String> {
     let cleaned = clean_for_speech(text);
     let text = cleaned.as_str();
     let model = if alt { piper_model_alt().or_else(piper_model) } else { piper_model() };
-    if let (Some(model), Some(bin)) = (model, piper_bin()) {
-        // piper writes a wav file (length-scale > 1 is slower), then pw-play plays it.
-        let scale = (150.0 / wpm.max(60) as f32).clamp(0.8, 1.8);
+    let handle = if let (Some(model), Some(bin)) = (model, piper_bin()) {
+        let scale = (150.0 / wpm.max(60) as f32).clamp(0.8, 1.8); // length-scale > 1 is slower
         let wav = State::dir().join("speak.wav");
         let _ = std::fs::create_dir_all(State::dir());
-        let script = "printf '%s' \"$4\" | \"$1\" -m \"$2\" --length-scale \"$3\" -f \"$5\" >/dev/null 2>&1 && exec pw-play \"$5\"";
-        let child = Command::new("sh")
-            .args(["-c", script, "sh"])
-            .arg(&bin)
-            .arg(&model)
-            .arg(format!("{scale:.2}"))
-            .arg(text)
-            .arg(&wav)
-            .stdout(Stdio::null())
-            .stderr(Stdio::null())
-            .spawn()
-            .map_err(|e| format!("piper: {e}"))?;
-        *VOICE.lock().unwrap() = Some(child);
-        return Ok(());
-    }
-    let child = Command::new("espeak-ng")
-        .args(["-v", "en-us", "-s", &wpm.to_string()])
-        .arg(text)
-        .stdout(Stdio::null())
-        .stderr(Stdio::null())
-        .spawn()
-        .map_err(|e| format!("espeak-ng: {e}"))?;
-    *VOICE.lock().unwrap() = Some(child);
+        backend::speak_piper(&bin, &model, scale, text, &wav)?
+    } else {
+        backend::speak_system(text, wpm)?
+    };
+    *VOICE.lock().unwrap() = Some(handle);
     Ok(())
 }
 
@@ -156,8 +126,8 @@ pub fn speak_wait(text: &str, wpm: u32, alt: bool) -> bool {
         std::thread::sleep(std::time::Duration::from_millis(80));
         let mut slot = VOICE.lock().unwrap();
         match slot.as_mut() {
-            Some(c) => {
-                if let Ok(Some(_)) = c.try_wait() {
+            Some(h) => {
+                if h.finished() {
                     return true;
                 }
             }

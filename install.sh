@@ -3,7 +3,15 @@
 # Usage: ./install.sh            full install
 #        ./install.sh --no-ai    app only (skip the ~2 GB AI download)
 set -euo pipefail
-cd "$(dirname "$0")"
+# Run as "curl ... | bash": there is no local copy yet, so fetch the source first.
+SELF="${BASH_SOURCE[0]:-}"
+if [ -z "$SELF" ] || [ ! -f "$(dirname "$SELF")/Cargo.toml" ]; then
+  command -v git >/dev/null || { echo "Missing: git"; exit 1; }
+  SRC="${BOLO_SRC:-$HOME/.local/share/bolo-src}"
+  if [ -d "$SRC/.git" ]; then git -C "$SRC" pull --ff-only -q || true; else git clone --depth 1 -q https://github.com/rave10x/bolo.git "$SRC"; fi
+  exec bash "$SRC/install.sh" "$@"
+fi
+cd "$(dirname "$SELF")"
 AI=1; [ "${1:-}" = "--no-ai" ] && AI=0
 
 MISSING=0

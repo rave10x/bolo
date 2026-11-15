@@ -67,3 +67,31 @@ Verified (by running it): all content builds and validates; 10 Rust tests pass (
 - **Interface language** (Hinglish / English) uses a lookup table, `content/en.tsv`, keyed by the Hinglish source string. Text without an entry shows as written.
 - **Call interviews** (phone screening / video round): stage 7 with 5 lessons, 5 dialogues, 2 Talk partners, a mock "call round" and a Practice drill ("call replies", 17 pick-the-best-reply questions). Content is written Hinglish + English together (`T()` in `tools/lessons_call.py` records both). **CHECK**: wording and salary/notice advice are generic and not reviewed by a recruiter.
 - **One-step install.** `install.sh` builds, installs the app and runs `scripts/install-ai.sh`. The app embeds the same script behind an "Install AI" button (never asks for a password; if Ollama is missing it shows the one command to run, because Ollama's installer needs sudo).
+
+## Interview Coach (added 2026-11-14)
+- New sidebar section **Interview Coach** (`src/coach.rs`, route `coach`). Paste a job description (+ optional "about you") → `llm::coach_plan` builds 8 questions. The first ("tell me about yourself") and last (join date / your questions) are fixed in code; the 3B model writes only the 6 middle ones, because it ignored the order when asked for all 8.
+- Mock interview: question spoken by Piper, answer by mic or typing; each answer is checked in the background (grammar fix + a sample answer from `llm::model_answer`). Summary shows words/answer, fillers, per-question corrected version (diff highlighted) and the sample. Fixes feed "Meri galtiyan".
+- **CHECK:** sample answers can still invent small details (seen once: "CSS frameworks in my Java project"). The UI says to say only what is true. Skills chips tick when the skill text appears in the profile.
+- Writing helper tab: polish message, recruiter follow-up, LinkedIn note, follow-up call script (`llm::write_help`).
+- Not verified: a full spoken run in the GUI (only the LLM calls were run, via `cargo test --release coach_live -- --ignored --nocapture`).
+- English UI strings for this screen live in `tools/en_coach.py`.
+
+## Additions the owner delegated ("add what you want and decide on my behalf") — 2026-11-14
+The owner tested the Coach, liked it, and told me to add what I think is useful and record the decisions here. Decisions I made:
+
+| Decision | Why |
+|---|---|
+| **Coach history**: each finished interview saves date, job title, average words per answer and filler count (last 30). The Coach page shows the last 6 and a one-line trend. | Progress you can see is what makes people come back tomorrow, and it gives the owner real numbers to post about. Only counts that are always accurate are stored — not AI scores, which a 3B model cannot judge reliably. |
+| **Today plan gets a "Do one mock interview" row.** | The owner is job hunting; a daily interview is the highest-value speaking habit. It sits right under Partner so it is seen. |
+| **No AI "score out of 10" for answers.** | Same reason as no AI tips: a small model's grade would be arbitrary, and a wrong score hurts a learner more than none. Length, fillers and the diffed correction are measurable. |
+| **README updated** (Coach row, 41 dialogues, 9 call dialogues) and **LinkedIn drafts written to `docs/linkedin-posts.md`**, not posted. | Networking was the owner's stated goal; the app now has a story ("government school → built my own practice partner") that is true and specific. Posting is outward-facing, so it stays the owner's click. |
+| **Nothing committed or pushed to git.** | Not asked for; the owner decides when to publish. |
+| **Not built: Android port, more Coach features (resume upload, salary coach).** | Android is large and mic/offline models are the hard part; better to first see whether the owner uses the desktop Coach daily. Resume upload needs PDF parsing for little gain over a typed "about you". |
+
+## Windows support (2026-11-15)
+
+- One Rust code base. OS differences live in `src/platform.rs` (paths, finding tools, venv layout, hidden child windows) and two audio backends: `audio_unix.rs` (PipeWire tools, espeak-ng, unchanged behaviour) and `audio_win.rs` (cpal record, rodio play, built-in Windows voice via System.Speech).
+- Windows-only crates (`cpal`, `hound`, `rodio`) sit under `[target.'cfg(windows)']`, so the Linux build has no new audio dependency.
+- `curl` was replaced by `ureq` (no TLS, localhost only) so neither OS needs curl.
+- Speech recognition and Piper still use Python virtualenvs; Windows gets `scripts/install-ai.ps1` and `install.ps1` instead of the bash scripts.
+- **Not verified:** `cargo check --target x86_64-pc-windows-gnu` passes, Linux tests pass, but nothing has been run on a real Windows machine (microphone capture, rodio playback, PowerShell installer, WebView2).

@@ -145,15 +145,22 @@ fn RolePlay(d: Dialogue, on_exit: EventHandler<()>) -> Element {
         }
     });
 
+    // save the best score once the role-play is finished (a hook, so it must run on every render)
+    let (did, nn) = (d.id.clone(), n);
+    use_effect(move || {
+        if *at.read() >= nn {
+            let sc = scores.peek().clone();
+            let avg = if sc.is_empty() { 0 } else { sc.iter().sum::<u32>() / sc.len() as u32 };
+            if avg > 0 {
+                let did = did.clone();
+                ctx.state.with_mut(|s| { let e = s.dialogs.entry(did).or_default(); *e = (*e).max(avg); });
+            }
+        }
+    });
+
     if *at.read() >= n {
         let sc = scores.read().clone();
         let avg = if sc.is_empty() { 0 } else { sc.iter().sum::<u32>() / sc.len() as u32 };
-        let id = d.id.clone();
-        use_hook(move || {
-            if avg > 0 {
-                ctx.state.with_mut(|s| { let e = s.dialogs.entry(id).or_default(); *e = (*e).max(avg); });
-            }
-        });
         return rsx! {
             div { class: "page narrow",
                 div { class: "card result",

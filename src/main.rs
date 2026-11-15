@@ -1,4 +1,13 @@
+#![cfg_attr(all(windows, not(debug_assertions)), windows_subsystem = "windows")]
 mod audio;
+#[cfg(unix)]
+#[path = "audio_unix.rs"]
+mod audio_backend;
+#[cfg(windows)]
+#[path = "audio_win.rs"]
+mod audio_backend;
+mod platform;
+mod coach;
 mod data;
 mod dialog;
 mod i18n;
@@ -20,6 +29,7 @@ const FONT: &[u8] = include_bytes!("../assets/onest.woff2");
 pub enum Route {
     Today,
     Talk,
+    Coach,
     Dialogues,
     Dialogue(String),
     Lessons,
@@ -74,6 +84,7 @@ fn App() -> Element {
     let route = use_signal(|| match std::env::var("BOLO_ROUTE").ok().as_deref() {
         Some("talk") => Route::Talk,
         Some("dialogues") => Route::Dialogues,
+        Some("coach") => Route::Coach,
         Some(r) if r.starts_with("dialogue:") => Route::Dialogue(r[9..].to_string()),
         Some("lessons") => Route::Lessons,
         Some("words") => Route::Words,
@@ -124,9 +135,10 @@ fn App() -> Element {
     let streak = state.read().streak();
     let due = state.read().due_ids().len();
 
-    let nav: [(&str, &str, Route); 9] = [
+    let nav: [(&str, &str, Route); 10] = [
         ("🏠", "Aaj · Today", Route::Today),
         ("💬", "Partner · Talk", Route::Talk),
+        ("💼", "Interview Coach", Route::Coach),
         ("🎭", "Conversations", Route::Dialogues),
         ("📘", "Seekho · Lessons", Route::Lessons),
         ("🔤", "Shabd · Words", Route::Words),
@@ -139,13 +151,14 @@ fn App() -> Element {
         match r {
             Route::Today => 0,
             Route::Talk => 1,
-            Route::Dialogues | Route::Dialogue(_) => 2,
-            Route::Lessons | Route::Lesson(_) => 3,
-            Route::Words | Route::Topic(_) | Route::Cards { .. } => 4,
-            Route::Speak | Route::Pack(_) => 5,
-            Route::Practice | Route::Drill(_) => 6,
-            Route::Mistakes => 7,
-            Route::Settings => 8,
+            Route::Coach => 2,
+            Route::Dialogues | Route::Dialogue(_) => 3,
+            Route::Lessons | Route::Lesson(_) => 4,
+            Route::Words | Route::Topic(_) | Route::Cards { .. } => 5,
+            Route::Speak | Route::Pack(_) => 6,
+            Route::Practice | Route::Drill(_) => 7,
+            Route::Mistakes => 8,
+            Route::Settings => 9,
         }
     };
     let cur_sec = section(&current);
@@ -163,7 +176,7 @@ fn App() -> Element {
                         rsx! {
                             button { key: "{i}", title: "{i18n::tr(label)}", class: if i == cur_sec { "nav on" } else { "nav" }, onclick: move |_| navigate(ctx, r2.clone()),
                                 span { class: "ni", icon::Ico { name: ico.to_string() } } span { class: "nl", "{i18n::tr(label)}" }
-                                if i == 4 && due > 0 { span { class: "pill", "{due}" } }
+                                if i == 5 && due > 0 { span { class: "pill", "{due}" } }
                             }
                         }
                     }
@@ -177,6 +190,7 @@ fn App() -> Element {
                 {match current {
                     Route::Today => rsx! { study::Today {} },
                     Route::Talk => rsx! { talk::Talk {} },
+                    Route::Coach => rsx! { coach::Coach {} },
                     Route::Dialogues => rsx! { dialog::DialogueList {} },
                     Route::Dialogue(id) => rsx! { dialog::DialogueView { id } },
                     Route::Lessons => rsx! { study::LessonList {} },

@@ -2,6 +2,7 @@
 name = "bolo"
 version = "0.1.0"
 edition = "2021"
+license = "PolyForm-Noncommercial-1.0.0"
 description = "Offline English practice for Hindi speakers - Hinglish lessons, words, speaking"
 
 [dependencies]
@@ -12,6 +13,14 @@ serde = { version = "1", features = ["derive"] }
 serde_json = "1"
 base64 = "0.22"
 tokio = { version = "1", features = ["rt", "time"] }
+# plain HTTP to the local Ollama server (no TLS needed, nothing leaves the machine)
+ureq = { version = "2", default-features = false }
+
+# Windows: record and play audio natively (Linux uses the PipeWire tools)
+[target.'cfg(windows)'.dependencies]
+cpal = "0.15"
+hound = "3"
+rodio = { version = "0.20", default-features = false, features = ["wav"] }
 
 [profile.release]
 opt-level = 3

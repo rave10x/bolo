@@ -1,0 +1,334 @@
+# Extra exchanges, inserted into dialogues.txt after line N (N must be even). Format: "## id|N" then Q:/Y: pairs.
+## int-intro|6
+Q: How would you describe your technical skills at the moment?
+Y: My strongest area is core Java and object-oriented design. I am comfortable with Spring Boot, SQL and Git, and I am still improving my knowledge of testing and system design.
+Q: How do you keep your skills up to date?
+Y: I follow a daily routine. I solve one or two problems, read about one new concept, and build small features in my own projects. I also read other people's code on GitHub.
+Q: Have you worked in a team before, or mostly alone?
+Y: Mostly on college and personal projects, but a few of them were team projects. I learned to use Git branches, write clear commit messages and ask for reviews.
+Q: What is one thing you are proud of in your journey so far?
+Y: Learning everything step by step on my own. I did not have much guidance at the start, but I kept going, and now I can build a complete application from the database to the API.
+## int-strength|6
+Q: Interesting. Can you tell me more about how you work on that weakness?
+Y: Yes. When I start a task, I note the time. If thirty minutes pass and I have no progress, I write down what I tried and ask a teammate. This also saves their time because my question is specific.
+Q: Do you have a strength that is useful specifically in a team?
+Y: I think it is being reliable. If I say I will finish something by Thursday, I tell the team early when there is a risk, so nobody is surprised.
+Q: How do you handle feedback when someone points out a mistake?
+Y: I try not to take it personally. I thank the person, fix the problem, and think about how to avoid it next time. Honestly, feedback is the fastest way for me to improve.
+Q: And how do you handle pressure near a deadline?
+Y: I break the work into small tasks, decide what is most important, and communicate clearly with my manager. I stay calm because panic does not fix bugs.
+## int-why|6
+Q: What do you think you can improve about our product?
+Y: I have only used it as a customer, so I would not claim to know everything. But I noticed the mobile page loads slowly, and I would like to understand why and help improve it.
+Q: Do you have any other offers at the moment?
+Y: I am talking to a few companies, but this role is a very good match for my skills, and it is one of my top choices.
+Q: How would you handle working on a technology you do not know yet?
+Y: I would start with the official documentation, build a very small example, and then ask a teammate to review it. I have done this with Spring and databases, and it works well for me.
+Q: What kind of work environment helps you do your best work?
+Y: A team where people share knowledge openly, give honest feedback and respect each other's time. I also like having clear goals so that I know what success looks like.
+## int-project|6
+Q: Did you work on this project alone, or with others?
+Y: Alone, but I asked friends to test it and tell me what was confusing. Their feedback helped me change the screens and the error messages.
+Q: Why did you choose Java and a database for it?
+Y: Java is the language I know best, and I wanted to learn how real applications store data safely. I used a relational database because expenses have a clear structure.
+Q: Can you describe how the data flows when a user adds an expense?
+Y: The user sends a request to the API. The controller checks the data and passes it to the service, and the service saves it in the database. Then the API returns a response with the saved expense.
+Q: How did you handle errors, for example if the database was not available?
+Y: I caught the exception, wrote it in the log, and returned a clear message with the right status code instead of crashing. I also added a retry for a short connection problem.
+## int-tech|6
+Q: What is the difference between an abstract class and an interface?
+Y: An interface describes what a class can do, and a class can implement many interfaces. An abstract class can also hold shared fields and some ready code, but a class can extend only one of them.
+Q: When would you choose one over the other?
+Y: If I only need a contract, I use an interface. If several classes share common code and state, I use an abstract class. These days I usually start with an interface because it is more flexible.
+Q: What is a primary key in a database, and why is it important?
+Y: A primary key uniquely identifies each row in a table. It cannot be empty or repeated, so other tables can refer to it safely, and the database can find a row quickly.
+Q: How would you make a slow query faster?
+Y: First I would look at the query plan to see where time is spent. Often adding an index on the column in the where condition helps. I would also select only the columns I need.
+## int-conflict|6
+Q: Has there been a situation where you realised you were wrong?
+Y: Yes. In another project I insisted on a certain design, but a teammate showed me a simpler approach. I tried it, and he was right. I told him so, and we used his idea.
+Q: How do you handle a teammate who is not doing their part?
+Y: I would first talk to them privately, without blaming, and ask if they have a problem. Maybe they are stuck or overloaded. If it continues, I would involve our lead.
+Q: What if your manager asks for something you think is a bad idea?
+Y: I would respect the decision, but I would explain my concern with facts, for example the risk or the extra time. If they still prefer it, I will do it and help make it work.
+Q: How do you make sure the team stays friendly after a disagreement?
+Y: I keep the discussion about the problem, not the person. Afterwards I thank them for their view, and maybe we have a tea together. Small things help a lot.
+## int-salary|6
+Q: Are you comfortable with the salary range we have for this role?
+Y: It is close to what I expected. I would like to discuss the details like variable pay and benefits, because the total package matters, not only the base number.
+Q: Would you accept a lower salary if the learning opportunity is good?
+Y: For a short time, yes, if there is a clear path to grow and a review after six months. But I would like the salary to be fair for the work I do.
+Q: How did you decide on that number?
+Y: I looked at job posts and salary reports for similar roles in this city, and I spoke with a few people working in the field. I also considered my skills and the responsibilities of this role.
+Q: If we offer less than your range, what will you do?
+Y: I would ask what we can adjust, maybe the review period or the benefits. I want to find a solution that works for both of us before making a decision.
+## int-ask|6
+Q: Good question. Is there anything else you would like to know about the company?
+Y: Yes. How do you measure success for a new developer in the first six months?
+Q: We look at how well you understand the codebase, the quality of your pull requests, and how you work with the team.
+Y: That is clear. And what is the biggest challenge the team is facing right now?
+Q: Our main challenge is growing quickly while keeping the code simple and stable.
+Y: Interesting. Could you tell me about the technology stack and whether there is room to learn new tools?
+Q: We use Java, Spring and PostgreSQL, and we encourage people to try new tools in small experiments.
+Y: That sounds exciting. Does the company support learning, for example with courses or conferences?
+## int-dontknow|6
+Q: Let us try another one. Can you explain what a deadlock is?
+Y: A deadlock happens when two threads each hold a resource and wait for the other to release theirs, so neither can continue. I have only seen it in examples, not in production.
+Q: How could you prevent it?
+Y: One way is to always acquire locks in the same order. Another way is to use a timeout so that a thread does not wait forever. I am not sure which one is better in every case.
+Q: What would you do if you got stuck on a problem like this at work?
+Y: I would first search the documentation and the logs, then try a small experiment. If I still cannot solve it after a reasonable time, I would ask a senior colleague with a clear description of what I tried.
+Q: Do you prefer to ask for help quickly or struggle alone?
+Y: I try to find a balance. I like to try on my own first because I learn more, but I set a time limit so that I do not waste the team's time.
+## off-standup|6
+Q: Thanks. Rahul, is the password reset feature on track for this sprint?
+Y: Yes, I think so. The email part is almost done, and the remaining work is the validation and the tests. I expect to finish it by Wednesday.
+Q: Do you need help from anyone on the team?
+Y: Maybe from the front-end side. Could someone confirm the final text of the reset email? I do not want to change it later.
+Q: Priya, can you take that one? Rahul, anything you found yesterday that others should know?
+Y: Yes, one thing. I found that the date field accepts values from the past in two other forms as well. I created a ticket for it, so we can fix it together later.
+Q: Good catch. Please add the ticket number to the channel.
+Y: Will do. I will post it right after the meeting.
+## off-help|6
+Q: By the way, how did you find the problem in the logs?
+Y: I searched for the word error and checked the lines just before it. Two lines above, there was a message with the port number, but I did not notice it at first.
+Q: A tip: set the log level to debug when you are not sure. It shows much more detail.
+Y: That is a great tip. Where can I change the log level? Is it in the same configuration file?
+Q: Yes, in the application properties file. You can set it for one package only, so the logs are not too noisy.
+Y: Thanks, I will try that now. Is there a place where the team keeps notes about common problems like this?
+Q: We have a wiki page. You are welcome to add your own notes there.
+Y: I will add this one today so that the next person can find it quickly.
+## off-delay|6
+Q: Have you told the client about the possible delay?
+Y: Not yet. I wanted to speak to you first. If you agree, I can prepare a short message with the new date and the reason, and you can review it before we send it.
+Q: Yes, please do that. What is the main risk for Monday?
+Y: The main risk is the payment testing. The provider sometimes responds slowly, so I have asked for a test account that is more stable. I will also test the rest of the feature in parallel.
+Q: Is there anything the team can do to help you?
+Y: If someone could review my code in two parts, one on Friday and one on Saturday morning, that would save a lot of time. I can also share a checklist so the review is quick.
+Q: Okay, I will ask Aman. How will we avoid this next time?
+Y: I will check external services earlier in the sprint and tell you about any risk on the first day, not the last day. I have also added a note in our planning document.
+## off-disagree|6
+Q: What if the extra table makes the queries more complicated?
+Y: A little, yes. We would need a join. But joins are standard, and with an index on the user id it will be fast. I can write the main queries so that you can check them.
+Q: And what about the time? We have a tight deadline.
+Y: I estimate half a day more. I can save time by creating the tables with a migration script, so nobody needs to set them up manually.
+Q: Would it affect the reports that Neha is building?
+Y: Possibly. I will talk to her today so that she knows about the change. It is better that she hears it from me early than finds out later.
+Q: Okay. And if we decide later that it was not needed?
+Y: Then we have only lost half a day. If we had to split the table later with real data, it would take much longer and be riskier.
+## off-review|6
+Q: One more thing. The variable names in the last class are not very clear.
+Y: You are right. I used short names to save time. I will rename them so that they describe what they store, for example total price instead of tp.
+Q: Also, is there any reason you used a loop here instead of a stream?
+Y: I find the loop easier to read and debug, but I am happy to try a stream if it is the team style. Could you tell me what the team usually prefers?
+Q: We use streams for simple transformations, but a loop is fine when it is clearer.
+Y: Understood, that is helpful. I will keep the loop here because there are two conditions, and I will use streams in simple places.
+Q: Good. Do you have any questions about the other comments?
+Y: Just one. On the error handling, should I throw a custom exception or return a message? I want to follow the same pattern as the rest of the code.
+## off-leave|6
+Q: Will you be travelling, or will you be at home?
+Y: I will be travelling to my hometown by train, so the network may not be stable. But I will check my messages in the evening, and for emergencies you can call me.
+Q: Is there anything that might need attention while you are away?
+Y: The deployment on Thursday is the only thing. I have written the steps in a document, and Aman has already done it once with me, so he is comfortable.
+Q: Can you add a note in the team calendar as well?
+Y: Of course. I will mark myself as on leave and add Aman as the backup contact, so everyone knows who to ask.
+Q: Do you plan to take any more leave this quarter?
+Y: Maybe one more day in March for a personal reason, but I will inform you well in advance so that we can plan the work.
+## off-clarify|6
+Q: Does anyone have other questions about the feature?
+Y: Yes, one more. When you say users should see the data in real time, do you mean it should update every second, or is a refresh every minute enough?
+Q: Good point. A refresh every thirty seconds should be enough.
+Y: Great, that makes it much simpler, and it will not put a lot of load on the server. Should we also show a message when the data was last updated?
+Q: Yes, that would be useful for the users.
+Y: Understood. One last thing, what should we do for the users who are on a slow connection? Do we need a special version?
+Q: Not for now. Let us keep it simple and see how it goes.
+Y: Okay. So, to summarise: the data refreshes every thirty seconds, we show the last updated time, and there is no special version for slow connections. Is that correct?
+## off-demo|6
+Q: How long did this take you to build?
+Y: About four days, including the tests. The first day was mostly design and the database, and the remaining time was for the screens and the filters.
+Q: Can you show how an admin user would see it differently?
+Y: Sure. An admin has one more button, Delete, next to each order. I am logging in with an admin account now. You can see the extra button here, and there is a confirmation before anything is deleted.
+Q: What happens if two people edit the same order at once?
+Y: Good question. Right now, the last save wins, which is not ideal. I plan to add a version check so that the second person sees a message and can reload the latest data.
+Q: That would be a good improvement. Any feedback you would like from us?
+Y: Yes, please. I would like to know if the filter is easy to understand, and whether you would like any other filters. Please share your comments in the ticket or message me directly.
+## off-first|6
+Q: How are you feeling so far? Is everything clear?
+Y: Yes, it is a lot to take in, but everyone has been very friendly. I have made a list of questions, and I will ask them when you have time.
+Q: Go ahead, we have time now.
+Y: First, what is the working time here, and is there a flexible start? And how do I log my work hours?
+Q: The core hours are eleven to four, and you log your time in the portal every Friday.
+Y: Thank you. And who is my manager, and when will I meet them? I would like to understand what is expected from me in the first month.
+Q: Your manager is Sandeep, and you have a meeting with him at three o'clock today.
+Y: Perfect. One last thing, where can I find the coding guidelines? I would like to follow them from the first commit.
+## off-connect|6
+Q: Is there something we can do to help with the connection?
+Y: Thanks. I am on Wi-Fi, so I will move closer to the router, or switch to my phone hotspot if it stays slow. Please give me a minute.
+Q: No problem. We will start with the other topics.
+Y: I am back, and the connection is better now. I can hear you clearly. Could you share the agenda again? I missed the first part.
+Q: Sure, I will paste it in the chat. First the status, then the release plan, and finally the open questions.
+Y: Thank you. For the status, the report is ninety percent ready, and I am only waiting for the final numbers from the finance team.
+Q: When do you expect the numbers?
+Y: They promised them by eleven. I will follow up with them directly, and if there is a delay, I will let you know in the chat.
+## hr-offer|6
+Q: Is there anything else you would like to know about the benefits?
+Y: Yes, please. Could you explain the health insurance? I would like to know if it covers my family and whether there is a waiting period.
+Q: Yes, it covers your spouse, children and parents up to a limit, and it starts from the first day.
+Y: That is good to know. What about the joining date? The letter says the first of next month. Is there some flexibility if my notice period ends a few days later?
+Q: We can wait a week or so, but please inform us as soon as possible.
+Y: Understood. I will confirm the date after I speak to my current manager. Could you also tell me which documents I need to submit before joining?
+Q: We need your educational certificates, ID proof and the relieving letter from your previous company.
+Y: Thank you, I will prepare them. And will the offer be valid until Friday, or is there a possibility to extend it by one more day if needed?
+## hr-negotiate|6
+Q: Let me ask you honestly: if we cannot change the base salary, would you still join?
+Y: I would like to, but I need to think about it. The role is exciting, so I would be open to a smaller increase if there is a salary review after six months.
+Q: A six-month review is possible. What else is important for you?
+Y: Flexibility in work from home, at least two days a week, and a learning budget for courses. These are very valuable for me.
+Q: We have a learning budget of fifty thousand a year, and two days remote is standard.
+Y: That is great to hear. With those and a slightly better base, I would be very happy to accept. Could you confirm everything in writing?
+Q: Yes, I will update the offer letter and send it by tomorrow.
+Y: Thank you very much. I really appreciate your time and flexibility, and I am looking forward to joining the team.
+## hr-notice|6
+Q: Is there anything specific you would like us to do to make the transition easier?
+Y: Yes. I can prepare documentation for my modules and train a teammate during the notice period. I will also finish the tasks that are already in progress.
+Q: Who do you suggest should take over your work?
+Y: I think Aman would be a good choice because he already knows the payment module. I can start the handover sessions next week if you agree.
+Q: Would you be open to leaving earlier if we find a replacement quickly?
+Y: Yes, I would be open to that, but I would need to check it with my new company. I will let you know after I speak to them.
+Q: Okay. How would you like us to inform the team?
+Y: I would prefer that we tell them together, maybe in the team meeting on Monday. I would like them to hear it from me directly, and not through rumours.
+## hr-appraisal|6
+Q: Do you think the targets we set at the start of the year were fair?
+Y: Mostly yes. The only difficulty was that two priorities changed in the middle of the year, so some of my tasks were delayed. It would help to review the targets every quarter.
+Q: That is a good suggestion. What was your biggest achievement this year?
+Y: Delivering the payment module, because it was my first big responsibility. I also helped two new joiners set up their environment, and I am proud of that.
+Q: What kind of support do you need from me to grow?
+Y: More chances to present my work to the larger team, and feedback after each release. A mentor for system design would also be very helpful.
+Q: I can arrange a mentor. Let us also think about the salary revision.
+Y: Thank you. I understand the decision depends on many factors. I would like to know what I can do to be in a strong position for the next review.
+## hr-policy|6
+Q: Do you have any other questions about leave or benefits?
+Y: Yes. If I work on a weekend because of a release, will I get compensatory leave or extra pay?
+Q: You get a compensatory day off, which you must use within two months.
+Y: That is fair. And what is the process for reimbursing travel and internet expenses when I work from home?
+Q: You upload the bills in the portal by the fifth of the next month, and the amount comes with your salary.
+Y: Understood. Also, how can I download my salary slips and tax documents? I will need them for the bank.
+Q: They are available in the portal under the payroll section. If something is missing, send me an email.
+Y: Perfect. One last thing, who should I contact if I find an error in my salary slip?
+## hr-exit|6
+Q: What did you find difficult while working here?
+Y: Sometimes the priorities changed quickly, and it was hard to plan. Also, there were not many chances to learn new technologies during working hours.
+Q: How was your relationship with your manager?
+Y: Very good. He was supportive, gave clear feedback, and trusted me with important tasks. I would work with him again without hesitation.
+Q: Do you think the salary and benefits were competitive?
+Y: They were fair for the market, but a regular review would help people feel valued. The benefits, like insurance and flexible hours, were very good.
+Q: If we offered you a chance to return later, would you consider it?
+Y: Yes, I would. I am leaving on good terms, and if the role and the growth are right, I would be happy to consider it in the future.
+## cl-req|6
+Q: Should customers be able to book more than one appointment at a time?
+Y: Good question. Do you want to allow that, or should one customer have only one active booking? It changes how we design the screen and the rules.
+Q: One active booking is fine for now, but maybe we will change it later.
+Y: Understood. I will build it in a way that is easy to change later. What about payments, do customers pay online when they book, or at the shop?
+Q: At the shop for now. Online payment will come in the second phase.
+Y: Okay, so no payment in phase one. Who will manage the schedule on your side, and does that person need an admin page?
+Q: Yes, one person will manage the slots and see all the bookings.
+Y: Great. I will include a simple admin page for that. Let me summarise everything once more, and please correct me if I missed something.
+## cl-status|6
+Q: How is the team coping with the workload?
+Y: The team is doing well. We have four people on the project, and we meet every morning for fifteen minutes to share progress and remove blockers.
+Q: Will the budget stay the same?
+Y: Yes, as of now we are within the budget. If the payment provider issue continues, we may need two extra days, but I will tell you before we spend any additional time.
+Q: Are there any decisions that you need from us this week?
+Y: Yes, two things. First, we need the final text for the confirmation email. Second, we need your approval on the colour of the booking button, as the designer has given two options.
+Q: I will send both by tomorrow. Anything else?
+Y: That is all for now. I will send a short summary of this call by email, with the next steps and the dates, so that we are aligned.
+## cl-outage|6
+Q: Were any customer records lost?
+Y: No, no data was lost. The problem was only that the login service was not responding. We checked the database carefully, and all records are safe.
+Q: Why did it take an hour to fix?
+Y: Honestly, we did not notice it right away, because we had no alert for that service. Once we saw the complaints, it took us fifteen minutes to find the cause and roll back.
+Q: What are you doing to find such problems faster?
+Y: We are adding an automatic alert that sends a message to the team if the login fails more than a few times in a minute. That will be ready by the end of this week.
+Q: Do you think the customers should be informed?
+Y: I would suggest a short, honest message from your side, saying that there was a technical issue, that it is fixed, and that no data was affected. I can help you draft it if you like.
+## cl-schedule|6
+Q: Who else should join the meeting?
+Y: It would be good to have the designer and someone from your side who can approve changes. That way we can decide in the meeting, without waiting for another round of emails.
+Q: I will invite our product owner. Should we prepare anything before the call?
+Y: Yes, it would help if you could look at the design file in advance and write down your comments. I will send the link and a short agenda today.
+Q: Which time zone should we use? We are in different cities.
+Y: Let us use Indian Standard Time, and I will also mention the time in your time zone in the invite, so there is no confusion.
+Q: Good. Can we record the meeting?
+Y: Of course, if everyone agrees. I will start the recording and share the notes and the link after the call.
+## soc-lunch|6
+Q: Which team are you in, again? I do not see you much.
+Y: I am in the backend team, on the payments project. Our desks are on the other side of the floor, so I do not come here often.
+Q: What do you usually do after work?
+Y: Sometimes I go for a walk, and on some days I practise coding or my spoken English. On weekends I like to relax, watch matches and meet friends.
+Q: Have you tried the food from the new place around the corner?
+Y: Not yet, but I heard it is good. Maybe we can go together on Friday if you are free. I would like to try their thali.
+Q: Sounds good. Let us ask the others too.
+Y: Yes, let us make a group. It is a good way to know people from other teams.
+## soc-network|6
+Q: What kind of projects are you working on these days?
+Y: I am building a small booking application with Java and Spring. I am also learning about testing, so I would love to hear how testers think about quality.
+Q: Testing is mostly about thinking like a user and trying to break things.
+Y: That is interesting. I think developers often test only the happy path. Do you have any advice for writing code that is easy to test?
+Q: Keep functions small and avoid hidden dependencies. Then automated tests become much easier.
+Y: That is very useful, thank you. Are there any good communities or groups that you would recommend for a developer who wants to grow?
+Q: There is a local Java group that meets monthly. I can add you to the group chat.
+Y: That would be great. Thank you for sharing. I am happy I came tonight.
+## soc-farewell|6
+Q: What are you going to remember most about this team?
+Y: The way everyone helped each other, and the Friday lunches. When I joined, I could barely speak in meetings, and now I can lead a discussion. That is because of all of you.
+Q: We will miss your questions in the stand-up!
+Y: I will miss them too. Please keep sending me the funny memes, and I will keep sending mine.
+Q: Do you have any advice for the new joiners?
+Y: Yes. Ask questions early, do not be afraid of making mistakes, and write things down. People here are very kind and happy to help.
+Q: That is great advice. Let us take a team photo before you go.
+Y: Yes, please. I would like to have one to remember everyone. Let me call the others from the next room.
+## call-phone-open|6
+Q: What kind of role are you looking for?
+Y: I am looking for a backend developer role where I can work on APIs and databases. I would like a team that does code reviews and supports learning.
+Q: Are you open to working from the office, or do you prefer remote?
+Y: I am open to a hybrid model. I can work from the office, and I am also comfortable working from home with a good internet connection.
+Q: What is your expected salary?
+Y: I am looking for a package in line with the market for my experience. I would be happy to discuss the details after I understand the role better.
+Q: Do you have any other interviews in progress?
+Y: Yes, I have two other conversations, but I am very interested in this position and would like to move forward with it.
+## call-video-tech|6
+Q: Which part of the project are you most comfortable explaining?
+Y: The backend, especially the REST API and the database design. I can also explain how I handled validation and error messages.
+Q: Great. Can you explain how you would design a simple URL shortener?
+Y: Sure. Let me think aloud. The user sends a long URL, and the service generates a short code and stores both in a database. When someone opens the short link, the service looks up the code and redirects to the long URL.
+Q: How would you generate the short code?
+Y: One simple way is to use an auto-incremented id and encode it in base sixty-two. It is short and unique. If we need to hide the sequence, we could add a random part.
+Q: What would happen if the traffic becomes very high?
+Y: I would add a cache for the popular links, so that the database is not hit each time, and then scale the service horizontally behind a load balancer.
+## call-audio|6
+Q: Is your connection stable now? Should we switch to a phone call?
+Y: It looks stable now, but if it breaks again, I can switch to a phone call. May I share my number in the chat as a backup?
+Q: Yes, please do that. Let us continue then. Where were we?
+Y: You asked about my last project. I built a booking application with a Java backend. The most important thing I learned was how to design clear and consistent API endpoints.
+Q: Sorry, can you repeat the last sentence? It froze for a second.
+Y: Of course. I said that the most important thing I learned was how to design clear and consistent API endpoints. Is it better now?
+Q: Yes, I could hear it now. Thank you for your patience.
+Y: No problem at all. Please stop me whenever the audio is not clear, and I will repeat it.
+## call-repeat|6
+Q: Do you want me to repeat anything else before we move on?
+Y: Yes, please. Could you speak a little slower? I want to make sure I catch every word, and the line is not very clear.
+Q: Of course. Is this speed better?
+Y: Yes, that is much better, thank you. I understood the question now: you want to know how I handle disagreement in a technical discussion.
+Q: Exactly. Let me ask you a new question. How do you prioritise your tasks?
+Y: I list all my tasks and sort them by urgency and impact. If I am not sure what is most important, I ask my lead. Could you give me an example scenario so that I can answer more specifically?
+Q: Imagine you have three tasks due today.
+Y: Thank you. In that case, I would finish the one that blocks other people first, then the one with the earliest deadline, and I would tell my lead if the third one needs more time.
+## call-close|6
+Q: Is there anything you would like to add that we did not talk about?
+Y: Just one thing. I am a quick learner and I take ownership of my work. If I do not know something, I learn it and ask for help early, so there are no surprises.
+Q: That is good to hear. What is your availability if we want to schedule the next round?
+Y: I am flexible. I can attend an interview any weekday after ten in the morning, and with some notice I can also take a morning slot.
+Q: Perfect. Please also keep your resume handy, we may ask for some documents.
+Y: Sure. I have my updated resume and my project links ready, and I can send them again by email right after this call.
+Q: One more thing, can I confirm your email address?
+Y: Yes, it is the same one as in my resume. I will also send you a short message after the call with my details, so that you have everything in one place.

@@ -194,6 +194,7 @@ pub fn body(name: &str) -> &'static str {
         "panel-left-open" => r##"<rect width="18" height="18" x="3" y="3" rx="2"/><path d="M9 3v18"/><path d="m14 9 3 3-3 3"/>"##,
         "languages" => r##"<path d="m5 8 6 6"/><path d="m4 14 6-6 2-3"/><path d="M2 5h12"/><path d="M7 2h1"/><path d="m22 22-5-10-5 10"/><path d="M14 18h6"/>"##,
         "video" => r##"<path d="m16 13 5.223 3.482a.5.5 0 0 0 .777-.416V7.87a.5.5 0 0 0-.752-.432L16 10.5"/><rect x="2" y="6" width="14" height="12" rx="2"/>"##,
+        "copy" => r##"<rect width="14" height="14" x="8" y="8" rx="2" ry="2"/><path d="M4 16c-1.1 0-2-.9-2-2V4c0-1.1.9-2 2-2h10c1.1 0 2 .9 2 2"/>"##,
         "download" => r##"<path d="M12 15V3"/><path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"/><path d="m7 10 5 5 5-5"/>"##,
         "arrow-right" => r##"<path d="M5 12h14"/><path d="m12 5 7 7-7 7"/>"##,
         "arrow-left" => r##"<path d="m12 19-7-7 7-7"/><path d="M19 12H5"/>"##,

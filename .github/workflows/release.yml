@@ -22,7 +22,39 @@ jobs:
           cp target/release/bolo dist/bolo/
           cp -r scripts packaging public README.md LICENSE install.sh dist/bolo/
           tar -C dist -czf bolo-${GITHUB_REF_NAME}-linux-x86_64.tar.gz bolo
+      - uses: actions/upload-artifact@v4
+        with:
+          name: linux
+          path: bolo-*.tar.gz
+  windows:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - uses: Swatinem/rust-cache@v2
+      - run: cargo build --release
+      - name: Package
+        shell: pwsh
+        run: |
+          New-Item -ItemType Directory -Force dist/bolo | Out-Null
+          Copy-Item target/release/bolo.exe dist/bolo/
+          Copy-Item -Recurse scripts, public dist/bolo/
+          Copy-Item README.md, LICENSE, install.ps1 dist/bolo/
+          Compress-Archive -Path dist/bolo -DestinationPath "bolo-$env:GITHUB_REF_NAME-windows-x86_64.zip"
+      - uses: actions/upload-artifact@v4
+        with:
+          name: windows
+          path: bolo-*.zip
+  release:
+    needs: [linux, windows]
+    runs-on: ubuntu-24.04
+    steps:
+      - uses: actions/download-artifact@v4
+        with:
+          merge-multiple: true
       - uses: softprops/action-gh-release@v2
         with:
-          files: bolo-*.tar.gz
+          files: |
+            bolo-*.tar.gz
+            bolo-*.zip
           generate_release_notes: true

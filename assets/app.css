@@ -166,6 +166,9 @@ button:disabled { cursor: default; opacity: .5; }
 .bubble { max-width: 82%; padding: 12px 18px; border-radius: 20px; font-size: 19px; display: flex; gap: 10px; align-items: center; }
 .bubble.ai { background: var(--surface); border: 1px solid var(--border); border-top-left-radius: 6px; }
 .bubble.me { background: var(--accent); color: var(--accent-ink); border-top-right-radius: 6px; }
+.bubble.me .ib { background: rgba(255,255,255,.28); color: var(--accent-ink); }
+.bubble.me .ib:hover:not(:disabled) { background: rgba(255,255,255,.45); }
+.bubble.me .ib svg { stroke: var(--accent-ink); }
 .fixcard { max-width: 82%; background: var(--good-soft); border-radius: 14px; padding: 10px 16px; }
 .okline { color: var(--good); }
 .hintbox { background: var(--tip); border-radius: 14px; padding: 10px 16px; margin: 10px 0; }
@@ -207,3 +210,5 @@ button:disabled { cursor: default; opacity: .5; }
 .app.collapsed .brand { flex-direction: column; gap: 10px; }
 .app.collapsed .side-toggle { margin: 0; }
 .installlog { margin: 10px 0 0; padding: 10px 12px; background: var(--surface-2); border-radius: 10px; font-size: 13px; line-height: 1.45; white-space: pre-wrap; color: var(--muted); max-height: 140px; overflow: auto; }
+.input.area { width: 100%; min-height: 90px; resize: vertical; line-height: 1.5; font-family: inherit; display: block; margin-top: 8px; }
+.writeout { white-space: pre-wrap; line-height: 1.6; padding: 6px 0; font-size: 17px; }

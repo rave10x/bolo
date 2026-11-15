@@ -135,6 +135,9 @@ pub fn Today() -> Element {
                 PlanRow { done: log.talks >= 5, icon: "💬", title: crate::i18n::tr("Partner se 5 jawab bolo"),
                     detail: crate::i18n::trf("Aaj {} jawab bole — bolna hi sabse zaroori hai", &[log.talks.to_string()]), cta: "Baat karo",
                     onclick: move |_| navigate(ctx, Route::Talk) }
+                PlanRow { done: st.coach_runs.iter().any(|r| r.date == t), icon: "💼", title: crate::i18n::tr("Ek mock interview karo"),
+                    detail: crate::i18n::trf("Job description se apna interview banao — ab tak {} kiye", &[st.coach_runs.len().to_string()]), cta: "Coach",
+                    onclick: move |_| navigate(ctx, Route::Coach) }
                 {
                     let next_d = DIALOGUES.items.iter().find(|d| !st.dialogs.contains_key(&d.id)).cloned();
                     let any_done = !st.dialogs.is_empty();
@@ -216,6 +219,8 @@ pub fn LessonList() -> Element {
 pub fn LessonView(id: String) -> Element {
     let ctx = use_context::<Ctx>();
     let mut quiz = use_signal(|| None::<Vec<drill::Q>>);
+    // developer hook: BOLO_AUTOQUIZ=1 opens the mini test straight away
+    use_hook(|| if std::env::var("BOLO_AUTOQUIZ").is_ok() { if let Some(l) = LESSONS.lessons.iter().find(|l| l.id == id) { quiz.set(Some(l.quiz.iter().map(drill::make_mcq_q).collect())); } });
     let Some(idx) = LESSONS.lessons.iter().position(|l| l.id == id) else {
         return rsx! { div { class: "page", {crate::i18n::tr("Lesson nahi mila")} } };
     };
@@ -226,7 +231,7 @@ pub fn LessonView(id: String) -> Element {
     if let Some(qs) = quiz.read().clone() {
         let lid = l.id.clone();
         return rsx! {
-            Drill { qs, back_label: format!("{}", l.title), lesson: Some(lid), on_exit: move |_| quiz.set(None) }
+            Drill { qs, back_label: format!("{}", l.title), lesson: Some(lid), on_exit: move |_| { quiz.set(None); let _ = document::eval("setTimeout(function(){var s=document.getElementById('scroller'); if(s){s.scrollTop=0;}},30);"); } }
         };
     }
     let l2 = l.clone();
@@ -274,7 +279,7 @@ pub fn LessonView(id: String) -> Element {
                 div { class: "stage-t", {crate::i18n::trf("Mini test ({} sawaal)", &[(l.quiz.len()).to_string()])} }
                 div { class: "muted", if let Some(p) = best { {crate::i18n::trf("Best score: {}%  — 60% se upar matlab lesson poora ✓", &[(p).to_string()])} } else { {crate::i18n::tr("60% se upar aaya to lesson poora maana jayega")} } }
                 div { class: "row-actions",
-                    button { class: "btn primary", onclick: move |_| { let qs: Vec<drill::Q> = l2.quiz.iter().map(drill::make_mcq_q).collect(); quiz.set(Some(qs)); }, {crate::i18n::tr("Test shuru karo")} }
+                    button { class: "btn primary", onclick: move |_| { let qs: Vec<drill::Q> = l2.quiz.iter().map(drill::make_mcq_q).collect(); quiz.set(Some(qs)); let _ = document::eval("setTimeout(function(){var s=document.getElementById('scroller'); if(s){s.scrollTop=0;}},30);"); }, {crate::i18n::tr("Test shuru karo")} }
                     if let Some(n) = next { button { class: "btn", onclick: move |_| navigate(ctx, Route::Lesson(n.clone())), {crate::i18n::tr("Agla lesson →")} } }
                 }
             }
@@ -455,7 +460,7 @@ pub fn Cards(ids: Vec<String>, review: bool, title: String) -> Element {
 pub fn SpeakPacks() -> Element {
     let ctx = use_context::<Ctx>();
     let st = ctx.state.read().clone();
-    let ok_tools = audio::tool_available("pw-record") && audio::tool_available("pw-play");
+    let ok_tools = audio::can_record();
     rsx! {
         div { class: "page",
             h1 { class: "title", {crate::i18n::tr("Bolo · Speak")} }
@@ -689,8 +694,7 @@ pub fn Settings() -> Element {
                 div { class: "muted sm", {crate::i18n::trf("Progress yahan save hota hai: {}", &[(State::path().display()).to_string()])} }
                 div { class: "row-actions",
                     button { class: "btn", onclick: move |_| {
-                        let home = std::env::var("HOME").unwrap_or_default();
-                        let dir = std::path::PathBuf::from(&home).join("Documents");
+                        let dir = crate::platform::documents_dir();
                         let _ = std::fs::create_dir_all(&dir);
                         let file = dir.join(format!("Bolo-backup-{}.json", today()));
                         match ctx.state.peek().save().and_then(|_| std::fs::copy(State::path(), &file).map(|_| ())) {

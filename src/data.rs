@@ -215,6 +215,17 @@ pub struct Fix {
     pub tip: String,
 }
 
+/// One finished Interview Coach run.
+#[derive(Serialize, Deserialize, Clone, PartialEq, Debug, Default)]
+#[serde(default)]
+pub struct CoachRun {
+    pub date: String,
+    pub role: String,
+    pub answers: u32,
+    pub avg_words: u32,
+    pub fillers: u32,
+}
+
 #[derive(Serialize, Deserialize, Clone, PartialEq, Debug)]
 #[serde(default)]
 pub struct State {
@@ -240,6 +251,11 @@ pub struct State {
     pub side_collapsed: bool,
     /// ollama model used by Talk; empty = default
     pub chat_model: String,
+    /// Coach: what the learner says about themselves, and the last job description
+    pub coach_profile: String,
+    pub coach_jd: String,
+    /// finished Interview Coach runs, newest last (max 30)
+    pub coach_runs: Vec<CoachRun>,
 }
 
 impl Default for State {
@@ -259,6 +275,9 @@ impl Default for State {
             lang: "hinglish".into(),
             side_collapsed: false,
             chat_model: String::new(),
+            coach_profile: String::new(),
+            coach_jd: String::new(),
+            coach_runs: Vec::new(),
         }
     }
 }
@@ -277,11 +296,7 @@ pub fn add_days(date: &str, n: i64) -> String {
 
 impl State {
     pub fn dir() -> PathBuf {
-        let base = std::env::var_os("XDG_DATA_HOME")
-            .map(PathBuf::from)
-            .or_else(|| std::env::var_os("HOME").map(|h| PathBuf::from(h).join(".local/share")))
-            .unwrap_or_else(|| PathBuf::from("."));
-        base.join("bolo")
+        crate::platform::data_dir()
     }
     pub fn path() -> PathBuf {
         Self::dir().join("state.json")
