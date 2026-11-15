@@ -690,6 +690,10 @@ pub fn Settings() -> Element {
                 InstallAi {}
             }
             div { class: "card set",
+                div { class: "stage-t", "License" }
+                div { class: "muted sm", "Bolo is free for personal, non-commercial use. Using it in a company, a training or coaching business, or charging people to use it needs a paid commercial license. See COMMERCIAL.md at github.com/rave10x/bolo." }
+            }
+            div { class: "card set",
                 div { class: "stage-t", {crate::i18n::tr("Backup")} }
                 div { class: "muted sm", {crate::i18n::trf("Progress yahan save hota hai: {}", &[(State::path().display()).to_string()])} }
                 div { class: "row-actions",

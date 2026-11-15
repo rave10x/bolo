@@ -136,6 +136,8 @@ Bolo is **free for personal use** and **paid for commercial use**.
 - **Personal, non-commercial use** (learning English yourself, hobby, study) is free under the [PolyForm Noncommercial License 1.0.0](LICENSE). You can read, build and modify the code for that.
 - **Commercial use** (a company, a training or coaching business, a bootcamp, charging people to use it, or bundling it into a product) needs a paid commercial license. Open an issue titled "Commercial license" at [github.com/rave10x/bolo/issues](https://github.com/rave10x/bolo/issues/new?title=Commercial+license) to get one.
 
+Details, who needs a license, and how to get one: [COMMERCIAL.md](COMMERCIAL.md).
+
 Versions published before this change (up to commit `44db349`) were released under the MIT license and stay MIT for anyone who already has them.
 
 ### Privacy
